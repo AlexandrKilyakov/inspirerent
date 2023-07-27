@@ -344,4 +344,36 @@
       }
     }
   }
+
+  &--form {
+    @extend %f-column;
+    @include cart($clr-f, $i32);
+    align-items: center;
+    max-width: 39.375rem;
+    width: 100%;
+    margin-inline: auto;
+
+    .title {
+      text-align: center;
+    }
+
+    form {
+      max-width: 25.875rem;
+      width: 100%;
+
+      button {
+        max-width: 100%;
+      }
+
+      .name {
+        color: $clr;
+
+        @include not-last(0);
+      }
+
+      .fake-label {
+        @include not-last($i16);
+      }
+    }
+  }
 }

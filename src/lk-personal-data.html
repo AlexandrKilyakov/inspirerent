@@ -1,0 +1,82 @@
+@@include('./template/header.html', { title: "Персональные данные водителя" })
+@@include('./inc/breadcrumbs.html', { text: "Персональные данные водителя" })
+
+<section class="margin--std container private--office">
+  <h1 class="title wow fadeIn">Личный кабинет</h1>
+  <button class="btn--aside" data-active="aside"></button>
+  <ul class="aside wow fadeIn" data-aside>
+    <button class="btn--back" data-active="aside"></button>
+    <li><a href="#">Заказы</a></li>
+    <li class="current"><a href="#">Персональные данные водителя</a></li>
+  </ul>
+  <section class="wrapper">
+    <div class="cart--form wow fadeIn">
+      <h2 class="title">Персональные данные водителя</h2>
+      <form action="">
+        <label class="label--reverse">
+          <input type="text" placeholder="Иванов Иван Иванович" required />
+          <span class="name">ФИО:</span>
+        </label>
+        <label class="label--reverse">
+          <input type="date" placeholder="01.01.1990" required />
+          <span class="name">Дата рождения:</span>
+        </label>
+        <label class="label--reverse">
+          <input type="number" placeholder="15" required />
+          <span class="name">Стаж вождения с:</span>
+        </label>
+        <div class="fake-label">
+          <p class="name">
+            Документ подтверждающий личность: <span class="clr-stop">*</span>
+          </p>
+          <label class="triggers">
+            <input type="radio" name="name" checked />
+            <span class="trigger"></span>
+            <span class="txt">Российский паспорт</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" />
+            <span class="trigger"></span>
+            <span class="txt">Заграничный паспорт</span>
+          </label>
+        </div>
+        <label class="label--reverse">
+          <input type="text" placeholder="1111 123456" required />
+          <span class="name">Серия и номер паспорта:</span>
+        </label>
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Код подразделения:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Кем и где выдан:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="date" placeholder="111-111" required />
+          <span class="name">Дата выдачи:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="1111 123456" required />
+          <span class="name">Серия и номер водительского удостоверения:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Дата выдачи водительского удостоверения:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Кем выдано водительское удостоверение:</span>
+        </label>
+        <button>Сохранить данные</button>
+      </form>
+    </div>
+  </section>
+</section>
+
+@@include('./template/footer.html')

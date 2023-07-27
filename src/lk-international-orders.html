@@ -1,0 +1,20 @@
+@@include('./template/header.html', { title: "Международные заказы" })
+@@include('./inc/breadcrumbs.html', { text: "Международные заказы" })
+
+<section class="margin--std container private--office">
+  <h1 class="title wow fadeIn">Личный кабинет</h1>
+  <button class="btn--aside" data-active="aside"></button>
+  <ul class="aside wow fadeIn" data-aside>
+    <button class="btn--back" data-active="aside"></button>
+    <li><a href="#">Заказы</a></li>
+    <li class="current"><a href="#">Персональные данные водителя</a></li>
+  </ul>
+  <section class="wrapper">
+    <div class="void wow fadeIn">
+      <h2 class="title">У вас пока нет заказов</h2>
+      <a href="#" class="btn">Выбрать автомобиль</a>
+    </div>
+  </section>
+</section>
+
+@@include('./template/footer.html')

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Автомобили</title>
+    <title>Персональные данные водителя</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -221,277 +221,87 @@
   <div class="container">
     <ul class="bc-list">
       <li><a href="/">Главная</a></li>
-      <li>Автомобили</li>
+      <li>Персональные данные водителя</li>
     </ul>
   </div>
 </div>
 
 
-<section class="margin--std container">
-  <p class="subtitle">Автопарк Inspire</p>
-  <h1 class="title h2">Выберите автомобиль для проката</h1>
-  <section class="tabs wow fadeIn">
-    <button class="tab active">Тип автомобиля</button>
-    <button class="tab">Коробка</button>
-    <button class="tab">Марка</button>
-  </section>
-  <section class="tabs--content wow fadeIn">
-    <div class="content wow fadeIn grid-10">
-      <button class="type--car active" data-id="0">Все авто</button>
-      <button class="type--car" data-id="0">Комфорт</button>
-      <button class="type--car" data-id="1">Кроссовер</button>
-      <button class="type--car" data-id="2">Минивен</button>
-      <button class="type--car" data-id="3">Эконом</button>
-      <button class="type--car" data-id="4">Ларгус</button>
-      <button class="type--car" data-id="5">Универсал</button>
-      <button class="type--car" data-id="6">Бизнес</button>
-      <button class="type--car" data-id="7">Премиум</button>
-      <button class="type--car" data-id="8">Внедорожник</button>
+<section class="margin--std container private--office">
+  <h1 class="title wow fadeIn">Личный кабинет</h1>
+  <button class="btn--aside" data-active="aside"></button>
+  <ul class="aside wow fadeIn" data-aside>
+    <button class="btn--back" data-active="aside"></button>
+    <li><a href="#">Заказы</a></li>
+    <li class="current"><a href="#">Персональные данные водителя</a></li>
+  </ul>
+  <section class="wrapper">
+    <div class="cart--form wow fadeIn">
+      <h2 class="title">Персональные данные водителя</h2>
+      <form action="">
+        <label class="label--reverse">
+          <input type="text" placeholder="Иванов Иван Иванович" required />
+          <span class="name">ФИО:</span>
+        </label>
+        <label class="label--reverse">
+          <input type="date" placeholder="01.01.1990" required />
+          <span class="name">Дата рождения:</span>
+        </label>
+        <label class="label--reverse">
+          <input type="number" placeholder="15" required />
+          <span class="name">Стаж вождения с:</span>
+        </label>
+        <div class="fake-label">
+          <p class="name">
+            Документ подтверждающий личность: <span class="clr-stop">*</span>
+          </p>
+          <label class="triggers">
+            <input type="radio" name="name" checked />
+            <span class="trigger"></span>
+            <span class="txt">Российский паспорт</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" />
+            <span class="trigger"></span>
+            <span class="txt">Заграничный паспорт</span>
+          </label>
+        </div>
+        <label class="label--reverse">
+          <input type="text" placeholder="1111 123456" required />
+          <span class="name">Серия и номер паспорта:</span>
+        </label>
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Код подразделения:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Кем и где выдан:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="date" placeholder="111-111" required />
+          <span class="name">Дата выдачи:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="1111 123456" required />
+          <span class="name">Серия и номер водительского удостоверения:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Дата выдачи водительского удостоверения:</span>
+        </label>
+
+        <label class="label--reverse">
+          <input type="text" placeholder="111-111" required />
+          <span class="name">Кем выдано водительское удостоверение:</span>
+        </label>
+        <button>Сохранить данные</button>
+      </form>
     </div>
-    <div class="content wow fadeIn flex">
-      <label class="triggers">
-        <input type="checkbox" name="akpp" />
-        <span class="trigger--point"></span>
-        <span class="value subtitle">АКПП</span>
-      </label>
-      <label class="triggers">
-        <input type="checkbox" name="mkpp" />
-        <span class="trigger--point"></span>
-        <span class="value subtitle">МКПП</span>
-      </label>
-    </div>
-    <div class="content wow fadeIn grid-10">
-      <button class="logo--car" data-id="0">Huindai</button>
-      <button class="logo--car" data-id="1">Volkswagen</button>
-      <button class="logo--car" data-id="2">Toyota</button>
-      <button class="logo--car" data-id="3">Skoda</button>
-      <button class="logo--car" data-id="4">Nissan</button>
-      <button class="logo--car" data-id="5">Lada</button>
-      <button class="logo--car" data-id="6">Kia</button>
-      <button class="logo--car" data-id="7">Haval</button>
-      <button class="logo--car" data-id="8">Geely</button>
-      <button class="logo--car" data-id="9">Audi</button>
-    </div>
-  </section>
-
-  <label class="triggers wow fadeIn mt32">
-    <input type="checkbox" name="var" />
-    <span class="value subtitle">По популярности</span>
-    <span class="trigger--point"></span>
-    <span class="value subtitle">По цене</span>
-  </label>
-
-  <section class="grid-4 catalog">
-    <article class="cart post wow fadeIn" data-new>
-      <h2 class="title">Hyundai Creta (II)</h2>
-      <div class="preview">
-        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
-      </div>
-      <p class="price" data-discount="15" data-price="4 606">
-        от 4 606 ₽ <span class="mini">/ сутки</span>
-      </p>
-
-      <div class="cart--grey mini-static">
-        <p class="name">Характеристики автомобиля:</p>
-        <p class="value" data-weight="car-door">x 5</p>
-        <p class="value" data-weight="peaple">x 5</p>
-        <p class="value" data-weight="bag">x 6</p>
-        <p class="value" data-weight="transmission">АТ</p>
-        <p class="value" data-weight="temperature">есть</p>
-      </div>
-
-      <div class="mini-static">
-        <p class="name">Условия аренды:</p>
-        <p class="value" data-weight="man">от 24 лет</p>
-        <p class="value" data-weight="wheel">от 3 лет</p>
-      </div>
-
-      <a href="#" class="btn" target="_blank">Забронировать</a>
-      <a href="#" class="link--line wow fadeIn"
-  >Подробнее об авто <span class="line"><svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M23.3536 12.3536C23.5488 12.1583 23.5488 11.8417 23.3536 11.6464L20.1716 8.46447C19.9763 8.2692 19.6597 8.2692 19.4645 8.46447C19.2692 8.65973 19.2692 8.97631 19.4645 9.17157L22.2929 12L19.4645 14.8284C19.2692 15.0237 19.2692 15.3403 19.4645 15.5355C19.6597 15.7308 19.9763 15.7308 20.1716 15.5355L23.3536 12.3536ZM0 12.5H23V11.5H0V12.5Z"
-    fill="#689901"
-  />
-</svg>
-</span></a
->
-
-    </article>
-    <article class="cart post wow fadeIn">
-      <h2 class="title">Hyundai Creta (II)</h2>
-      <div class="preview">
-        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
-      </div>
-      <p class="price" data-discount="15" data-price="4 606">
-        от 4 606 ₽ <span class="mini">/ сутки</span>
-      </p>
-
-      <div class="cart--grey mini-static grid-12">
-        <p class="name">Характеристики автомобиля:</p>
-        <p class="value" data-weight="car-door">x 5</p>
-        <p class="value" data-weight="peaple">x 5</p>
-        <p class="value" data-weight="bag">x 6</p>
-        <p class="value" data-weight="transmission">АТ</p>
-        <p class="value" data-weight="temperature">есть</p>
-      </div>
-
-      <div class="mini-static flex">
-        <p class="name">Условия аренды:</p>
-        <p class="value" data-weight="man">от 24 лет</p>
-        <p class="value" data-weight="wheel">от 3 лет</p>
-      </div>
-
-      <a href="#" class="btn" target="_blank">Забронировать</a>
-      <a href="#" class="link--line wow fadeIn"
-  >Подробнее об авто <span class="line"><svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M23.3536 12.3536C23.5488 12.1583 23.5488 11.8417 23.3536 11.6464L20.1716 8.46447C19.9763 8.2692 19.6597 8.2692 19.4645 8.46447C19.2692 8.65973 19.2692 8.97631 19.4645 9.17157L22.2929 12L19.4645 14.8284C19.2692 15.0237 19.2692 15.3403 19.4645 15.5355C19.6597 15.7308 19.9763 15.7308 20.1716 15.5355L23.3536 12.3536ZM0 12.5H23V11.5H0V12.5Z"
-    fill="#689901"
-  />
-</svg>
-</span></a
->
-
-    </article>
-    <article class="cart post wow fadeIn">
-      <h2 class="title">Hyundai Creta (II)</h2>
-      <div class="preview">
-        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
-      </div>
-      <p class="price" data-discount="15" data-price="4 606">
-        от 4 606 ₽ <span class="mini">/ сутки</span>
-      </p>
-
-      <div class="cart--grey mini-static grid-12">
-        <p class="name">Характеристики автомобиля:</p>
-        <p class="value" data-weight="car-door">x 5</p>
-        <p class="value" data-weight="peaple">x 5</p>
-        <p class="value" data-weight="bag">x 6</p>
-        <p class="value" data-weight="transmission">АТ</p>
-        <p class="value" data-weight="temperature">есть</p>
-      </div>
-
-      <div class="mini-static flex">
-        <p class="name">Условия аренды:</p>
-        <p class="value" data-weight="man">от 24 лет</p>
-        <p class="value" data-weight="wheel">от 3 лет</p>
-      </div>
-
-      <a href="#" class="btn" target="_blank">Забронировать</a>
-      <a href="#" class="link--line wow fadeIn"
-  >Подробнее об авто <span class="line"><svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M23.3536 12.3536C23.5488 12.1583 23.5488 11.8417 23.3536 11.6464L20.1716 8.46447C19.9763 8.2692 19.6597 8.2692 19.4645 8.46447C19.2692 8.65973 19.2692 8.97631 19.4645 9.17157L22.2929 12L19.4645 14.8284C19.2692 15.0237 19.2692 15.3403 19.4645 15.5355C19.6597 15.7308 19.9763 15.7308 20.1716 15.5355L23.3536 12.3536ZM0 12.5H23V11.5H0V12.5Z"
-    fill="#689901"
-  />
-</svg>
-</span></a
->
-
-    </article>
-    <article class="cart post wow fadeIn">
-      <h2 class="title">Hyundai Creta (II)</h2>
-      <div class="preview">
-        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
-      </div>
-      <p class="price" data-discount="15" data-price="4 606">
-        от 4 606 ₽ <span class="mini">/ сутки</span>
-      </p>
-
-      <div class="cart--grey mini-static grid-12">
-        <p class="name">Характеристики автомобиля:</p>
-        <p class="value" data-weight="car-door">x 5</p>
-        <p class="value" data-weight="peaple">x 5</p>
-        <p class="value" data-weight="bag">x 6</p>
-        <p class="value" data-weight="transmission">АТ</p>
-        <p class="value" data-weight="temperature">есть</p>
-      </div>
-
-      <div class="mini-static flex">
-        <p class="name">Условия аренды:</p>
-        <p class="value" data-weight="man">от 24 лет</p>
-        <p class="value" data-weight="wheel">от 3 лет</p>
-      </div>
-
-      <a href="#" class="btn" target="_blank">Забронировать</a>
-      <a href="#" class="link--line wow fadeIn"
-  >Подробнее об авто <span class="line"><svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M23.3536 12.3536C23.5488 12.1583 23.5488 11.8417 23.3536 11.6464L20.1716 8.46447C19.9763 8.2692 19.6597 8.2692 19.4645 8.46447C19.2692 8.65973 19.2692 8.97631 19.4645 9.17157L22.2929 12L19.4645 14.8284C19.2692 15.0237 19.2692 15.3403 19.4645 15.5355C19.6597 15.7308 19.9763 15.7308 20.1716 15.5355L23.3536 12.3536ZM0 12.5H23V11.5H0V12.5Z"
-    fill="#689901"
-  />
-</svg>
-</span></a
->
-
-    </article>
-    <article class="cart post wow fadeIn">
-      <h2 class="title">Hyundai Creta (II)</h2>
-      <div class="preview">
-        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
-      </div>
-      <p class="price" data-discount="15" data-price="4 606">
-        от 4 606 ₽ <span class="mini">/ сутки</span>
-      </p>
-
-      <div class="cart--grey mini-static grid-12">
-        <p class="name">Характеристики автомобиля:</p>
-        <p class="value" data-weight="car-door">x 5</p>
-        <p class="value" data-weight="peaple">x 5</p>
-        <p class="value" data-weight="bag">x 6</p>
-        <p class="value" data-weight="transmission">АТ</p>
-        <p class="value" data-weight="temperature">есть</p>
-      </div>
-
-      <div class="mini-static flex">
-        <p class="name">Условия аренды:</p>
-        <p class="value" data-weight="man">от 24 лет</p>
-        <p class="value" data-weight="wheel">от 3 лет</p>
-      </div>
-
-      <a href="#" class="btn" target="_blank">Забронировать</a>
-      <a href="#" class="link--line wow fadeIn"
-  >Подробнее об авто <span class="line"><svg
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M23.3536 12.3536C23.5488 12.1583 23.5488 11.8417 23.3536 11.6464L20.1716 8.46447C19.9763 8.2692 19.6597 8.2692 19.4645 8.46447C19.2692 8.65973 19.2692 8.97631 19.4645 9.17157L22.2929 12L19.4645 14.8284C19.2692 15.0237 19.2692 15.3403 19.4645 15.5355C19.6597 15.7308 19.9763 15.7308 20.1716 15.5355L23.3536 12.3536ZM0 12.5H23V11.5H0V12.5Z"
-    fill="#689901"
-  />
-</svg>
-</span></a
->
-
-    </article>
   </section>
 </section>
 
