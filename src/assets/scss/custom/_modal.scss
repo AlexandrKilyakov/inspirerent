@@ -18,6 +18,23 @@
     @extend %cursor;
   }
 
+  &.desktop {
+    position: relative;
+    margin-block: $i28 $i64;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: all;
+
+    &::before {
+      position: initial;
+      display: none;
+    }
+
+    .modal--body {
+      max-height: fit-content;
+    }
+  }
+
   .btns {
     margin-top: $i32;
   }

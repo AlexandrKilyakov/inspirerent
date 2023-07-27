@@ -74,6 +74,21 @@ a {
       }
     }
   }
+  &--cancel {
+    @extend %f-center;
+    color: $clr-cnsl;
+    gap: $i4;
+
+    &::after {
+      content: "";
+      @include square-ava($i16);
+      @include bg-contain("@svg/art/cancel.svg");
+    }
+
+    &:hover {
+      color: $clr-stp;
+    }
+  }
 }
 
 .downloads {

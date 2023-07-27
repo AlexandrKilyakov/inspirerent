@@ -158,6 +158,43 @@
     }
   }
 
+  &--notification {
+    @include cart($clr-notification);
+    @include not-first-last($i32, $i32);
+    @include bg-contain("@svg/art/notification.svg");
+    width: 100%;
+    padding-left: calc($i32 + $i64 + $i20);
+    background-size: $i64;
+    background-position-x: $i32;
+
+    @include __467 {
+      padding-top: calc($i32 + 4rem);
+      padding-left: $i32;
+      background: {
+        size: 4rem;
+        position: {
+          x: center;
+          y: $i32;
+        }
+      }
+    }
+
+    .name {
+      font-size: $h4;
+      font-weight: 500;
+      line-height: 120%;
+
+      @include not-last($i8);
+    }
+
+    .btn--close {
+      --size: 1rem;
+      position: absolute;
+      top: $i16;
+      right: $i16;
+    }
+  }
+
   &--preview {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -229,6 +266,81 @@
 
       .numbers {
         text-align: center;
+      }
+    }
+  }
+
+  &--order {
+    @include cart($clr-f, $i32);
+    @include not-last($i20);
+    width: 100%;
+
+    .content {
+      display: flex;
+
+      @include __667 {
+        flex-direction: column;
+      }
+
+      .ava {
+        max-width: 13.4375rem;
+        width: 100%;
+        aspect-ratio: 215/141;
+
+        @include __667 {
+          max-width: 100%;
+        }
+
+        img {
+          @extend %fit-contain;
+        }
+      }
+    }
+
+    .price {
+      font-size: $h3;
+
+      &[data-title] {
+        &:before {
+          content: attr(data-title);
+          display: inline-block;
+          font-size: $i16;
+          font-weight: 400;
+          line-height: 150%;
+          color: $clr-g-55;
+          margin-right: $i4;
+        }
+      }
+    }
+
+    &-table {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: $i16;
+
+      @media (max-width: 74.375rem) AND (min-width: 73rem),
+        (max-width: 54.1875rem) {
+        grid-template-columns: 100%;
+
+        time {
+          margin-left: auto;
+        }
+      }
+
+      @include not-last($i16);
+
+      .address {
+        grid-column: span 3;
+
+        @media (max-width: 74.375rem) AND (min-width: 73rem),
+          (max-width: 54.1875rem) {
+          grid-column: 1/-1;
+        }
+      }
+
+      time {
+        font-size: $i16;
+        color: $clr;
       }
     }
   }

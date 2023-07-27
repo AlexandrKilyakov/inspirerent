@@ -31,7 +31,7 @@
       }
 
       &[data-type="date"] {
-        @include dataType($calendar);
+        @include dataType("@svg/art/calendar.svg");
       }
 
       [data-output] {

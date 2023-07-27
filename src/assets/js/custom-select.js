@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const selects = document.querySelectorAll(".inspire--select");
+const selects = document.querySelectorAll(".inspire--select");
 
-  if (!selects.length) return;
-
+if (selects.length) {
   selects.forEach((select) => {
     const header = select.querySelector(".inspire--select-header");
 
@@ -22,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
-});
+}
 
 // Работаем с селектом даты
 function selectDate(item) {

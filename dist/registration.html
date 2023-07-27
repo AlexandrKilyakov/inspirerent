@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Доставка Inspire</title>
+    <title>Регистрация</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -221,224 +221,65 @@
   <div class="container">
     <ul class="bc-list">
       <li><a href="/">Главная</a></li>
-      <li>Доставка Inspire</li>
+      <li>Регистрация</li>
     </ul>
   </div>
 </div>
 
 
-<section class="section--std-top container">
-  <h1 class="title mb32 wow fadeIn">Доставка Inspire</h1>
-  <article class="cart--preview">
-    <div class="content">
-      <h2 class="title wow fadeIn">
-        Inspire совместно с <span class="clr-stop">RAIDEN</span> доставит все
-        необходимое
-      </h2>
-      <ul class="sber">
-        <li class="wow fadeIn">
-          <span
-            ><b>Профессиональные водители</b>, которым можно доверить самое
-            ценное</span
-          >
-        </li>
-        <li class="wow fadeIn">
-          <span
-            ><b>Фиксированная стоимость доставки</b>, чтобы не&nbsp;беспокоиться
-            о конечной сумме</span
-          >
-        </li>
-        <li class="wow fadeIn">
-          <span>Доставляем <b>до 100 км от МКАД</b></span>
-        </li>
-      </ul>
-    </div>
-    <img src="./assets/img/raiden.jpg" alt="" class="preview wow fadeIn" />
-  </article>
-</section>
-
-<section class="section--std container section--steps">
-  <h2 class="title wow fadeIn">Как оформить доставку?</h2>
-  <figure class="cart wow fadeIn">
-    <img src="./assets/svg/art/step/1.svg" alt="" class="ava" />
-    <figcaption>
-      Позвоните по номеру <a href="tel:84957885888">8 (495) 788-58-88</a>,
-      сообщите оператору маршрут и что нужно отвезти
-    </figcaption>
-  </figure>
-  <figure class="cart wow fadeIn">
-    <img src="./assets/svg/art/step/2.svg" alt="" class="ava" />
-    <figcaption>
-      Оператор рассчитает стоимость доставки и сформирует заказ. Номер вашего
-      заказа придёт на ваш номер в&nbsp;виде SMS.
-    </figcaption>
-  </figure>
-  <figure class="cart wow fadeIn">
-    <img src="./assets/svg/art/step/3.svg" alt="" class="ava" />
-    <figcaption>
-      Заполните форму ниже, указав номер заказа из SMS и оплатите доставку через
-      форму онлайн-оплаты «Сбербанка».
-    </figcaption>
-  </figure>
-</section>
-
-<section class="section--aside container">
-  <form action="" class="content cart">
-    <h2 class="title wow fadeIn">Доставка с фиксированным временем</h2>
-    <fieldset>
-      <legend class="wow fadeIn">
-        Укажите пределы доставки:<span class="clr-stop">*</span>
-      </legend>
-      <label class="triggers--cart wow fadeIn">
-        <input type="radio" name="delivery-limits" />
-        <span class="trigger"></span>
-        <span class="border"></span>
-        <span class="txt"
-          >Доставка в&nbsp;пределах САО и Химок
-          <span class="cost">500 ₽</span></span
-        >
+<div id="logup" class="modal logup desktop">
+  <div class="modal--body modal--order">
+    <h2 class="modal--name">Регистрация</h2>
+    <form action="" name="login">
+      <label class="label--reverse">
+        <input type="text" placeholder="Иван Иванов" required />
+        <span class="name">Имя и Фамилия:</span>
       </label>
-      <label class="triggers--cart wow fadeIn">
-        <input type="radio" name="delivery-limits" />
-        <span class="trigger"></span>
-        <span class="border"></span>
-        <span class="txt"
-          >Доставка в&nbsp;пределах МКАД <span class="cost">1000 ₽</span></span
-        >
+      <label class="label--reverse">
+        <input type="email" placeholder="ivanov@mail.ru" required />
+        <span class="name">E-mail:</span>
       </label>
-      <label class="triggers--cart wow fadeIn">
-        <input type="radio" name="delivery-limits" />
-        <span class="trigger"></span>
-        <span class="border"></span>
-        <span class="txt"
-          >Доставка в&nbsp;пределах 20 км от МКАД
-          <span class="cost">1500 ₽</span></span
-        >
+      <label class="label--reverse">
+        <input type="tel" required />
+        <span class="name">Телефон:</span>
       </label>
-      <label class="triggers--cart wow fadeIn">
-        <input type="radio" name="delivery-limits" />
-        <span class="trigger"></span>
-        <span class="border"></span>
-        <span class="txt"
-          >Доставка в&nbsp;пределах 50 км от МКАД
-          <span class="cost">2000 ₽</span></span
-        >
+      <label class="label--reverse">
+        <input type="password" placeholder="123456" minlength="6" required />
+        <span class="name">Пароль:</span>
+        <span class="chips">минимум 6 символов</span>
       </label>
-      <label class="triggers--cart wow fadeIn">
-        <input type="radio" name="delivery-limits" />
-        <span class="trigger"></span>
-        <span class="border"></span>
-        <span class="txt"
-          >Доставка в&nbsp;пределах 100 км от МКАД
-          <span class="cost">3000 ₽</span></span
-        >
+      <label class="label--reverse">
+        <input type="password" placeholder="123456" minlength="6" required />
+        <span class="name">Подтверждение пароля:</span>
       </label>
-    </fieldset>
-    <fieldset>
-      <label class="shifter wow fadeIn">
-        <input type="text" name="name" placeholder="Иван" required />
-        <p class="name">Номер заказа из SMS:</p>
-      </label>
-      <label class="shifter wow fadeIn">
-        <input
-          type="text"
-          name="name"
-          placeholder="Иванов Иван Иванович"
-          required
-        />
-        <p class="name">ФИО:</p>
-      </label>
-      <label class="shifter wow fadeIn">
-        <input type="text" name="name" placeholder="ivan@mail.ru" required />
-        <p class="name">E-mail:</p>
-      </label>
-      <label class="shifter wow fadeIn">
-        <input type="tel" name="name" required />
-        <p class="name">Телефон:</p>
-      </label>
-      <label class="triggers wow fadeIn">
+      <label class="triggers">
         <input type="checkbox" name="name" />
         <span class="trigger"></span>
-        <span class="txt"
-          >Клиент обязуется не&nbsp;передавать для доставки Курьеру Отправление,
-          указанные в&nbsp;списке</span
+        <span class="chips"
+          >Я знакомлен и принимаю
+          <a href="#" target="_blank">Политику безопасности</a></span
         >
       </label>
-      <label class="triggers wow fadeIn">
-        <input type="checkbox" name="name" />
-        <span class="trigger"></span>
-        <span class="txt"
-          >Я принимаю <a href="#">политику конфиденциальности</a> и согласен с
-          <a href="#">политикой обработки данных</a></span
-        >
-      </label>
-      <button class="wow fadeIn">Оплатить заказ</button>
-    </fieldset>
-  </form>
-  <article class="info cart">
-    <h2 class="title wow fadeIn">Доставка без фиксированного времени</h2>
-    <p class="descr wow fadeIn">
-      Также возможна доставка без фиксированного времени в&nbsp;период с
-      <b>8:00 до&nbsp;22:00</b>.
-    </p>
-    <p class="cart--grey wow fadeIn">
-      Доставка в&nbsp;пределах САО и Химок
-      <span class="clr-main cost">375 ₽</span>
-    </p>
-    <p class="cart--grey wow fadeIn">
-      Доставка в&nbsp;пределах МКАД <span class="clr-main cost">750 ₽</span>
-    </p>
-    <p class="cart--grey wow fadeIn">
-      Доставка в&nbsp;пределах 20 км от МКАД
-      <span class="clr-main cost">1125 ₽</span>
-    </p>
-    <p class="mt24 wow fadeIn">
-      Для заказа доставки без фиксированного времени позвоните по номеру:
-    </p>
-    <a href="tel:84957885888" class="h3 wow fadeIn">8 (495) 788-58-88</a>
-  </article>
-</section>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    <a href="#" class="link--line wow fadeIn"
+  >Я зарегистрирован <span class="line"><svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M23.3536 12.3536C23.5488 12.1583 23.5488 11.8417 23.3536 11.6464L20.1716 8.46447C19.9763 8.2692 19.6597 8.2692 19.4645 8.46447C19.2692 8.65973 19.2692 8.97631 19.4645 9.17157L22.2929 12L19.4645 14.8284C19.2692 15.0237 19.2692 15.3403 19.4645 15.5355C19.6597 15.7308 19.9763 15.7308 20.1716 15.5355L23.3536 12.3536ZM0 12.5H23V11.5H0V12.5Z"
+    fill="#689901"
+  />
+</svg>
+</span></a
+>
 
-<section class="section--std container">
-  <h2 class="title wow fadeIn"></h2>
-  <div class="section--info grid-4 row-gap-64">
-    <article class="cart--presentment">
-      <h3 class="title wow fadeIn" data-weight="tabler-main">Вес доставки</h3>
-      <p class="wow fadeIn">Вес отправления не&nbsp;должен превышать 50 кг.</p>
-    </article>
-    <article class="cart--presentment">
-      <h3 class="title wow fadeIn" data-weight="mail-main">
-        Оформление заказа
-      </h3>
-      <p class="wow fadeIn">
-        Заказ должен быть размещен не&nbsp;менее чем&nbsp;за 3&nbsp;часа
-        до&nbsp;времени планируемой доставки.
-      </p>
-    </article>
-    <article class="cart--presentment">
-      <h3 class="title wow fadeIn" data-weight="sun-main">Дневная доставка</h3>
-      <p class="wow fadeIn">
-        Доставка осуществляется в&nbsp;дневное время c&nbsp;9:00 до&nbsp;18:00.
-      </p>
-    </article>
-    <article class="cart--presentment">
-      <h3 class="title wow fadeIn" data-weight="moon-main">Ночная доставка</h3>
-      <p class="wow fadeIn">
-        Доставка в&nbsp;ночное время возможна при&nbsp;условии размещения заказа
-        не&nbsp;менее чем&nbsp;за 24&nbsp;часа.
-      </p>
-    </article>
   </div>
-  <h2 class="title wow fadeIn">Документы, которые вам могут понадобиться</h2>
-
-  <section class="downloads">
-    <a href="#" download="" class="wow fadeIn">Договор-оферта</a>
-    <a href="#" download="" class="wow fadeIn"
-      >Разовая доверенность на получение</a
-    >
-    <a href="#" download="" class="wow fadeIn">Расписка о получении</a>
-  </section>
-</section>
+</div>
 
 	</main>
 	<footer class="footer">

@@ -1,0 +1,116 @@
+@@include('./template/header.html', { title: "Заказы" })
+@@include('./inc/breadcrumbs.html', { text: "Заказы" })
+
+<section class="margin--std container private--office">
+  <h1 class="title">Личный кабинет</h1>
+  <button class="btn--aside" data-active="aside"></button>
+  <ul class="aside" data-aside>
+    <button class="btn--back" data-active="aside"></button>
+    <li class="current"><a href="#">Заказы</a></li>
+    <li><a href="#">Персональные данные водителя</a></li>
+  </ul>
+  <section class="wrapper">
+    <article class="cart--notification" data-notification>
+      <button
+        type="button"
+        class="btn--close"
+        data-close="notification"
+      ></button>
+      <h2 class="name">Заполните персональные данные водителя!</h2>
+      <p>
+        Заполнив эти данные один раз, вы больше не будите тратить время при
+        получение забронированного автомобиля
+      </p>
+    </article>
+    <article class="cart--order">
+      <header class="header--std">
+        <h2 class="number">Заказ № 32518</h2>
+        <p class="price" data-title="Стоимость заказа:">21 936 ₽</p>
+      </header>
+      <div class="content">
+        <div class="ava">
+          <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+        </div>
+        <section>
+          <div class="cart--order-table">
+            <address class="address" data-point="start">
+              Санкт-Петербург, БЦ Метрополис (Ленинградское ш.16А, стр.3)
+            </address>
+            <time class="date" data-type="date">1 июня </time>
+            <time class="time" data-type="time">09:00</time>
+          </div>
+          <div class="cart--order-table">
+            <address class="address" data-point="end">
+              Санкт-Петербург, БЦ Метрополис (Ленинградское ш.16А, стр.3)
+            </address>
+            <time class="date" data-type="date">14 июня</time>
+            <time class="time" data-type="time">09:00</time>
+          </div>
+        </section>
+      </div>
+      <a href="#" class="link--cancel">Отменить заказ</a>
+    </article>
+    <article class="cart--order">
+      <header class="header--std">
+        <h2 class="number">Заказ № 32545</h2>
+        <p class="price" data-title="Стоимость заказа:">21 702 ₽</p>
+      </header>
+      <div class="content">
+        <div class="ava">
+          <img
+            src="https://inspirerent.ru/upload/iblock/5bf/ela_1.png"
+            alt=""
+          />
+        </div>
+        <section>
+          <div class="cart--order-table">
+            <address class="address" data-point="start">
+              Москва, БЦ Метрополис (Ленинградское ш.16А, стр.3)
+            </address>
+            <time class="date" data-type="date">1 июня </time>
+            <time class="time" data-type="time">09:00</time>
+          </div>
+          <div class="cart--order-table">
+            <address class="address" data-point="end">
+              Москва, БЦ Метрополис (Ленинградское ш.16А, стр.3)
+            </address>
+            <time class="date" data-type="date">14 июня</time>
+            <time class="time" data-type="time">09:00</time>
+          </div>
+        </section>
+      </div>
+      <a href="#" class="link--cancel">Отменить заказ</a>
+    </article>
+    <article class="cart--order">
+      <header class="header--std">
+        <h2 class="number">Заказ № 31844</h2>
+        <p class="price" data-title="Стоимость заказа:">16 518 ₽</p>
+      </header>
+      <div class="content">
+        <div class="ava">
+          <img src="https://inspirerent.ru/upload/iblock/3b4/vp_1.png" alt="" />
+        </div>
+
+        <section>
+          <div class="cart--order-table">
+            <address class="address" data-point="start">
+              Москва, БЦ Метрополис (Ленинградское ш.16А, стр.3)
+            </address>
+            <time class="date" data-type="date">1 июня 2022</time>
+            <time class="time" data-type="time">09:00</time>
+          </div>
+          <div class="cart--order-table">
+            <address class="address" data-point="end">
+              Москва, БЦ Метрополис (Ленинградское ш.16А, стр.3)
+            </address>
+            <time class="date" data-type="date">14 июня 2022</time>
+            <time class="time" data-type="time">09:00</time>
+          </div>
+        </section>
+      </div>
+      <a href="#" class="link--cancel">Отменить заказ</a>
+    </article>
+  </section>
+</section>
+
+@@include('./template/footer.html')

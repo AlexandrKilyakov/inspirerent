@@ -2,16 +2,98 @@
   @extend %f-column;
   position: relative;
   gap: $i8;
+
+  &--section {
+    align-items: center;
+
+    @extend %f-column;
+    @include cart($clr-f, $i32);
+    @include container-inline(52.875rem);
+
+    fieldset {
+      width: 100%;
+      @include not-first-last($i24, $i24);
+    }
+
+    [class*="grid-"] {
+      gap: $i16 $i20;
+
+      .label--reverse {
+        @include not-last(0);
+      }
+    }
+
+    button:not([type]),
+    [type="submit"] {
+      @include not-first-last($i24, $i24);
+    }
+
+    .title {
+      width: 100%;
+    }
+
+    .description {
+      @include not-last(0);
+    }
+  }
 }
 
 .label {
   &--reverse {
-    flex-direction: column-reverse;
-    display: flex;
+    @extend %f-column;
     text-align: start;
     gap: $i8;
 
     @include not-last($i16);
+
+    .name {
+      order: -1;
+    }
+  }
+  &--file {
+    position: relative;
+    @extend %flex-center;
+    font-weight: 500;
+    font-size: $h4;
+    max-width: 19.0625rem;
+    width: 100%;
+    background-color: transparent;
+    color: $clr;
+    border: $ln;
+    border-radius: $i4;
+    gap: $i8;
+    padding: $i16;
+    text-align: center;
+    transition: 0.3s all;
+    cursor: pointer;
+
+    @include __467 {
+      width: 100%;
+    }
+
+    &:before {
+      content: "";
+      transition: 0.3s background-image;
+      @include bg-contain("@svg/art/add.svg");
+      @include square-ava();
+    }
+
+    &:hover {
+      background-color: $clr-mn;
+      color: $clr-f;
+
+      &:before {
+        background-image: url("@svg/art/add-light.svg");
+      }
+    }
+
+    input {
+      @extend %abs-center;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
   }
 }
 

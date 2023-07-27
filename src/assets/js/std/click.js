@@ -5,15 +5,33 @@ document.addEventListener("click", (e) => {
     return;
   }
 
-  const btnClose = el.closest(".btn--close");
+  const dataActive = el.closest("[data-active]");
+  const dataClose = el.closest("[data-close]");
   const dataClick = el.closest("[data-click]");
+  const dataAside = el.closest("[data-aside]");
   const dataToggleFavorites = el.closest("[data-toggle-favorites]");
 
-  if (btnClose) {
-    const notice = el.closest(".notice-block");
+  if (dataClose) {
+    const notice = el.closest(`[data-${dataClose.dataset.close}]`);
 
     if (notice) {
       notice.remove();
+    }
+  }
+
+  if (dataActive) {
+    const active = document.querySelector(
+      `[data-${dataActive.dataset.active}]`
+    );
+
+    if (active) {
+      active.classList.toggle("active");
+    }
+  }
+
+  if (dataAside) {
+    if (e.pageX > el.offsetWidth) {
+      dataAside.classList.toggle("active");
     }
   }
 
@@ -21,7 +39,6 @@ document.addEventListener("click", (e) => {
     switch (dataClick.dataset.click) {
       case "this":
         const elClick = el.dataset.click;
-        console.log(el.closest("[data-click='close']"));
         // Если клик произошел за пределами тела модалки, или по кнопке закрытия, тогда нужно скрыть модалку
         if (elClick && elClick == "this") {
           e.preventDefault();

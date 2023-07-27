@@ -88,6 +88,7 @@ ol {
 
     a {
       @include not-hover-color($clr);
+      display: block;
       margin-left: $i16;
     }
 
@@ -134,10 +135,56 @@ time {
   color: $clr-g-35;
   font-size: $f14;
   line-height: 150%;
+
+  &[data-type] {
+    display: flex;
+    gap: $i8;
+
+    &:before {
+      content: "";
+      display: block;
+      @include square-ava(1.5rem);
+    }
+  }
+
+  &[data-type="date"] {
+    &:before {
+      @include bg-contain("@svg/art/calendar.svg");
+    }
+  }
+
+  &[data-type="time"] {
+    &:before {
+      @include bg-contain("@svg/art/clock.svg");
+    }
+  }
 }
 
 address {
   font-style: normal;
+
+  &[data-point] {
+    @extend %f-center;
+    gap: $i8;
+
+    &:before {
+      content: "";
+      display: block;
+      @include square-ava(2.5rem);
+    }
+  }
+
+  &[data-point="start"] {
+    &::before {
+      @include bg-contain("@svg/art/point-start.svg");
+    }
+  }
+
+  &[data-point="end"] {
+    &::before {
+      @include bg-contain("@svg/art/point-end.svg");
+    }
+  }
 }
 
 .tall {

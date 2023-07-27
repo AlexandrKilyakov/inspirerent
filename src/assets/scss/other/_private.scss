@@ -1,0 +1,126 @@
+.private {
+  &--office {
+    @media (min-width: 73rem) {
+      display: grid;
+      grid-template-columns: 19.0625rem 1fr;
+      column-gap: $i20;
+
+      > .title {
+        grid-column: 1/-1;
+      }
+    }
+
+    .btn--aside {
+      display: none;
+      @include __1167 {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        z-index: 9;
+      }
+    }
+
+    .aside {
+      height: fit-content;
+      list-style: decimal-leading-zero;
+      padding-inline-start: revert;
+      margin-top: 0 !important;
+
+      @media (min-width: 73rem) {
+        position: sticky;
+        top: 5rem;
+      }
+
+      @include __1167 {
+        position: fixed;
+        top: var(--height-header);
+        left: 0;
+        max-width: 20rem;
+        width: 100%;
+        height: 100vh;
+        list-style: none;
+        padding-block: $i8;
+        padding-inline-start: 0;
+        background-color: $clr-f;
+        z-index: 99;
+        transition: 0.3s translate;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 100%;
+          bottom: 0;
+          width: 100vw;
+          height: 100%;
+          background-color: $clr-blkt;
+          transition: 0.3s opacity;
+        }
+
+        &:not(.active) {
+          translate: -100%;
+          &:after {
+            opacity: 0;
+            pointer-events: none;
+          }
+        }
+      }
+
+      @include __467 {
+        padding-top: 0;
+        max-width: 100%;
+      }
+
+      .btn--back {
+        display: none;
+        @include __467 {
+          display: block;
+          border-radius: 0;
+        }
+      }
+
+      li {
+        @include not-last($i16);
+
+        @include __1167 {
+          @include not-last(0);
+          border-bottom: $ln-g-15;
+        }
+      }
+
+      a {
+        @include not-hover-color($clr);
+        display: block;
+        margin-left: $i16;
+
+        @include __1167 {
+          padding: $i8;
+          margin-left: 0;
+        }
+      }
+
+      .current {
+        a,
+        &::marker {
+          color: $clr-mn;
+        }
+      }
+
+      ::marker {
+        font-size: 1rem;
+        color: $clr-g-55;
+      }
+    }
+
+    .wrapper {
+      max-width: 52.9375rem;
+      width: 100%;
+
+      @include __1167 {
+        margin-inline: auto;
+      }
+    }
+  }
+}

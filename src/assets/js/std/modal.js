@@ -1,13 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Собираю все модалки на странице
-  const modals = document.querySelectorAll(".modal");
+// Собираю все модалки на странице
+const modals = document.querySelectorAll(".modal");
 
-  // Если модалок нет, тогда дальнейший код нам не нужен
-  if (!modals.length) {
-    return;
-  }
-
-  // Перебираем все модалки и даем им действие на клик
+// Если модалок нет, тогда дальнейший код нам не нужен
+if (modals.length) {
   modals.forEach((modal) => {
     modal.addEventListener("click", (e) => {
       let el = e.target; // Записываем в переменную для личного удобства
@@ -22,4 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
+}

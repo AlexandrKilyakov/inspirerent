@@ -1,0 +1,46 @@
+.review {
+  &s {
+    .column-2 {
+      @include not-first-last($i32, $i32);
+      @include __1067 {
+        column-count: 1;
+      }
+    }
+  }
+
+  &--post {
+    break-inside: avoid-column;
+
+    @include cart($clr-f, $i32);
+    @include not-last($i20);
+
+    time {
+      font-size: $f12;
+    }
+
+    .text {
+      color: $clr;
+      font-size: $h5;
+      font-weight: 500;
+      line-height: 120%;
+
+      @include not-last($i16);
+
+      &:before {
+        content: "“";
+        color: $clr-g-35;
+        font-size: $i72;
+        font-weight: 700;
+        vertical-align: bottom;
+      }
+    }
+
+    .author {
+      @include not-last(0);
+    }
+  }
+}
+
+.avoid-column {
+  break-inside: avoid-column;
+}

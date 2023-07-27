@@ -1,35 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const customSelects = document.querySelectorAll(".custom--select");
+const customSelects = document.querySelectorAll(".custom--select");
 
-  if (!customSelects.length) {
-    return;
-  }
-
+if (customSelects.length) {
   customSelects.forEach((cs) => {
     const csName = cs.querySelector(".custom--select .name");
     const csInput = cs.querySelectorAll(".custom--select .options input");
 
-    if (!(csName && csInput)) {
-      return;
-    }
+    if (csName && csInput) {
+      csInput.forEach((input) => {
+        input.addEventListener("change", () => {
+          let dataSort = input.dataset.sort;
+          csName.textContent = input.value;
 
-    csInput.forEach((input) => {
-      input.addEventListener("change", () => {
-        let dataSort = input.dataset.sort;
-        csName.textContent = input.value;
+          if (dataSort && sortArray[dataSort]) {
+            filterArray = sortArray[dataSort];
 
-        if (dataSort && sortArray[dataSort]) {
-          filterArray = sortArray[dataSort];
-
-          filterArraySort();
-        }
+            filterArraySort();
+          }
+        });
       });
-    });
 
-    csInput[0].click();
+      csInput[0].click();
+    }
   });
-});
-
+}
 function filterArraySort() {
   const slides = document.querySelectorAll(".filter--car .scroll--car .slide");
 

@@ -1,10 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".tabs");
+const tabs = document.querySelectorAll(".tabs");
 
-  if (!tabs.length) {
-    return;
-  }
-
+if (tabs.length) {
   tabs.forEach((tabContainer) => {
     for (const [index, tab] of Object.entries(tabContainer.children)) {
       tab.dataset.index = index;
@@ -36,4 +32,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tabContainer.children[0].click();
   });
-});
+}

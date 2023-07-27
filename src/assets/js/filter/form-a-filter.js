@@ -1,13 +1,9 @@
 window.filterArray = [];
 window.sortArray = {};
 
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".filter--car .scroll--car .slide");
+const slides = document.querySelectorAll(".filter--car .scroll--car .slide");
 
-  if (!slides.length) {
-    return;
-  }
-
+if (slides.length) {
   slides.forEach((slide, i) => {
     let dataNew =
       slide.querySelector("[data-new]") || slide.closest("[data-new]");
@@ -104,4 +100,4 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let key in sortArray) {
     sortArray[key] = filterArray.slice().sort(sortArray[key]);
   }
-});
+}

@@ -1,13 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const active = "active";
+const active = "active";
 
-  const menu = document.getElementById("#menu");
-  const btn = document.querySelector("[data-click='menu']");
+const menu = document.getElementById("#menu");
+const btn = document.querySelector("[data-click='menu']");
 
-  if (!menu) {
-    return;
-  }
-
+if (menu) {
   menu.addEventListener("click", (e) => {
     let el = e.target;
 
@@ -21,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   menuChilds(menu);
-});
+}
 
 // Функция для эллементов меню, а точнее для тех, у кого есть дочерние элементы и они должны быть показаны при клике
 function menuChilds(menu, active = "active") {

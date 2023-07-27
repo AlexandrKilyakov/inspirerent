@@ -11,6 +11,7 @@ button,
   background-color: $clr-mn;
   color: $clr-f;
   border: none;
+  border-radius: $i4;
   gap: $i8;
   padding: $i16;
   text-align: center;
@@ -129,5 +130,23 @@ button,
     &[data-toggle-favorites="true"] {
       --x: 3;
     }
+  }
+  &--aside {
+    @include bg-contain("@svg/art/btn-aside.svg");
+    max-width: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: $ln;
+  }
+
+  &--back {
+    @include bg-contain("@svg/art/btn-aside.svg");
+    max-width: none;
+    width: 100%;
+    height: 2rem;
+    background-color: transparent;
+    border: $ln;
+    rotate: 180deg;
   }
 }

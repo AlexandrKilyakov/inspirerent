@@ -1,13 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const inputs = document.querySelectorAll(
-    ".filter--car .click--elements input"
-  );
-  const slides = document.querySelectorAll(".filter--car .scroll--car .slide");
+const inputs = document.querySelectorAll(".filter--car .click--elements input");
+const slides = document.querySelectorAll(".filter--car .scroll--car .slide");
 
-  if (!(inputs.length && slides.length)) {
-    return;
-  }
-
+if (inputs.length && slides.length) {
   const filter = {
     new: false,
     box_types: false,
@@ -42,4 +36,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-});
+}

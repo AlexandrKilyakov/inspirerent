@@ -1,0 +1,43 @@
+@@include('./template/header.html', { title: "Регистрация" })
+@@include('./inc/breadcrumbs.html', { text: "Регистрация" })
+
+<div id="logup" class="modal logup desktop">
+  <div class="modal--body modal--order">
+    <h2 class="modal--name">Регистрация</h2>
+    <form action="" name="login">
+      <label class="label--reverse">
+        <input type="text" placeholder="Иван Иванов" required />
+        <span class="name">Имя и Фамилия:</span>
+      </label>
+      <label class="label--reverse">
+        <input type="email" placeholder="ivanov@mail.ru" required />
+        <span class="name">E-mail:</span>
+      </label>
+      <label class="label--reverse">
+        <input type="tel" required />
+        <span class="name">Телефон:</span>
+      </label>
+      <label class="label--reverse">
+        <input type="password" placeholder="123456" minlength="6" required />
+        <span class="name">Пароль:</span>
+        <span class="chips">минимум 6 символов</span>
+      </label>
+      <label class="label--reverse">
+        <input type="password" placeholder="123456" minlength="6" required />
+        <span class="name">Подтверждение пароля:</span>
+      </label>
+      <label class="triggers">
+        <input type="checkbox" name="name" />
+        <span class="trigger"></span>
+        <span class="chips"
+          >Я знакомлен и принимаю
+          <a href="#" target="_blank">Политику безопасности</a></span
+        >
+      </label>
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    @@include("./inc/link-line.html", {text: "Я зарегистрирован"})
+  </div>
+</div>
+
+@@include('./template/footer.html')

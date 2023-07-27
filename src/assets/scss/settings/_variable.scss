@@ -1,10 +1,12 @@
 // Цвета
 $clr-blk-pct-02: var(--clr-black-opacity-02, rgba(34, 34, 34, 0.2));
 $clr-scrollbar: var(--clr-main-opacity-02, rgba(104, 153, 1, 0.2));
+$clr-notification: var(--clr-main-opacity-01, rgba(104, 153, 1, 0.1));
 $clr-blkt: var(--clr-blackout, rgba(0, 0, 0, 0.5));
 $clr-hvr: var(--clr-hover, #4e7200);
 $clr-hvr-2: var(--clr-hover-2, #ffc400);
-$clr-stp: var(--clr-stop, #ff0000);
+$clr-stp: var(--clr-stop, #ce2028);
+$clr-cnsl: var(--clr-stop, #f00);
 $clr-mn: var(--clr-main, #689901);
 $clr-mn-2: var(--clr-main-2, #ffce33);
 $clr-g-80: var(--clr-grey-80, #4e4e4e);

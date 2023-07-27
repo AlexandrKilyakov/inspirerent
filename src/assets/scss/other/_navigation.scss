@@ -4,7 +4,11 @@
     width: fit-content;
     gap: $i16;
     margin: $i24 auto 0;
-    overflow-x: auto;
+
+    @include __467 {
+      width: 100%;
+      overflow-x: auto;
+    }
 
     .num {
       font-size: $h5;
