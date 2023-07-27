@@ -1,0 +1,66 @@
+@@include('./template/header.html', { title: "Отзывы" })
+@@include('./inc/breadcrumbs.html', { text: "Отзывы" })
+
+<article class="margin--std container grid-3">
+  <div class="item">
+    <h1 class="title">Отзывы о работе<br />Inspire Москва</h1>
+    <p>
+      Компания Inspire заботится о своих клиентах и всегда стремится к
+      максимально качественному уровню сервиса. Поэтому мнение наших клиентов —
+      самый важный уровень контроля. Помогите нам стать лучше, расскажите о
+      качестве предоставленных нами услуг.
+    </p>
+    <a href="#" class="btn mt32">Оставить отзыв</a>
+  </div>
+  <div class="banner--mini" style="background-image: url(@img/peaple.jpg)">
+    <div class="logo">@@include("./assets/svg/logo.html")</div>
+  </div>
+</article>
+
+<section class="margin--std container grid-6">
+  <h2 class="title full--column">Нам доверяют</h2>
+  <img src="@img/trust/1.png" alt="" />
+  <img src="@img/trust/2.png" alt="" />
+  <img src="@img/trust/3.png" alt="" />
+  <img src="@img/trust/4.png" alt="" />
+  <img src="@img/trust/5.png" alt="" />
+  <img src="@img/trust/6.png" alt="" />
+</section>
+
+<section class="margin--std container">
+  <div class="letters">
+    <h2 class="title">Благодарственные письма от корпоративных клиентов</h2>
+    <div class="scroll--x">
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+      <img src="@img/write.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<section class="margin--std container">
+  <h2 class="title">Отзывы частных клиентов</h2>
+  <div class="grid-2">
+    <p class="mb32">
+      Средний рейтинг нашей работы —&nbsp;оценка 4,95&nbsp;из&nbsp;5,00
+      на&nbsp;основе более&nbsp;чем 2286&nbsp;отзывов. Некоторые из&nbsp;наших
+      пользователей поделились своим опытом работы&nbsp;Inspire, ознакомьтесь
+      с&nbsp;ними ниже и&nbsp;оставляйте свои отзывы.
+    </p>
+    <div></div>
+  </div>
+</section>
+
+@@include('./template/footer.html')

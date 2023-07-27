@@ -1,0 +1,11 @@
+%cart {
+  @extend %z1;
+  width: fit-content;
+  border-radius: $br-cart;
+}
+
+%mt-last-child {
+  > :last-child {
+    margin-top: auto;
+  }
+}

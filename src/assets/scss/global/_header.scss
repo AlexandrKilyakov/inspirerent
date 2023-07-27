@@ -1,0 +1,66 @@
+.header {
+  @extend %f-center;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  background-color: $clr-mn;
+  padding: $i16 $i20;
+  gap: $i8;
+  z-index: 99;
+
+  a {
+    &[data-icon] {
+      &:hover {
+        --x: 4;
+      }
+    }
+  }
+
+  .icon--element {
+    color: $clr-f;
+    font-size: $f24;
+    font-weight: 900;
+    line-height: 120%;
+
+    @media (max-width: 26.5625rem) {
+      font-size: 0;
+    }
+
+    @include not-last(0);
+
+    &[data-icon] {
+      --w: 2rem;
+      --h: 2rem;
+    }
+
+    &:hover {
+      color: $clr-mn-2;
+    }
+  }
+
+  .burger--menu {
+    margin-inline: $i8;
+
+    @media (max-width: 15.625rem) {
+      font-size: 0;
+    }
+  }
+
+  &--link {
+    &-icon {
+      @include square-ava();
+      display: block;
+      color: $clr-f;
+
+      @extend %svg-current;
+
+      &:hover {
+        color: $clr-mn-2;
+      }
+    }
+  }
+
+  &--mr {
+    margin-right: auto;
+  }
+}

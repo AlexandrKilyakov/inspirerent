@@ -1,0 +1,51 @@
+%dataBefore {
+  &:before {
+    content: "";
+    @extend %bg-contain;
+    @include square-ava($i24);
+  }
+}
+
+@mixin dataType($art) {
+  @extend %dataBefore;
+
+  &:before {
+    content: "";
+    background-image: url($art);
+  }
+}
+
+.inspire {
+  &--select {
+    &-header {
+      @extend %f-center;
+      @extend %select;
+      @include cart();
+      width: 26.375rem;
+      height: 100%;
+      padding-block: $i8;
+      gap: $i12;
+
+      &[data-type="point-issue"] {
+        @include dataType($punkt);
+      }
+
+      &[data-type="date"] {
+        @include dataType($calendar);
+      }
+
+      [data-output] {
+        &:after {
+          content: attr(data-output);
+          display: block;
+          color: $clr-g-35;
+        }
+      }
+    }
+  }
+  &-center {
+    display: flex;
+    justify-content: center;
+    gap: $i1;
+  }
+}

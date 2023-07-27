@@ -1,0 +1,55 @@
+%-baza {
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    @include sprite("@svg/combo/x64.svg", 4);
+  }
+}
+
+@mixin -before-ava($name, $x: 0, $y: 0, $w: 4rem, $h: 4rem) {
+  [data-before-ava="#{$name}"] {
+    @extend %-baza;
+    --w: #{$w};
+    --h: #{$h};
+    --x: #{$x};
+    --y: #{$y};
+  }
+}
+
+@include -before-ava("call-24-main", 3);
+@include -before-ava("call-main", 3, 1);
+@include -before-ava("car-main", 3, 2);
+@include -before-ava("dtp-main", 3, 3);
+@include -before-ava("get-car-main", 3, 4);
+@include -before-ava("child-seat-main", 2);
+@include -before-ava("loc-line-main", 2, 1);
+@include -before-ava("insure-main", 2, 2);
+@include -before-ava("defend-main", 2, 3);
+@include -before-ava("man-main", 2, 4);
+@include -before-ava("flex-main", 2, 5, 8rem);
+@include -before-ava("tarif-main", 2, 6);
+@include -before-ava("keys-main", 2, 7);
+@include -before-ava("garage-main", 2, 8);
+@include -before-ava("money-main", 3, 6);
+@include -before-ava("in-road-main", 3, 7);
+
+@include -before-ava("call-24", 1);
+@include -before-ava("call", 1, 1);
+@include -before-ava("car", 1, 2);
+@include -before-ava("dtp", 1, 3);
+@include -before-ava("get-car", 1, 4);
+@include -before-ava("child-seat");
+@include -before-ava("loc-line", 0, 1);
+@include -before-ava("insure", 0, 2);
+@include -before-ava("defend", 0, 3);
+@include -before-ava("man", 0, 4);
+@include -before-ava("flex", 0, 5, 8rem);
+@include -before-ava("tarif", 0, 6);
+@include -before-ava("keys", 0, 7);
+@include -before-ava("garage", 0, 8);
+@include -before-ava("money", 1, 6);
+@include -before-ava("in-road", 1, 7);

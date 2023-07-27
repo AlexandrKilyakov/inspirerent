@@ -1,0 +1,26 @@
+.form {
+  @extend %f-column;
+  position: relative;
+  gap: $i8;
+}
+
+.label {
+  &--reverse {
+    flex-direction: column-reverse;
+    display: flex;
+    text-align: start;
+    gap: $i8;
+
+    @include not-last($i16);
+  }
+}
+
+label {
+  &.shifter {
+    flex-direction: column-reverse;
+    display: flex;
+    gap: $i8;
+
+    @include not-last($i16);
+  }
+}

@@ -1,0 +1,10 @@
+@mixin cart($clr: $clr-f, $p: $i24) {
+  @extend %cart;
+  background-color: $clr;
+  padding: $p;
+}
+
+@mixin close($size) {
+  --size: #{$size};
+  @extend %close;
+}

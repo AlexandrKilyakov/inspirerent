@@ -1,0 +1,83 @@
+%square {
+  @include square-ava();
+  @extend %bg-contain;
+  display: block;
+}
+
+@mixin bg-image($art, $name: $art) {
+  @if $name != $art {
+    .#{$name} {
+      @extend %square;
+      background-image: url(@svg/art/#{$art}.svg);
+    }
+  } @else {
+    .svg-#{$art} {
+      @extend %square;
+      background-image: url(@svg/art/#{$art}.svg);
+    }
+  }
+
+  .before-#{$name} {
+    &:before {
+      @extend %square;
+      content: "";
+      background-image: url(@svg/art/#{$art}.svg);
+    }
+  }
+}
+
+.icon {
+  &--element {
+    @extend %flex-center;
+    width: fit-content;
+    column-gap: $i10;
+    color: $clr;
+
+    @include not-last($i8);
+
+    @include __967 {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--big {
+    .icon--element,
+    [class*="before-"]:before {
+      --ava: 4rem;
+    }
+
+    .icon--element {
+      flex-wrap: nowrap;
+      @media (min-width: 60.5rem) {
+        padding-inline: $i32;
+      }
+
+      @include __567 {
+        width: 100%;
+        justify-content: start;
+      }
+    }
+  }
+}
+
+@include bg-image("arrow");
+@include bg-image("calendar");
+@include bg-image("line-left");
+@include bg-image("line-right");
+@include bg-image("loc");
+@include bg-image("mail");
+@include bg-image("no-photo");
+@include bg-image("phone");
+@include bg-image("punkt");
+@include bg-image("switch");
+
+@include bg-image("country/en", "en");
+
+@include bg-image("icon/call", "icon-call");
+@include bg-image("icon/car", "icon-car");
+@include bg-image("icon/dtp", "icon-dtp");
+@include bg-image("icon/flex", "icon-flex");
+@include bg-image("icon/get-car", "icon-get-car");
+@include bg-image("icon/loc-f", "icon-loc-f");
+@include bg-image("icon/phone-24", "icon-phone-24");
+@include bg-image("icon/train", "icon-train");

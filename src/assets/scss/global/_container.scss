@@ -1,0 +1,19 @@
+.container {
+  @include container-inline(100vw);
+
+  .article--container,
+  .article--content {
+    padding: 0;
+  }
+}
+
+.article {
+  &--content {
+    @include container(48.75rem);
+    margin: $i64 auto;
+  }
+
+  &--container {
+    @include container-inline(70rem);
+  }
+}

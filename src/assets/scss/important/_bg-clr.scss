@@ -1,0 +1,16 @@
+@mixin clr($clr) {
+  .clr-#{$clr} {
+    color: var(--clr-#{$clr}) !important;
+  }
+}
+
+@mixin bg($clr) {
+  .bg-#{$clr} {
+    background-color: var(--clr-#{$clr}) !important;
+  }
+}
+
+@include clr("main");
+@include clr("stop");
+
+@include bg("f");

@@ -1,0 +1,55 @@
+input,
+textarea,
+select {
+  width: 100%;
+  color: $clr;
+  background-color: $clr-f;
+  border: $ln-g-15;
+  border-radius: $br;
+  padding: $i10;
+  transition: all 0.1s;
+
+  &:focus-visible,
+  &:focus {
+    outline: none;
+    border-color: $clr-mn;
+  }
+
+  &:hover:not(:focus, :focus-visible, :disabled) {
+    border-color: $clr-g-55;
+  }
+}
+
+select {
+  min-height: 3rem;
+  appearance: none;
+
+  @extend %select;
+}
+
+option {
+  background-color: $clr-bg;
+
+  &:checked {
+    background: $clr-hvr;
+    color: $clr-f;
+  }
+}
+
+textarea {
+  height: 7rem;
+  border-radius: $br;
+  resize: none;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  legend {
+    font-size: $f20;
+    line-height: 150%;
+    margin-bottom: $i16;
+  }
+}

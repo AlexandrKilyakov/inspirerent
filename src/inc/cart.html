@@ -1,0 +1,26 @@
+<div class="cart slide wow fadeIn" data-new="@@if(context.new){@@new}" data-view="@@view">
+  <header class="cart--header">
+    <div class="name">
+      <h2 class="title">@@title</h2>
+      <p class="subtitle" data-box-types="@@box_types"></p>
+    </div>
+    <button
+      type="button"
+      class="btn--like"
+      data-toggle-favorites="@@favorites"
+      data-id
+    ></button>
+  </header>
+  <img src="@@art" alt="" class="ava" />
+  <p
+    class="price bb"
+    data-discount="@@discount"
+    data-old-price="@@old_price"
+    data-price="@@price"
+  >
+    @@price ₽
+  </p>
+  <p class="rent" data-rent="@@rent">@@rent ₽ / сутки</p>
+
+  <a href="#" class="btn" target="_blank">Забронировать</a>
+</div>

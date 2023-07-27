@@ -1,0 +1,142 @@
+@@include('./template/header.html', { title: "Акции" })
+@@include('./inc/breadcrumbs.html', { text: "Акции" })
+
+<section class="section--std container">
+  <h1 class="title wow fadeIn">
+    Акции и новости от автопроката «Inspire» Москва
+  </h1>
+
+  <div class="news--list" data-posts>
+    <label class="triggers wow fadeIn">
+      <input type="checkbox" name="stock" data-click="choice-post" />
+      <span class="trigger--point"></span>
+      <span class="value">только Текущие акции</span>
+    </label>
+
+    <article class="post wow fadeIn">
+      <img src="@img/1.jpg" alt="" />
+      <div class="content">
+        <header class="post--header">
+          <p class="new--category" data-type="stock"></p>
+          <time>30 мая 2023</time>
+        </header>
+        <h2 class="name">
+          @@include("./inc/link-line.html", {text:
+          "Аренда&nbsp;до&nbsp;25&nbsp;апреля&nbsp;cо&nbsp;скидкой до 20%"})
+        </h2>
+        <p>
+          С 1 апреля 2023 года прокат автомобилей без водителя "Europcar"
+          объявил о запуске новой Акции для привлечения потенциальных клиентов.
+        </p>
+        <div class="statistics">
+          <div class="item">
+            <p class="title">Дата бронирования:</p>
+            <p class="value">31 декабря - 30 апреля</p>
+          </div>
+          <div class="item">
+            <p class="title">Дата аренды авто:</p>
+            <p class="value">1 апреля - 30 апреля</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="post wow fadeIn">
+      <img src="" alt="" />
+      <div class="content">
+        <header class="post--header">
+          <p class="new--category" data-type="news"></p>
+          <time>30 декабря 2022</time>
+        </header>
+        <h2 class="name">
+          @@include("./inc/link-line.html", {text: "Новый график работы"})
+        </h2>
+        <p>Изменилось время работы офисов.</p>
+      </div>
+    </article>
+
+    <article class="post wow fadeIn">
+      <img src="@img/2.jpg" alt="" />
+      <div class="content">
+        <header class="post--header">
+          <p class="new--category" data-type="past-stock"></p>
+          <time>30 мая 2022</time>
+        </header>
+        <h2 class="name">
+          @@include("./inc/link-line.html", {text:
+          "Бесплатная&nbsp;подача&nbsp;автомобиля&nbsp;по адресу"})
+        </h2>
+        <p>
+          Акция распространяется на заказы, размещенные за 24 часа до времени
+          начала действия заказа.
+        </p>
+      </div>
+    </article>
+
+    <article class="post wow fadeIn">
+      <img src="" alt="" />
+      <div class="content">
+        <header class="post--header">
+          <p class="new--category" data-type="news"></p>
+          <time>28 февраля 2022</time>
+        </header>
+        <h2 class="name">
+          @@include("./inc/link-line.html", {text:
+          "Мы&nbsp;переезжаем&nbsp;на&nbsp;новый&nbsp;сайт"})
+        </h2>
+        <p>
+          Наша компания не стоит на месте! И сегодня мы рады представить вам
+          новый бренд, под которым будет осуществляться дальнейшее обслуживание
+          - "Inspire".
+        </p>
+      </div>
+    </article>
+
+    <article class="post wow fadeIn">
+      <img src="@img/3.jpg" alt="" />
+      <div class="content">
+        <header class="post--header">
+          <p class="new--category" data-type="past-stock"></p>
+          <time>29 января 2023</time>
+        </header>
+        <h2 class="name">
+          @@include("./inc/link-line.html", {text:
+          "Аренда&nbsp;до&nbsp;25&nbsp;апреля&nbsp;cо&nbsp;скидкой до 20%"})
+        </h2>
+        <p>
+          С 1 апреля 2023 года прокат автомобилей без водителя "Europcar"
+          объявил о запуске новой Акции для привлечения потенциальных клиентов.
+        </p>
+        <div class="statistics">
+          <div class="item">
+            <p class="title">Дата бронирования:</p>
+            <p class="value">31 декабря - 30 апреля</p>
+          </div>
+          <div class="item">
+            <p class="title">Дата аренды авто:</p>
+            <p class="value">1 апреля - 30 апреля</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <section class="navigation--paginated wow fadeIn">
+      <a href="#" class="btn-line" data-step="start" data-stop></a>
+      <a href="#" class="btn-line" data-step="left" data-stop></a>
+      <a href="#" class="num active">1</a>
+      <a href="#" class="num">2</a>
+      <a href="#" class="num">3</a>
+      <a href="#" class="num">4</a>
+      <a href="#" class="num">5</a>
+      <a href="#" class="num">6</a>
+      <a href="#" class="num">7</a>
+      <a href="#" class="num">8</a>
+      <a href="#" class="num">9</a>
+      <a href="#" class="num">10</a>
+      <a href="#" class="btn-line" data-step="right"></a>
+      <a href="#" class="btn-line" data-step="end"></a>
+    </section>
+  </div>
+</section>
+
+@@include('./template/footer.html')

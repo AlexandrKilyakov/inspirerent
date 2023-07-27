@@ -1,0 +1,34 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  @include not-first-last($i24, $i24);
+
+  tr {
+    border-bottom: $ln-g-35;
+  }
+
+  th,
+  td {
+    width: 0;
+    padding: $i10;
+  }
+
+  th {
+    padding-top: 0;
+    color: $clr-g-55;
+    font-size: $f12;
+    font-weight: 400;
+    text-align: start;
+  }
+
+  td {
+    color: $clr;
+
+    &:not(:first-child) {
+      text-align: center;
+      vertical-align: middle;
+      border-left: $ln-g-35;
+    }
+  }
+}

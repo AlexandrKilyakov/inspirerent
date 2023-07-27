@@ -1,0 +1,235 @@
+.cart {
+  @include cart();
+  overflow: hidden;
+
+  &:hover {
+    a.btn {
+      transform: translateY(0);
+    }
+  }
+
+  .title {
+    font-size: $h3;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .subtitle {
+    color: $clr-g-35;
+
+    &[data-box-types] {
+      &:empty {
+        display: block;
+      }
+
+      &::after {
+        content: attr(data-box-types);
+      }
+    }
+  }
+
+  .ava {
+    @extend %fit-contain;
+    min-height: 9.375rem;
+    max-height: 22.5rem;
+    aspect-ratio: 1/1;
+  }
+
+  .rent {
+    @include not-last(0);
+  }
+
+  a.btn {
+    position: absolute;
+    inset: auto 0 0 0;
+    max-width: 100%;
+    transform: translateY(100%);
+  }
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: $i20;
+  }
+
+  &--new {
+    position: relative;
+    border: $ln-g-15;
+
+    .ava {
+      width: 100%;
+      aspect-ratio: 413/219;
+      min-height: 9.375rem;
+      max-height: 22.5rem;
+      margin: -0.0625rem;
+      inline-size: -webkit-fill-available;
+      border-radius: 0 0 $br $br;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .new--category {
+      position: absolute;
+      top: $i16;
+      left: $i16;
+    }
+
+    .content {
+      max-height: 10.5rem;
+      margin: $i24;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 6;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+    }
+
+    time {
+      font-size: $f16;
+      color: $clr-g-35;
+
+      @include not-last($i8);
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: $h4;
+
+      @include not-last($i16);
+    }
+  }
+
+  &--presentment {
+    @extend %f-column;
+    @extend %mt-last-child;
+
+    @media (min-width: 60.5rem) {
+      padding-inline: $i32;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: $h3;
+
+      &:not(:last-child) {
+        padding-bottom: $i16;
+        margin-bottom: $i16;
+        border-bottom: $ln-g-15;
+      }
+
+      &[data-before-ava] {
+        &::before {
+          margin-bottom: $i8;
+        }
+      }
+    }
+
+    p {
+      color: $clr-g-80;
+
+      @include not-last($i16);
+    }
+  }
+
+  &--attention {
+    @include cart($clr-bg);
+    @include not-first-last($i16, $i16);
+
+    .name {
+      font-size: $h4;
+      font-weight: 500;
+      line-height: 120%;
+
+      @include not-last($i16);
+
+      &:before {
+        --ava: 1.5rem;
+        content: "";
+        position: relative;
+        top: 0.15em;
+        display: inline-block;
+        min-width: var(--ava);
+        width: var(--ava);
+        height: var(--ava);
+        margin-right: 0.5rem;
+
+        @include bg-contain("@svg/art/warning.svg");
+      }
+    }
+  }
+
+  &--preview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $clr-f;
+    border-radius: 1rem;
+    column-gap: $i20;
+    overflow: hidden;
+
+    @include __1067 {
+      grid-template-columns: 100%;
+    }
+
+    .content {
+      width: 100%;
+      padding: $i64;
+
+      .title {
+        @include not-last($i32);
+      }
+    }
+
+    .preview {
+      @extend %fit-cover;
+
+      @include __1067 {
+        order: -1;
+      }
+    }
+  }
+
+  &--grey {
+    background-color: $clr-bg;
+    border-radius: $i4;
+    padding: $i8 $i16;
+
+    @include not-last($i16);
+  }
+
+  &--statistics {
+    &-numbers {
+      background-color: $clr-f;
+      border-radius: $i4;
+      padding: $i32 $i64;
+
+      @include __1067 {
+        padding: $i32;
+      }
+
+      .title {
+        @extend %flex-center;
+        flex-direction: column;
+        font-size: $h3;
+
+        body & {
+          @include not-last($i8);
+        }
+
+        &[data-num] {
+          &::before {
+            content: attr(data-num);
+            color: $clr-mn;
+            text-align: center;
+            font-size: $i72;
+            font-weight: 800;
+            line-height: 120%;
+          }
+        }
+      }
+
+      .numbers {
+        text-align: center;
+      }
+    }
+  }
+}

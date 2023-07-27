@@ -1,0 +1,88 @@
+@@include('./template/header.html', { title: "О компании" })
+@@include('./inc/breadcrumbs.html', { text: "О компании" })
+
+<section class="margin--std container">
+  <h1 class="title mb32 wow fadeIn">О компании Inspire в Москве</h1>
+  <div class="banner text wow fadeIn">
+    <div class="content">
+      <p class="wow fadeIn">
+        С 2017 года компания «Inspire» представляет интересы крупнейшей
+        международной компании по аренде автомобилей — Europcar. Мы регулярно
+        проходим аттестацию на соответствие жесточайшим европейским стандартам
+        качества обслуживания Europcar Mobility Group.
+      </p>
+      <p class="wow fadeIn">
+        Центральный офис находится в Москве. Отделение в Санкт-Петербурге
+        предоставляет полный спектр услуг по прокату автомобилей.
+      </p>
+    </div>
+    <div class="item wow fadeIn">
+      <div class="logo">@@include("./assets/svg/logo-full.html")</div>
+    </div>
+  </div>
+</section>
+
+<section class="margin--std container">
+  <div class="cart--statistics-numbers grid-4">
+    <article class="numbers wow fadeIn">
+      <h2 class="title" data-num="5">лет на рынке</h2>
+      <p>Официальное представительство Europcar Mobility Group</p>
+    </article>
+    <article class="numbers wow fadeIn">
+      <h2 class="title" data-num="180+">машин в автопарке</h2>
+      <p>Постоянно обновляемый автопарк в 3 городах России</p>
+    </article>
+    <article class="numbers wow fadeIn">
+      <h2 class="title" data-num="1500+">счастливых клиентов</h2>
+      <p>Мы внимательно следим за качеством сервиса и автопарка</p>
+    </article>
+    <article class="numbers wow fadeIn">
+      <h2 class="title" data-num="15">точек выдачи</h2>
+      <p>По индивидуальному запросу, выдача авто по любому адресу</p>
+    </article>
+  </div>
+</section>
+
+<section class="margin--std container">
+  <h2 class="title wow fadeIn">Преимущества и гарантии</h2>
+
+  <div class="content-about grid-3">
+    <div class="item">
+      <p class="wow fadeIn">
+        Основная цель - долгосрочные отношения с клиентами.
+      </p>
+      <p class="wow fadeIn">
+        Мы стремимся к цивилизованному рынку и видим свою задачу в том, чтобы
+        сделать услугу качественного автопроката доступной, удобной и простой
+        процедурой, с минимальными рисками.
+      </p>
+      <img src="@img/car-logo.png" alt="" class="img wow fadeIn" />
+    </div>
+    <div class="item">
+      <section class="grid-5 icon--big">
+        <p class="h5 icon--element wow fadeIn" data-before-ava="car-main">
+          Новые автомобили
+        </p>
+        <p class="h5 icon--element wow fadeIn" data-before-ava="dtp-main">
+          Страховка на случай ДТП
+        </p>
+        <p class="h5 icon--element wow fadeIn" data-before-ava="get-car-main">
+          Удобное расположение
+        </p>
+        <p class="h5 icon--element wow fadeIn" data-before-ava="call-24-main">
+          24-часа поддержка
+        </p>
+      </section>
+      <h3 class="wow fadeIn">Всегда есть автомобили в наличии</h3>
+      <p class="wow fadeIn">
+        При оформлении заказа онлайн или по телефону, вы получаете
+        <b>100% гарантию</b>, что вам будет предоставлен автомобиль
+        соответствующего класса к нужной дате. За счёт широкого автопарка и
+        своевременного обслуживания наших автомобилей, вы можете быть уверены в
+        своих планах.
+      </p>
+    </div>
+  </div>
+</section>
+
+@@include('./template/footer.html')

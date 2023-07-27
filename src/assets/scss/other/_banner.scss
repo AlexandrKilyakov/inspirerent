@@ -1,0 +1,193 @@
+.banner {
+  --lg-tringle: #{$clr-mn};
+  --w-tringle: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: $clr-mn;
+
+  @include __567 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &.text {
+    --w-tringle: calc(#{$i128} * 1.5);
+    grid-template-columns: repeat(2, 1fr);
+    background-color: transparent;
+
+    @include __1067 {
+      gap: $i20;
+    }
+
+    @include __867 {
+      grid-template-columns: 100%;
+    }
+
+    .logo {
+      --mw: 19.75rem;
+    }
+
+    .item {
+      &:nth-child(even) {
+        padding: $i32 0 $i32 calc(var(--w-tringle) + $i64);
+
+        @include __1067 {
+          padding: $i32;
+        }
+
+        @include __867 {
+          display: none;
+          width: 0;
+          height: 0;
+        }
+
+        &::after {
+          top: -0.0625rem;
+          right: auto;
+          left: 0;
+          background-color: $clr-bg;
+          rotate: 180deg;
+
+          @include __1067 {
+            display: none;
+            width: 0;
+            height: 0;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0%;
+          left: 100%;
+          width: $con;
+          height: 100%;
+          background-color: inherit;
+        }
+      }
+    }
+  }
+
+  .logo {
+    @extend %z1;
+    --mw: 29.5625rem;
+  }
+
+  .item {
+    @extend %f-column;
+    position: relative;
+    justify-content: center;
+    color: $clr-f;
+    padding: $i64;
+
+    p,
+    ul,
+    ol,
+    .title {
+      color: $clr-f;
+    }
+
+    @include __567 {
+      padding: $i64 $con;
+    }
+
+    &:nth-child(odd) {
+      @media (min-width: 35.5rem) {
+        grid-column: span 2;
+        padding-left: $con;
+      }
+    }
+    &:nth-child(even) {
+      background-color: var(--lg-tringle);
+
+      @media (min-width: 35.5rem) {
+        padding-inline: $i20 $con;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 100%;
+          width: var(--w-tringle);
+          height: 100%;
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          background-color: var(--lg-tringle);
+          z-index: 1;
+        }
+      }
+    }
+
+    .ava {
+      @extend %inset;
+
+      &[style*="background-image"] {
+        @extend %bg-cover;
+        background-color: lightgray;
+        background-blend-mode: luminosity;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $clr-mn;
+        mix-blend-mode: multiply;
+        z-index: 1;
+      }
+
+      img {
+        @extend %fit-cover;
+      }
+    }
+
+    .title {
+      @include not-last($i8);
+    }
+
+    button,
+    .link--line {
+      @include not-first($i16);
+    }
+  }
+
+  &--f {
+    --lg-tringle: #{$clr-f};
+    --w-tringle: 25%;
+    grid-template-columns: repeat(2, 1fr);
+
+    .item {
+      &:nth-child(odd) {
+        @media (min-width: 35.5rem) {
+          grid-column: span 1;
+        }
+      }
+
+      p,
+      ul,
+      ol {
+        color: $clr;
+      }
+
+      .title {
+        color: $clr-mn;
+      }
+    }
+  }
+
+  &--mini {
+    @extend %flex-center;
+    @extend %bg-cover;
+    border-radius: $i20;
+    padding: $i64;
+
+    .logo {
+      max-width: 21.5625rem;
+      height: fit-content;
+
+      img,
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

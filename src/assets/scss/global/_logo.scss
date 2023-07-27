@@ -1,0 +1,23 @@
+.logo {
+  --mw: 8rem;
+  display: block;
+  max-width: var(--mw);
+  width: 100%;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+a.logo {
+  color: initial !important;
+
+  &:not(.no-hover) {
+    transition: 0.3s scale;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}

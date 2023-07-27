@@ -1,0 +1,79 @@
+.catalog {
+  @include not-first-last($i16, $i64);
+
+  .post {
+    &[data-new] {
+      .preview {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 5.3125rem;
+          height: 1.875rem;
+          @include bg-contain("@svg/art/new.svg");
+          background-position: {
+            x: left;
+            y: top;
+          }
+        }
+      }
+    }
+
+    .preview {
+      border-radius: $i4;
+      border: $ln-g-15;
+      aspect-ratio: 1/1;
+      @include not-first-last($i16, $i8);
+
+      img {
+        @extend %fit-contain;
+      }
+    }
+
+    a.btn {
+      position: initial;
+      transform: translateY(0);
+      border-radius: $i4;
+      line-height: 120%;
+
+      @include not-first-last($i24, $i16);
+    }
+
+    .link--line {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+.mini-static {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $i8;
+
+  @include not-first-last($i16, $i16);
+  @include __1425 {
+    justify-content: space-between;
+  }
+
+  &.cart--grey {
+    padding: $i16;
+  }
+
+  .name {
+    width: 100%;
+  }
+
+  p {
+    @include not-last(0);
+  }
+
+  .value {
+    @extend %f-center;
+    gap: $i4;
+  }
+}

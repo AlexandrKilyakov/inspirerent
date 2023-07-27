@@ -1,0 +1,20 @@
+@mixin not-last($n: $i16) {
+  &:not(:last-child) {
+    margin-bottom: $n;
+  }
+}
+@mixin not-first($n: $i16) {
+  &:not(:first-child) {
+    margin-top: $n;
+  }
+}
+@mixin not-first-last($f: $i16, $l: $i16) {
+  @include not-first($f);
+  @include not-last($l);
+}
+
+@mixin not-hover-color($clr: $clr-f) {
+  &:not(:hover) {
+    color: $clr;
+  }
+}

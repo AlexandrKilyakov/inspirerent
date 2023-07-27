@@ -1,0 +1,69 @@
+@mixin indent($n) {
+  .p#{$n} {
+    padding-block: var(--#{$n}) !important;
+
+    &.scroll--inset {
+      scroll-margin-block-start: var(--#{$n});
+    }
+  }
+  .pt#{$n} {
+    padding-top: var(--#{$n}) !important;
+    &.scroll--inset {
+      scroll-margin-block-start: var(--#{$n});
+    }
+  }
+  .pb#{$n} {
+    padding-bottom: var(--#{$n}) !important;
+    &.scroll--inset {
+      scroll-margin-block-start: var(--#{$n});
+    }
+  }
+  .m#{$n} {
+    margin-top: var(--#{$n}) !important;
+    margin-bottom: var(--#{$n}) !important;
+    &.scroll--inset {
+      scroll-margin-block-start: var(--#{$n});
+    }
+  }
+  .mt#{$n} {
+    margin-top: var(--#{$n}) !important;
+    &.scroll--inset {
+      scroll-margin-block-start: var(--#{$n});
+    }
+  }
+  .mb#{$n} {
+    margin-bottom: var(--#{$n}) !important;
+    &.scroll--inset {
+      scroll-margin-block-start: var(--#{$n});
+    }
+  }
+}
+
+@include indent("20");
+@include indent("24");
+@include indent("28");
+@include indent("32");
+@include indent("36");
+@include indent("40");
+@include indent("44");
+@include indent("48");
+@include indent("52");
+@include indent("56");
+@include indent("60");
+@include indent("64");
+@include indent("68");
+@include indent("72");
+@include indent("76");
+@include indent("80");
+@include indent("84");
+@include indent("88");
+@include indent("92");
+@include indent("96");
+@include indent("100");
+@include indent("104");
+@include indent("108");
+@include indent("112");
+@include indent("116");
+@include indent("120");
+@include indent("124");
+@include indent("128");

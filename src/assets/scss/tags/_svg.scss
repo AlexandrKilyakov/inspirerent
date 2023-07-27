@@ -1,0 +1,10 @@
+svg {
+  --ava: 1.5rem;
+  @extend %square-ava;
+}
+
+.svg {
+  &--current {
+    @extend %svg-current;
+  }
+}

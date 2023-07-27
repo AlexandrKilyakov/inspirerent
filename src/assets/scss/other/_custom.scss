@@ -1,0 +1,73 @@
+.custom {
+  &--select-loc {
+    max-width: fit-content;
+    width: 100%;
+    font-size: $h3;
+    font-weight: 600;
+    line-height: 120%;
+    background: {
+      color: $clr-blk-pct-02;
+      image: url(@svg/art/icon/loc-f.svg);
+      repeat: no-repeat;
+      size: $i24;
+      position: {
+        y: center;
+        x: $i32;
+      }
+    }
+    color: $clr-f;
+    padding: $i10 $i32 $i10 calc($i32 + $i24 + $i16);
+    border: none;
+    border-radius: 6.25rem;
+
+    @include not-last($i32);
+
+    option {
+      &:not(:checked) {
+        background-color: $clr-mn;
+      }
+    }
+  }
+
+  &--select {
+    @extend %z1;
+    max-width: 12.3125rem;
+    width: 100%;
+
+    &:not(.active) {
+      .options {
+        @extend %no-active-op;
+      }
+    }
+
+    .name {
+      @extend %subtitle;
+      margin: 0;
+    }
+
+    .options {
+      @extend %f-column;
+      position: absolute;
+      top: calc(100% + 1rem);
+      left: 0;
+      width: 100%;
+      background-color: $clr-f;
+      border-radius: $br;
+      padding: 1rem;
+      gap: 0.5rem;
+      box-shadow: 0px 0.125rem 0.9375rem 0px rgba(0, 0, 0, 0.15);
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0.5rem 1rem 0.5rem;
+        border-color: transparent transparent $clr-f transparent;
+      }
+    }
+  }
+}

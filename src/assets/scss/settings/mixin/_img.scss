@@ -1,0 +1,4 @@
+@mixin square-ava($ava: 1.5rem) {
+  @extend %square-ava;
+  --ava: #{$ava};
+}

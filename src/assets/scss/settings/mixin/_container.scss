@@ -1,0 +1,9 @@
+@mixin container-inline($mw: 70rem) {
+  @extend %container-inline;
+  max-width: $mw;
+}
+
+@mixin container($mw: 70rem) {
+  @extend %container;
+  max-width: $mw;
+}

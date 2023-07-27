@@ -1,0 +1,18 @@
+%full-100 {
+  width: 100%;
+  height: 100%;
+}
+%fit-contain {
+  @extend %full-100;
+  object-fit: contain;
+}
+%fit-cover {
+  @extend %full-100;
+  object-fit: cover;
+}
+
+%square-ava {
+  flex: 0 0 var(--ava);
+  width: var(--ava);
+  height: var(--ava);
+}

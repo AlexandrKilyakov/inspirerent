@@ -1,0 +1,44 @@
+.slider {
+  position: relative;
+
+  &--btn {
+    --size: 3rem;
+    max-width: var(--size);
+    width: var(--size);
+    height: var(--size);
+    padding: 0;
+    border: $ln;
+    border-width: $i2;
+    background-color: transparent;
+
+    &[data-slide] {
+      @extend %bg-image;
+      background-size: 1.5rem auto;
+    }
+
+    &[data-slide="left"] {
+      background-image: url(@svg/art/line-left.svg);
+    }
+
+    &[data-slide="right"] {
+      background-image: url(@svg/art/line-right.svg);
+    }
+  }
+
+  &--window {
+    overflow: hidden;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+      user-select: none;
+    }
+  }
+
+  &--track {
+    position: relative;
+    display: flex;
+    gap: $i20;
+    transition: 1s transform;
+  }
+}

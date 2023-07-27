@@ -1,0 +1,73 @@
+$step: 5.625rem;
+$gap: 1.25rem;
+
+%-grid {
+  --gap: #{$gap};
+  display: grid;
+  gap: var(--gap);
+}
+
+@mixin grid($x) {
+  $n: 12 / $x;
+  $i: $n - 1;
+  $minW: $step * $n;
+  $mw: $minW + $gap * $i + 1.875rem;
+
+  .grid-#{$x} {
+    @extend %-grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc($minW + (var(--gap) * #{$i})), 1fr)
+    );
+
+    @media (max-width: $mw) {
+      grid-template-columns: 100%;
+    }
+  }
+}
+
+@include grid(1);
+@include grid(2);
+@include grid(3);
+@include grid(4);
+@include grid(5);
+@include grid(6);
+@include grid(7);
+@include grid(8);
+@include grid(9);
+@include grid(10);
+@include grid(11);
+@include grid(12);
+
+.full {
+  &--column {
+    grid-column: 1/-1 !important;
+
+    &.title {
+      @media (min-width: 60.5rem) {
+        @include not-last($i12);
+      }
+
+      @include __967 {
+        @include not-last($i4);
+      }
+    }
+  }
+}
+
+.row {
+  &-gap {
+    &-64 {
+      row-gap: $i64;
+    }
+  }
+}
+
+.flex {
+  @extend %f-center;
+  gap: $i16;
+
+  &-center {
+    @extend %flex-center;
+  }
+}

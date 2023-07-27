@@ -1,0 +1,285 @@
+%-input {
+  input {
+    position: absolute !important;
+    top: $i4;
+    left: $i4;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.triggers {
+  @extend %f-center;
+  position: relative;
+  height: fit-content;
+  gap: $i10;
+
+  @extend %-input;
+
+  &:hover {
+    .trigger {
+      border-color: $clr-hvr;
+    }
+  }
+
+  input {
+    &[type="radio"] {
+      ~ {
+        .trigger {
+          border-radius: $i24;
+
+          &:after {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    &:checked {
+      ~ {
+        .trigger {
+          border-color: $clr-hvr;
+
+          &:after {
+            width: 80%;
+            height: 80%;
+            background: $clr-hvr;
+          }
+        }
+
+        .trigger--point {
+          background-color: $clr-mn;
+
+          &:after {
+            left: calc(100% - 1rem);
+          }
+        }
+
+        .trigger--rating {
+          background: $clr-mn;
+          color: $clr-f;
+          border-color: $clr-hvr;
+        }
+      }
+    }
+
+    &[type="checkbox"] {
+      ~ {
+        .trigger {
+          border-radius: $i4;
+
+          &:after {
+            background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNMC41IDNMNC42MDgxMSA3TDEwIDEiIHN0cm9rZT0iIzY4OTkwMSIvPg0KPC9zdmc+DQo=")
+              center/contain no-repeat;
+            border-radius: $i2;
+          }
+        }
+      }
+    }
+
+    &[type="radio"] {
+      &:checked {
+        ~ {
+          .trigger {
+            border-color: $clr-mn;
+            background: $clr-mn;
+
+            &:after {
+              width: 50%;
+              height: 50%;
+              background: $clr-f;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .trigger {
+    @include square-ava(1rem);
+    position: relative;
+    background-color: transparent;
+    border: $ln-g-15;
+    overflow: hidden;
+    transition: 0.1s all;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      @extend %abs-center;
+      display: block;
+      width: 0;
+      height: 0;
+      transition: 0.1s all;
+      background: $clr-mn;
+    }
+
+    &.small {
+      --ava: 1rem;
+      margin-top: $i4;
+    }
+
+    &--point {
+      --w: 2rem;
+      --h: 1.25rem;
+      position: relative;
+      min-width: var(--w);
+      width: var(--w);
+      height: var(--h);
+      background-color: $clr-g-15;
+      border-radius: var(--h);
+      cursor: pointer;
+      transition: 0.1s all;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0.25rem;
+        width: calc(var(--h) - 0.5rem);
+        height: calc(var(--h) - 0.5rem);
+        background: $clr-f;
+        border-radius: 1.25rem;
+        transition: 0.3s all ease-out;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--rating {
+      @extend %flex-center;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: $ln-g-15;
+      border-radius: $i4;
+      cursor: pointer;
+      transition: 0.1s all;
+
+      &:hover,
+      &:active {
+        background: $clr-mn;
+        color: $clr;
+      }
+
+      &:hover {
+        border-color: currentColor;
+      }
+
+      &:active {
+        border-color: $clr-hvr;
+      }
+    }
+  }
+
+  &--cart {
+    position: relative;
+    display: flex;
+    height: fit-content;
+    background-color: $clr-f;
+    border-radius: $i4;
+    padding: $i16;
+    gap: $i10;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include not-last($i8);
+
+    &:hover {
+      .trigger {
+        color: $clr-mn;
+        border-color: $clr-mn;
+      }
+
+      .border {
+        border-color: $clr-mn;
+      }
+
+      .txt {
+        .cost {
+          color: $clr-mn;
+        }
+      }
+    }
+
+    @extend %-input;
+
+    input {
+      &[type="radio"] {
+        ~ {
+          .trigger {
+            border-radius: var(--ava);
+
+            &::after {
+              border-radius: inherit;
+            }
+          }
+        }
+      }
+      &[type="checkbox"] {
+        .trigger {
+          border-radius: $i4;
+
+          &::after {
+            border-radius: $i2;
+          }
+        }
+      }
+
+      &:checked {
+        ~ {
+          .trigger {
+            color: $clr-mn;
+            border-color: $clr-mn;
+
+            &:after {
+              --size: 50%;
+            }
+          }
+
+          .border {
+            border-color: $clr-mn;
+          }
+
+          .txt {
+            .cost {
+              color: $clr-mn;
+            }
+          }
+        }
+      }
+    }
+
+    .trigger {
+      @include square-ava(1rem);
+      position: relative;
+      color: $clr-g-55;
+      border: $ln-g-55;
+      transition: 0.1s border-color;
+
+      &:after {
+        --size: 0;
+        content: "";
+        @extend %abs-center;
+        display: block;
+        width: var(--size);
+        height: var(--size);
+        transition: 0.1s all;
+        background-color: currentColor;
+      }
+    }
+
+    .border {
+      @extend %inset;
+      border: $ln-g-15;
+      border-radius: inherit;
+      transition: 0.1s border-color;
+    }
+
+    .txt {
+      margin-top: -0.25rem;
+
+      .cost {
+        transition: 0.1s color;
+      }
+    }
+  }
+}

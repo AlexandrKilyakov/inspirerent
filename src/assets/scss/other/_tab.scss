@@ -1,0 +1,152 @@
+.tabs {
+  display: flex;
+
+  @include __967 {
+    flex-wrap: wrap;
+  }
+
+  &--content {
+    background-color: $clr-f;
+    border-radius: $i4;
+    padding: $i24;
+
+    .content {
+      --gap: 0.625rem;
+    }
+  }
+}
+.tab {
+  @extend %flex-center;
+  text-align: center;
+  width: fit-content;
+  background-color: $clr-f;
+  color: $clr;
+  border: $ln-g-15;
+  border-color: $clr-f;
+  border-bottom-color: $clr-g-15;
+  border-radius: $i4 $i4 0 0;
+  padding: $i16 $i32;
+
+  @include __467 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &:hover,
+  &.active {
+    border-color: $clr-mn;
+    background-color: $clr-f;
+    color: $clr;
+  }
+
+  &.active {
+    pointer-events: none;
+  }
+}
+
+.logo,
+.type {
+  &--car {
+    @extend %flex-center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: $clr-f;
+    color: $clr;
+    border: $ln-g-15;
+    border-radius: $i4;
+    padding: $i8 0;
+    gap: $i8;
+    font-size: $i16;
+
+    &[data-id] {
+      --w: 4rem;
+      --y: 0;
+
+      &:before {
+        content: "";
+        width: var(--w);
+        height: var(--h);
+      }
+
+      &.active {
+        --y: 1;
+      }
+
+      &:hover,
+      &.active {
+        border-color: $clr-mn;
+        background-color: $clr-f;
+        color: $clr;
+      }
+
+      &.active {
+        pointer-events: none;
+      }
+    }
+
+    &[data-id="0"] {
+      --x: 0;
+    }
+
+    &[data-id="1"] {
+      --x: 1;
+    }
+
+    &[data-id="2"] {
+      --x: 2;
+    }
+
+    &[data-id="3"] {
+      --x: 3;
+    }
+
+    &[data-id="4"] {
+      --x: 4;
+    }
+
+    &[data-id="5"] {
+      --x: 5;
+    }
+
+    &[data-id="6"] {
+      --x: 6;
+    }
+
+    &[data-id="7"] {
+      --x: 7;
+    }
+
+    &[data-id="8"] {
+      --x: 8;
+    }
+
+    &[data-id="9"] {
+      --x: 9;
+    }
+  }
+}
+
+.type {
+  &--car {
+    &[data-id] {
+      --h: 1.75rem;
+
+      &:before {
+        @include sprite("@svg/combo/type_car.svg", 9, var(--w));
+      }
+    }
+  }
+}
+
+.logo {
+  &--car {
+    &[data-id] {
+      --h: 4rem;
+
+      &:before {
+        @include sprite("@svg/combo/logo.svg", 10);
+      }
+    }
+  }
+}

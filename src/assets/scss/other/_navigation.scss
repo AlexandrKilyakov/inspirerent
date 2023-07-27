@@ -1,0 +1,58 @@
+.navigation {
+  &--paginated {
+    @extend %f-center;
+    width: fit-content;
+    gap: $i16;
+    margin: $i24 auto 0;
+    overflow-x: auto;
+
+    .num {
+      font-size: $h5;
+      font-weight: 500;
+      line-height: 120%;
+      color: $clr;
+
+      &:hover,
+      &.active {
+        color: $clr-mn;
+      }
+
+      &.active {
+        pointer-events: none;
+      }
+    }
+
+    .btn-line {
+      display: block;
+      @include square-ava();
+
+      &[data-step] {
+        --w: 1.5rem;
+        --h: 1.5rem;
+        --y: 1;
+        @include sprite("@svg/combo/arrow.svg", 12);
+
+        &[data-stop] {
+          pointer-events: none;
+          --y: 0;
+        }
+      }
+
+      &[data-step="start"] {
+        --x: 4;
+      }
+
+      &[data-step="end"] {
+        --x: 5;
+      }
+
+      &[data-step="left"] {
+        --x: 0;
+      }
+
+      &[data-step="right"] {
+        --x: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+%-baza-icon {
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    @include sprite("@svg/combo/x24.svg", 5);
+  }
+}
+
+@mixin -icon($name, $x: 0, $y: 0, $w: 1.5rem, $h: 1.5rem) {
+  [data-icon="#{$name}"] {
+    @extend %-baza-icon;
+    --w: #{$w};
+    --h: #{$h};
+    --x: #{$x};
+    --y: #{$y};
+  }
+}
+
+@include -icon("heart", 2, 0);
+@include -icon("loc", 2, 1);
+@include -icon("phone", 2, 2);
+@include -icon("mail", 2, 3);
+@include -icon("user", 2, 4);

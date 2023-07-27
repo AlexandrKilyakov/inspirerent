@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Black.eot');
+    src: local('Mulish Black'), local('Mulish-Black'),
+        url('Mulish-Black.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Black.woff2') format('woff2'),
+        url('Mulish-Black.woff') format('woff'),
+        url('Mulish-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-BlackItalic.eot');
+    src: local('Mulish Black Italic'), local('Mulish-BlackItalic'),
+        url('Mulish-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-BlackItalic.woff2') format('woff2'),
+        url('Mulish-BlackItalic.woff') format('woff'),
+        url('Mulish-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-ExtraBoldItalic.eot');
+    src: local('Mulish ExtraBold Italic'), local('Mulish-ExtraBoldItalic'),
+        url('Mulish-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-ExtraBoldItalic.woff2') format('woff2'),
+        url('Mulish-ExtraBoldItalic.woff') format('woff'),
+        url('Mulish-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-MediumItalic.eot');
+    src: local('Mulish Medium Italic'), local('Mulish-MediumItalic'),
+        url('Mulish-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-MediumItalic.woff2') format('woff2'),
+        url('Mulish-MediumItalic.woff') format('woff'),
+        url('Mulish-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Medium.eot');
+    src: local('Mulish Medium'), local('Mulish-Medium'),
+        url('Mulish-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Medium.woff2') format('woff2'),
+        url('Mulish-Medium.woff') format('woff'),
+        url('Mulish-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-SemiBoldItalic.eot');
+    src: local('Mulish SemiBold Italic'), local('Mulish-SemiBoldItalic'),
+        url('Mulish-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-SemiBoldItalic.woff2') format('woff2'),
+        url('Mulish-SemiBoldItalic.woff') format('woff'),
+        url('Mulish-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-BoldItalic.eot');
+    src: local('Mulish Bold Italic'), local('Mulish-BoldItalic'),
+        url('Mulish-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-BoldItalic.woff2') format('woff2'),
+        url('Mulish-BoldItalic.woff') format('woff'),
+        url('Mulish-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-ExtraBold.eot');
+    src: local('Mulish ExtraBold'), local('Mulish-ExtraBold'),
+        url('Mulish-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-ExtraBold.woff2') format('woff2'),
+        url('Mulish-ExtraBold.woff') format('woff'),
+        url('Mulish-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-LightItalic.eot');
+    src: local('Mulish Light Italic'), local('Mulish-LightItalic'),
+        url('Mulish-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-LightItalic.woff2') format('woff2'),
+        url('Mulish-LightItalic.woff') format('woff'),
+        url('Mulish-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Light.eot');
+    src: local('Mulish Light'), local('Mulish-Light'),
+        url('Mulish-Light.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Light.woff2') format('woff2'),
+        url('Mulish-Light.woff') format('woff'),
+        url('Mulish-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Bold.eot');
+    src: local('Mulish Bold'), local('Mulish-Bold'),
+        url('Mulish-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Bold.woff2') format('woff2'),
+        url('Mulish-Bold.woff') format('woff'),
+        url('Mulish-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-ExtraLightItalic.eot');
+    src: local('Mulish ExtraLight Italic'), local('Mulish-ExtraLightItalic'),
+        url('Mulish-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-ExtraLightItalic.woff2') format('woff2'),
+        url('Mulish-ExtraLightItalic.woff') format('woff'),
+        url('Mulish-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Regular.eot');
+    src: local('Mulish Regular'), local('Mulish-Regular'),
+        url('Mulish-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Regular.woff2') format('woff2'),
+        url('Mulish-Regular.woff') format('woff'),
+        url('Mulish-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-ExtraLight.eot');
+    src: local('Mulish ExtraLight'), local('Mulish-ExtraLight'),
+        url('Mulish-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-ExtraLight.woff2') format('woff2'),
+        url('Mulish-ExtraLight.woff') format('woff'),
+        url('Mulish-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-Italic.eot');
+    src: local('Mulish Italic'), local('Mulish-Italic'),
+        url('Mulish-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-Italic.woff2') format('woff2'),
+        url('Mulish-Italic.woff') format('woff'),
+        url('Mulish-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url('Mulish-SemiBold.eot');
+    src: local('Mulish SemiBold'), local('Mulish-SemiBold'),
+        url('Mulish-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Mulish-SemiBold.woff2') format('woff2'),
+        url('Mulish-SemiBold.woff') format('woff'),
+        url('Mulish-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+

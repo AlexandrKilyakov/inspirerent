@@ -1,0 +1,24 @@
+<section class="banner wow fadeIn">
+  <div class="item">
+    <div class="ava" style="background-image: url(@img/car.png)"></div>
+    <div class="logo">@@include("../assets/svg/logo.html")</div>
+  </div>
+  <div class="item">
+    <h1 class="title">
+      @@if(context.title) { @@title } @@if(!context.title) { Скидка 50% }
+    </h1>
+
+    @@if(context.text) {
+    <p>@@text</p>
+    } @@if(!context.text && context.lorem) {
+    <p>
+      Lorem ipsum dolor sit amet consectetur. Non feugiat tincidunt non laoreet
+      pellentesque nec auctor gravida
+    </p>
+    }
+
+    <button class="btn--main" data-click="order-in-1-click">
+      @@if(context.btn) { @@btn } @@if(!context.btn) { Забронировать }
+    </button>
+  </div>
+</section>

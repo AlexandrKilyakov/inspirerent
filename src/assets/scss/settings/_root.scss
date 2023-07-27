@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  // Цвета
+  --clr-main: #689901;
+  --clr-main-2: #ffce33;
+  --clr-hover: #4e7200;
+  --clr-hover-2: #ffc400;
+  --clr-text: #222;
+  --clr-grey-80: #4e4e4e;
+  --clr-grey-55: #868686;
+  --clr-grey-35: #b2b2b2;
+  --clr-grey-15: #dedede;
+  --clr-bg: #f5f5f5;
+  --clr-f: #fff;
+  --clr-ok: #689901;
+  --clr-stop: #ce2028;
+  --clr-blackout: rgba(0, 0, 0, 0.5);
+  --clr-main-opacity-02: rgba(104, 153, 1, 0.2);
+  --clr-black-opacity-02: rgba(34, 34, 34, 0.2);
+  // Рамка
+  --solid: 0.0625rem var(--clr-main) solid;
+  --solid-text: 0.0625rem var(--clr-text) solid;
+  --solid-grey-80: 0.0625rem var(--clr-grey-80) solid;
+  --solid-grey-55: 0.0625rem var(--clr-grey-55) solid;
+  --solid-grey-35: 0.0625rem var(--clr-grey-35) solid;
+  --solid-grey-15: 0.0625rem var(--clr-grey-15) solid;
+  --solid-current: 0.0625rem currentColor solid;
+
+  // Отступы
+  --20: 1.25rem;
+  --24: clamp(1.25rem, 1.154rem + 0.42vw, 1.5rem);
+  --28: clamp(1.375rem, 1.231rem + 0.63vw, 1.75rem);
+  --32: clamp(1.5rem, 1.307rem + 0.839vw, 2rem);
+  --36: clamp(1.5rem, 1.211rem + 1.259vw, 2.25rem);
+  --40: clamp(1.625rem, 1.288rem + 1.469vw, 2.5rem);
+  --44: clamp(1.625rem, 1.192rem + 1.889vw, 2.75rem);
+  --48: clamp(1.75rem, 1.269rem + 2.099vw, 3rem);
+  --52: clamp(1.875rem, 1.345rem + 2.308vw, 3.25rem);
+  --56: clamp(1.875rem, 1.249rem + 2.728vw, 3.5rem);
+  --60: clamp(2rem, 1.326rem + 2.938vw, 3.75rem);
+  --64: clamp(2rem, 1.23rem + 3.358vw, 4rem);
+  --68: clamp(2.125rem, 1.307rem + 3.568vw, 4.25rem);
+  --72: clamp(2.25rem, 1.384rem + 3.778vw, 4.5rem);
+  --76: clamp(2.375rem, 1.46rem + 3.987vw, 4.75rem);
+  --80: clamp(2.5rem, 1.537rem + 4.197vw, 5rem);
+  --84: clamp(2.625rem, 1.614rem + 4.407vw, 5.25rem);
+  --88: clamp(2.75rem, 1.691rem + 4.617vw, 5.5rem);
+  --92: clamp(2.875rem, 1.768rem + 4.827vw, 5.75rem);
+  --96: clamp(3rem, 1.845rem + 5.037vw, 6rem);
+  --100: clamp(3.125rem, 1.922rem + 5.247vw, 6.25rem);
+  --104: clamp(3.25rem, 1.998rem + 5.456vw, 6.5rem);
+  --108: clamp(3.375rem, 2.075rem + 5.666vw, 6.75rem);
+  --112: clamp(3.5rem, 2.152rem + 5.876vw, 7rem);
+  --116: clamp(3.625rem, 2.229rem + 6.086vw, 7.25rem);
+  --120: clamp(3.75rem, 2.306rem + 6.296vw, 7.5rem);
+  --124: clamp(3.875rem, 2.383rem + 6.506vw, 7.75rem);
+  --128: clamp(4rem, 2.46rem + 6.716vw, 8rem);
+
+  // Заголовки
+  --h1: clamp(2rem, 1.807rem + 0.839vw, 2.5rem);
+  --h2: clamp(1.625rem, 1.481rem + 0.63vw, 2rem);
+  --h3: 1.5rem;
+  --h4: 1.25rem;
+  --h5: 1.125rem;
+
+  // Шрифты
+  --f24: clamp(1.25rem, 1.154rem + 0.42vw, 1.5rem);
+  --f28: clamp(1.375rem, 1.231rem + 0.63vw, 1.75rem);
+  --f32: clamp(1.5rem, 1.307rem + 0.839vw, 2rem);
+  --f36: clamp(1.5rem, 1.211rem + 1.259vw, 2.25rem);
+  --f40: clamp(1.625rem, 1.288rem + 1.469vw, 2.5rem);
+  --f48: clamp(1.75rem, 1.269rem + 2.099vw, 3rem);
+
+  // Стандарт
+  --br: 0.25rem;
+  --br-cart: 0.25rem;
+  --base: 1rem;
+  --container: clamp(0.938rem, -29.412rem + 38.235vw, 5rem);
+}

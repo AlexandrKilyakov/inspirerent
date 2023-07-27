@@ -1,0 +1,73 @@
+.arrow {
+  @extend %flex-center;
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+
+  &:after {
+    content: "";
+    width: 0.375rem;
+    height: 0.375rem;
+    border: {
+      top: $ln;
+      right: $ln;
+      width: $i2;
+      radius: 0;
+    }
+    transform: rotate(45deg);
+    transition: 0.1s all;
+  }
+}
+
+.accordion {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+
+  &.active {
+    .accordion--name {
+      align-items: center;
+      color: $clr-mn;
+
+      .arrow {
+        &:after {
+          transform: translate(-50%, -25%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &--name {
+    @extend %f-center;
+    font-weight: 400;
+    line-height: 150%;
+    width: fit-content;
+    background-color: transparent;
+    color: $clr;
+    gap: $i8;
+    cursor: pointer;
+
+    &:hover {
+      color: $clr-hvr;
+    }
+
+    .arrow {
+      &:after {
+        @extend %abs-50;
+        transform: translate(-50%, -75%) rotate(135deg);
+      }
+    }
+
+    .name {
+      margin-bottom: 0;
+    }
+  }
+
+  &--child {
+    overflow: hidden;
+    transition: 0.5s height cubic-bezier(0.39, 0.58, 0.57, 1);
+  }
+}

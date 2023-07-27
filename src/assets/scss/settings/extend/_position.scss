@@ -1,0 +1,27 @@
+%abs-50 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+%abs-center {
+  @extend %abs-50;
+  transform: translate(-50%, -50%);
+}
+
+%inset {
+  position: absolute;
+  inset: 0;
+}
+
+%z1 {
+  position: relative;
+  z-index: 1;
+}
+
+%circle-absolute {
+  @extend %abs-center;
+  width: var(--ava);
+  height: var(--ava);
+  border-radius: 50%;
+}

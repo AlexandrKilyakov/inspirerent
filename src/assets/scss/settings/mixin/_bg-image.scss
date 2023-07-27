@@ -1,0 +1,20 @@
+@mixin bg-contain($url) {
+  @extend %bg-contain;
+  background-image: url($url);
+}
+@mixin bg-cover($url) {
+  @extend %bg-cover;
+  background-image: url($url);
+}
+
+@mixin sprite($art, $k, $size: var(--h)) {
+  background: {
+    image: url($art);
+    size: calc($size * $k);
+    repeat: no-repeat;
+    position: {
+      x: calc(-1 * var(--x) * $size);
+      y: calc(-1 * var(--y) * var(--h));
+    }
+  }
+}

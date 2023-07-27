@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@@title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="@css/app.min.css" />
+  </head>
+  <body>
+    <header data-role="header" class="header wow fadeIn">
+      <a
+        href="tel:88007770755"
+        class="icon--element header--mr"
+        data-icon="phone"
+        >8 (800) 777-07-55</a
+      >
+
+      <button class="burger--menu" data-click="menu" data-body="no-scroll">
+        <span class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </span>
+        Меню
+      </button>
+      <a href="#" class="header--link-icon" data-icon="user"></a>
+      <a href="#" class="header--link-icon" data-icon="heart"></a>
+    </header>
+    <div id="menu" class="menu" data-click="this" data-body="no-scroll">
+      <nav class="menu--content">
+        <button
+          type="button"
+          class="btn--close"
+          data-click="menu"
+          data-body="no-scroll"
+        ></button>
+        <a href="/" class="logo no-hover"
+          >@@include("../assets/svg/logo-full.html")</a
+        >
+        <!-- form — связывает отдельно стоящий элемент <input> с формой. -->
+        <select
+          name="rate_id"
+          form="order-in-1-click"
+          class="custom--select-loc"
+        >
+          <option value="1298376">Москва</option>
+          <option value="1488201">Санкт-Петербург</option>
+          <option value="1473758">Краснодар</option>
+        </select>
+        <a href="#" class="link--nav">Условия аренды</a>
+        <a href="#" class="link--nav">Автомобили</a>
+        <a href="#" class="link--nav">Подписка</a>
+        <a href="#" class="link--nav">Новости и акции</a>
+        <a href="#" class="link--nav">Пункты проката</a>
+        <a href="#" class="link--nav">О нас</a>
+        <button data-click="order-in-1-click" class="btn--main">
+          Заказать в 1 клик
+        </button>
+        <a href="tel:88007770755" class="icon--element" data-icon="phone"
+          >8 (800) 777-07-55</a
+        >
+        <a href="tel:84956408282" class="icon--element" data-icon="phone"
+          >+7 (495) 640-82-82 <small>(с 9:00 до 21:00)</small></a
+        >
+        <a
+          href="marlto:spbrent@europcar.ru"
+          class="icon--element"
+          data-icon="mail"
+          >spbrent@europcar.ru</a
+        >
+        @@include("../inc/social.html")
+        <a href="#" class="icon--element before-en">English version</a>
+      </nav>
+    </div>
+    <main role="main">

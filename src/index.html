@@ -1,0 +1,227 @@
+@@include('./template/header.html', { "title": "Главная" })
+@@include('./inc/banner.html', {lorem: true})
+
+<section class="filter--car">
+  <div class="container">
+    <section class="nav--center wow fadeIn">
+      <a href="#" class="link topical">Москва</a>
+      <a href="#" class="link">Санкт-Петербург</a>
+      <a href="#" class="link">Краснодар</a>
+    </section>
+    <section class="inspire-center wow fadeIn">
+      <div class="inspire--select">
+        <header class="inspire--select-header" data-type="point-issue">
+          <p class="name">Пункт выдачи «Метрополис»</p>
+        </header>
+      </div>
+      <div class="inspire--select">
+        <header class="inspire--select-header" data-type="date">
+          <p
+            class="name"
+            data-start="11"
+            data-end="14"
+            data-start-month="3"
+            data-end-month="3"
+            data-start-year
+            data-end-year
+            data-output=""
+          >
+            11 марта 09:00 — 14 марта 09:00
+          </p>
+        </header>
+      </div>
+    </section>
+    <div class="filter--elements wow fadeIn">
+      <div class="custom--select">
+        <p
+          class="name icon--element wow fadeIn before-switch"
+          data-click="custom--select"
+        >
+          По популярности
+        </p>
+        <section class="options">
+          <label class="triggers">
+            <input
+              type="radio"
+              name="type"
+              value="По популярности"
+              data-sort="by_popularity"
+            />
+            <span class="trigger"></span>
+            <span class="chips">По популярности</span>
+          </label>
+          <label class="triggers">
+            <input
+              type="radio"
+              name="type"
+              value="По возрастанию цены"
+              data-sort="ascending_price"
+            />
+            <span class="trigger"></span>
+            <span class="chips">По возрастанию цены</span>
+          </label>
+          <label class="triggers">
+            <input
+              type="radio"
+              name="type"
+              value="По убыванию цены"
+              data-sort="descending_price"
+            />
+            <span class="trigger"></span>
+            <span class="chips">По убыванию цены</span>
+          </label>
+          <label class="triggers">
+            <input
+              type="radio"
+              name="type"
+              value="По новинкам"
+              data-sort="by_new"
+            />
+            <span class="trigger"></span>
+            <span class="chips">По новинкам</span>
+          </label>
+          <label class="triggers">
+            <input
+              type="radio"
+              name="type"
+              value="Сначала выгодные"
+              data-sort="profitable_first"
+            />
+            <span class="trigger"></span>
+            <span class="chips">Сначала выгодные</span>
+          </label>
+        </section>
+      </div>
+      <div class="click--elements">
+        <label class="triggers">
+          <input type="checkbox" name="box-types" value="АКПП" />
+          <span class="trigger--point"></span>
+          <span class="value">акпп</span>
+        </label>
+        <label class="triggers">
+          <input type="checkbox" name="new" />
+          <span class="trigger--point"></span>
+          <span class="value">NEW</span>
+        </label>
+        <label class="triggers">
+          <input type="checkbox" name="favorites" />
+          <span class="trigger--point"></span>
+          <span class="value">мои Избранные</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  @@include("./inc/scroll-car.html", {cls: "margin-block"})
+</section>
+
+<section class="section--std bg-f">
+  <div class="container news grid-3 row-gap-64">
+    <article class="cart--presentment">
+      <h2 class="title wow fadeIn" data-before-ava="flex-main">
+        Долгосрочная аренда авто
+      </h2>
+      <p class="wow fadeIn">
+        Подписка «Flex» на аренду автомобиля по выгодным тарифам
+      </p>
+      @@include("./inc/link-line.html", {text: "Подробнее о подписке"})
+    </article>
+    <article class="cart--presentment">
+      <h2 class="title wow fadeIn" data-before-ava="call-main">
+        Дополнительные услуги
+      </h2>
+      <p class="wow fadeIn">
+        Подача автомобиля в&nbsp;аэропорту, услуги консультанта при ДТП, другие
+        опции
+      </p>
+      @@include("./inc/link-line.html", {text: "Посмотреть доп услуги"})
+    </article>
+    <article class="cart--presentment">
+      <h2 class="title wow fadeIn" data-before-ava="loc-line-main">
+        Из Москвы в&nbsp;Минск
+      </h2>
+      <p class="wow fadeIn">
+        Путешествуйте комфортно — арендуйте машину в&nbsp;Москве, верните
+        в&nbsp;Минске
+      </p>
+      @@include("./inc/link-line.html", {text: "Арендовать авто"})
+    </article>
+  </div>
+</section>
+
+<section class="section--std container grid-4 icon--big">
+  <p class="h5 icon--element wow fadeIn" data-before-ava="car-main">
+    Новые автомобили
+  </p>
+  <p class="h5 icon--element wow fadeIn" data-before-ava="dtp-main">
+    Страховка на случай ДТП
+  </p>
+  <p class="h5 icon--element wow fadeIn" data-before-ava="get-car-main">
+    Удобное расположение
+  </p>
+  <p class="h5 icon--element wow fadeIn" data-before-ava="call-24-main">
+    24-часа поддержка
+  </p>
+</section>
+
+<section class="section--std bg-f">
+  <div class="container news grid-3">
+    <header class="section--header">
+      <h2 class="title wow fadeIn">Новости Inspire</h2>
+      @@include("./inc/link-line.html", {text: "Все новости"})
+    </header>
+    <article class="cart--new wow fadeIn">
+      <a href="#" class="link--full"></a>
+      <img src="@img/1.jpg" alt="" class="ava" />
+      <p class="new--category">Новости компании</p>
+      <div class="content">
+        <time>08.02.2023</time>
+        <h3 class="title">Мы переехали на новый сайт</h3>
+        <p>
+          Наша компания не стоит на месте! И сегодня мы рады представить вам
+          новый бренд, под которым будет осуществляться дальнейшее обслуживание
+          - <b>"Inspire"</b>.
+        </p>
+      </div>
+    </article>
+    <article class="cart--new wow fadeIn">
+      <a href="#" class="link--full"></a>
+      <img src="@img/2.jpg" alt="" class="ava" />
+      <p class="new--category" data-type="offers">Предложения</p>
+      <div class="content">
+        <time>08.02.2023</time>
+        <h3 class="title">
+          Станьте партнером Inspire в&nbsp;своём городе России
+        </h3>
+        <p>Откройте офис компании с мировым именем в&nbsp;вашем городе!</p>
+      </div>
+    </article>
+    <article class="cart--new wow fadeIn">
+      <a href="#" class="link--full"></a>
+      <img src="@img/3.jpg" alt="" class="ava" />
+      <p class="new--category" data-type="promotion">Акция</p>
+      <div class="content">
+        <time>08.02.2023</time>
+        <h3 class="title">
+          Арендуйте автомобиль со скидкой до 20% и начните год с увлекательного
+          путешествия!
+        </h3>
+        <p>
+          Наша компания не стоит на месте! И сегодня мы рады представить вам
+          новый бренд и так далее по тексту
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="banner banner--f wow fadeIn">
+  <div class="item">
+    <div class="logo">@@include("./assets/svg/logo.html")</div>
+  </div>
+  <div class="item">
+    <h2 class="title">Откройте офис Inspire в&nbsp;вашем городе</h2>
+    @@include("./inc/link-line.html", {text: "Подробнее"})
+  </div>
+</section>
+
+@@include('./template/footer.html')

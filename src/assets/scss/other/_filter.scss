@@ -1,0 +1,36 @@
+.filter {
+  &--car {
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .scroll--car {
+      margin-top: 0;
+      z-index: 0;
+    }
+  }
+
+  &--elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $i20;
+    margin-block: $i32 $i16;
+
+    @include not-first-last($i32, $i16);
+  }
+}
+
+.click {
+  &--elements {
+    @extend %f-center;
+    flex-wrap: wrap;
+    gap: $i24;
+
+    .triggers {
+      .value {
+        @extend %subtitle;
+      }
+    }
+  }
+}

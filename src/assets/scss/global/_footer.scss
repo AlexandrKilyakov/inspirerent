@@ -1,0 +1,40 @@
+.footer {
+  @extend %f-column;
+  background-color: $clr;
+  padding-block: $i64;
+  gap: $i32;
+
+  .logo {
+    --mw: 11.5625rem;
+
+    @include not-last($i16);
+  }
+
+  .title {
+    color: $clr-g-55;
+
+    @include not-last($i20);
+  }
+
+  .icon--element {
+    font-weight: 700;
+    line-height: 150%;
+
+    &:not(:hover, :active) {
+      color: $clr-f;
+    }
+
+    @include not-last($i8);
+  }
+
+  &--link {
+    font-size: $f12;
+    width: fit-content;
+  }
+
+  &--end {
+    color: $clr-g-80;
+
+    @include not-last(0);
+  }
+}

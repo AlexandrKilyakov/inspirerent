@@ -1,0 +1,25 @@
+%normal {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+%f500 {
+  font-weight: 500;
+}
+
+%f600 {
+  font-weight: 600;
+}
+
+%f700 {
+  font-weight: 700;
+}
+
+%subtitle {
+  font-size: $f12;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.015rem;
+  text-transform: uppercase;
+}

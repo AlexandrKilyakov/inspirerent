@@ -1,0 +1,14 @@
+%svg-current {
+  path,
+  rect,
+  circle {
+    &[fill] {
+      fill: currentColor;
+      transition: 0.1s fill;
+    }
+    &[stroke] {
+      stroke: currentColor;
+      transition: 0.1s stroke;
+    }
+  }
+}

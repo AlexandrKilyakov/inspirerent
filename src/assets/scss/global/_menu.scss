@@ -1,0 +1,163 @@
+.menu {
+  --mw: 32rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: end;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  &:not(.active) {
+    @extend %no-active;
+
+    &:after {
+      opacity: 0;
+    }
+
+    .menu--content {
+      transform: translateX(100%);
+    }
+  }
+
+  @media (min-width: 41.75rem) {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $clr-blkt;
+      transition: 0.3s opacity;
+    }
+  }
+
+  &:after {
+    @extend %cursor;
+  }
+
+  .logo {
+    --mw: 18.8125rem;
+
+    @include not-last($i32);
+  }
+
+  .link {
+    &--nav {
+      font-size: $h3;
+      line-height: 120%;
+
+      @include not-last($i16);
+    }
+  }
+
+  .icon--element {
+    flex-wrap: wrap;
+    font-size: $h4;
+    font-weight: 500;
+    line-height: 120%;
+    @include not-last($i24);
+
+    @include not-hover-color();
+
+    &[data-icon] {
+      &:hover {
+        --x: 4;
+      }
+    }
+  }
+
+  .btn {
+    &--main {
+      font-size: $h3;
+      font-weight: 600;
+      line-height: 120%;
+
+      @include not-first-last($i48, $i32);
+    }
+
+    &--close {
+      @include not-hover-color();
+
+      @media (min-width: 41.75rem) {
+        display: none;
+      }
+    }
+  }
+
+  &--content {
+    --clr-hover: #{$clr-hvr-2};
+    @extend %z1;
+    @extend %f-center;
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100%;
+    background-color: $clr-mn;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.3s transform;
+
+    @extend %mt-last-child;
+
+    @media (min-width: 41.75rem) {
+      max-width: 32rem;
+      padding: $i64 $i108;
+    }
+
+    @include __667 {
+      padding: $i64;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $clr-mn-2;
+    }
+  }
+}
+
+.current {
+  color: var(--clr-main) !important;
+}
+
+a.current,
+.current a {
+  @extend %no-active;
+}
+
+.nav {
+  &--center {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    margin-block: $i32;
+    gap: $i20 $i32;
+
+    .link {
+      font-weight: 700;
+      line-height: 150%;
+      @include not-hover-color($clr-g-35);
+
+      &.topical {
+        @extend %no-active;
+        @extend %flex-center;
+        color: $clr;
+        --w: 1.5rem;
+        --h: 1.5rem;
+        --x: 1;
+        --y: 1;
+
+        &::before {
+          content: "";
+          display: block;
+          flex: 0 0 var(--w);
+          width: var(--w);
+          height: var(--h);
+
+          @include sprite("@svg/combo/x24.svg", 5);
+        }
+      }
+    }
+  }
+}

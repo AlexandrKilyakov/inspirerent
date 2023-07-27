@@ -1,0 +1,70 @@
+html {
+  // Окраска скролл бара для браузера FireFox
+  scrollbar-color: $clr-mn $clr-scrollbar;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: $i10;
+  height: 0.25rem;
+  background-color: $clr-scrollbar;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $clr-mn;
+}
+
+body {
+  :disabled {
+    background-color: $clr-scrollbar;
+    color: $clr-g-55;
+    @extend %no-active;
+
+    &::placeholder {
+      color: $clr-g-55;
+    }
+  }
+}
+
+:required {
+  ~ .name {
+    &::after {
+      content: " *";
+      color: $clr-stp;
+    }
+  }
+}
+
+::placeholder {
+  font-weight: 400;
+  font-size: $i16;
+  line-height: 150%;
+  color: $clr-g-55;
+}
+
+::marker {
+  color: $clr-mn;
+  font-size: $f12;
+}
+
+::selection {
+  background-color: $clr-mn;
+  color: $clr-f;
+}
+
+input {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    height: $i16;
+    width: $i16;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMCAxNC40NzZMMS41MjM3OSAxNS45OTk4TDcuOTk5OTUgOS41MjM2OEwxNC40NzYyIDE1Ljk5OTlMMTYgMTQuNDc2MUw5LjUyMzc0IDcuOTk5ODlMMTUuOTk5OCAxLjUyMzc5TDE0LjQ3NiAwTDcuOTk5OTUgNi40NzYwOUwxLjUyMzk2IDAuMDAwMTAwMjY3TDAuMDAwMTYyODM3IDEuNTIzODlMNi40NzYxNiA3Ljk5OTg5TDAgMTQuNDc2WiIgZmlsbD0iI0E1QTVBNSIvPg0KPC9zdmc+DQo=);
+    background-size: $i16;
+    cursor: pointer;
+  }
+}

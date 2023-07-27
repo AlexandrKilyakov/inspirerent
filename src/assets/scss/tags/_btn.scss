@@ -1,0 +1,133 @@
+.btn,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  @extend %flex-center;
+  font-weight: 500;
+  font-size: $h4;
+  max-width: 19.0625rem;
+  width: 100%;
+  background-color: $clr-mn;
+  color: $clr-f;
+  border: none;
+  gap: $i8;
+  padding: $i16;
+  text-align: center;
+  transition: 0.3s all;
+  cursor: pointer;
+
+  @include __467 {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    background-color: $clr-hvr;
+    color: $clr-f;
+  }
+}
+
+.burger {
+  --ava: 1.5rem;
+  @extend %f-column;
+  position: relative;
+  justify-content: space-around;
+  min-width: var(--ava);
+  width: var(--ava);
+  height: var(--ava);
+  background-color: transparent !important;
+  color: $clr-f;
+  padding: $i4;
+  gap: 0;
+
+  .line {
+    position: relative;
+    width: 100%;
+    height: $i2;
+    background: currentColor;
+    overflow: hidden;
+    @extend %no-active;
+  }
+
+  &.close {
+    &:hover {
+      color: $clr-stp;
+    }
+    .line {
+      display: none;
+    }
+
+    @include close(1.25rem);
+  }
+
+  &--menu {
+    max-width: fit-content;
+    color: $clr-f;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0;
+
+    &:hover {
+      background-color: $clr-mn;
+      color: $clr-mn-2;
+    }
+
+    .burger {
+      color: currentColor;
+    }
+  }
+}
+
+.btn {
+  &--close {
+    position: absolute;
+    top: $i32;
+    right: $i32;
+    width: var(--size) !important;
+    height: var(--size);
+    background: transparent !important;
+    color: $clr-g-55;
+    border: none;
+    padding: 0.25rem;
+
+    &:hover {
+      color: $clr-stp;
+    }
+
+    @include close(1.25rem);
+  }
+  &--main {
+    background-color: $clr-mn-2;
+    color: $clr;
+
+    &:hover {
+      background-color: $clr-hvr-2;
+      color: $clr;
+    }
+  }
+  &--like {
+    @include square-ava(2rem);
+    --x: 0;
+    --y: 0;
+    --w: var(--ava);
+    --h: var(--ava);
+
+    @include sprite("@svg/combo/x24.svg", 5);
+
+    background-color: transparent !important;
+    border-radius: var(--ava);
+    padding: 0;
+    transition: none;
+
+    &:hover {
+      --x: 1;
+    }
+
+    &[data-toggle-favorites="true"] {
+      --x: 3;
+    }
+  }
+}

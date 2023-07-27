@@ -1,0 +1,45 @@
+%-baza-weight {
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    @include sprite("@svg/combo/x32.svg", 6);
+  }
+}
+
+@mixin -icon($name, $x: 0, $y: 0, $w: 2rem, $h: 2rem) {
+  [data-weight="#{$name}"] {
+    @extend %-baza-weight;
+    --w: #{$w};
+    --h: #{$h};
+    --x: #{$x};
+    --y: #{$y};
+  }
+}
+
+@include -icon("car-door", 0, 0);
+@include -icon("peaple", 0, 1);
+@include -icon("bag", 0, 2);
+@include -icon("transmission", 0, 3);
+@include -icon("temperature", 0, 4);
+@include -icon("man", 1, 0);
+@include -icon("wheel", 1, 1);
+@include -icon("tabler", 1, 2);
+@include -icon("mail", 1, 3);
+@include -icon("sun", 1, 4);
+@include -icon("moon", 2, 0);
+
+@include -icon("car-door-main", 3, 0);
+@include -icon("peaple-main", 3, 1);
+@include -icon("bag-main", 3, 2);
+@include -icon("transmission-main", 3, 3);
+@include -icon("temperature-main", 3, 4);
+@include -icon("man-main", 4, 0);
+@include -icon("wheel-main", 4, 1);
+@include -icon("tabler-main", 4, 2);
+@include -icon("mail-main", 4, 3);
+@include -icon("sun-main", 4, 4);
+@include -icon("moon-main", 5, 0);

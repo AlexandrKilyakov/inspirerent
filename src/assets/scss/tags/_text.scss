@@ -1,0 +1,276 @@
+%h-normal {
+  line-height: 120%;
+  margin: 0;
+  color: $clr;
+}
+
+h1,
+.h1 {
+  @extend %h-normal;
+  font-weight: 700;
+  font-size: $h1;
+}
+
+h2,
+.h2 {
+  @extend %h-normal;
+  font-weight: 600;
+  font-size: $h2;
+}
+
+h3,
+.h3 {
+  @extend %h-normal;
+  font-weight: 600;
+  font-size: $h3;
+}
+
+h4,
+.h4 {
+  @extend %h-normal;
+  font-weight: 500;
+  @include not-last($i16);
+  font-size: $h4;
+}
+
+h5,
+.h5 {
+  @extend %h-normal;
+  font-weight: 500;
+  font-size: $h5;
+}
+
+small,
+.chips {
+  @extend %normal;
+  display: block;
+  font-size: $f12;
+}
+
+p {
+  @include not-last($i8);
+  color: $clr-g-80;
+
+  &:empty {
+    display: none;
+  }
+}
+
+p,
+span {
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+ul,
+ol {
+  @include not-first-last($i8, $i8);
+  color: $clr-g-80;
+
+  margin: 0;
+  padding-inline-start: $i16;
+
+  ul,
+  ol {
+    margin: $i8 0 $i16;
+  }
+
+  &.anchos {
+    list-style: decimal-leading-zero;
+    padding-inline-start: revert;
+
+    li {
+      @include not-last($i16);
+    }
+
+    a {
+      @include not-hover-color($clr);
+      margin-left: $i16;
+    }
+
+    .current {
+      a,
+      &::marker {
+        color: $clr-mn;
+      }
+    }
+
+    ::marker {
+      font-size: 1rem;
+      color: $clr-g-55;
+    }
+  }
+
+  &.sber {
+    padding-inline-start: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      color: $clr-g-80;
+      gap: $i16;
+      @include not-last($i16);
+
+      &:before {
+        content: "";
+        @include square-ava();
+        @include bg-contain("@svg/art/sber.svg");
+      }
+
+      b {
+        font-weight: 700;
+        color: $clr;
+      }
+    }
+  }
+}
+
+time {
+  display: block;
+  color: $clr-g-35;
+  font-size: $f14;
+  line-height: 150%;
+}
+
+address {
+  font-style: normal;
+}
+
+.tall {
+  font-weight: 600;
+  line-height: 150%;
+  color: $clr;
+}
+
+.bold {
+  font-weight: 700;
+  color: $clr;
+}
+
+.title {
+  &--center {
+    text-align: center;
+
+    @include not-last($i32);
+  }
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: $f12;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-right {
+    text-align: right;
+  }
+  &-start {
+    text-align: start;
+  }
+  &-end {
+    text-align: end;
+  }
+}
+
+.line {
+  list-style: none;
+  padding-inline-start: 0;
+
+  li {
+    position: relative;
+    letter-spacing: 0.05em;
+
+    @include not-last($i16);
+  }
+
+  > li {
+    padding-inline-start: $i24;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0.625rem;
+      left: 0;
+      display: block;
+      width: $i16;
+      height: $i2;
+      background: $clr-mn;
+    }
+  }
+}
+
+.price {
+  font-size: $h2;
+  font-weight: 600;
+  line-height: 120%;
+  color: $clr;
+
+  @include not-last($i16);
+
+  .mini {
+    font-size: $f16;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+  }
+
+  &.bb {
+    padding-bottom: $i8;
+    border-bottom: $ln-g-15;
+
+    @include not-last($i8);
+  }
+
+  &:before,
+  &:after {
+    display: block;
+    width: fit-content;
+    font-size: $f12;
+    letter-spacing: 0.015rem;
+  }
+
+  &[data-discount] {
+    &:before {
+      content: "-" attr(data-discount) "%";
+      line-height: 120%;
+      background-color: $clr-mn;
+      color: $clr-f;
+      border-radius: 6.25rem;
+      padding: $i2 $i8;
+    }
+  }
+
+  &[data-old-price] {
+    &:after {
+      content: attr(data-old-price) " ₽";
+      color: $clr-g-55;
+      font-weight: 800;
+      line-height: 150%;
+      text-decoration-line: line-through;
+    }
+  }
+}
+
+.rent {
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.02rem;
+}
+
+b,
+strong {
+  color: $clr;
+}

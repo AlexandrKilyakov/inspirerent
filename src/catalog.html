@@ -1,0 +1,197 @@
+@@include('./template/header.html', { title: "Автомобили" })
+@@include('./inc/breadcrumbs.html', { text: "Автомобили" })
+
+<section class="margin--std container">
+  <p class="subtitle">Автопарк Inspire</p>
+  <h1 class="title h2">Выберите автомобиль для проката</h1>
+  <section class="tabs wow fadeIn">
+    <button class="tab active">Тип автомобиля</button>
+    <button class="tab">Коробка</button>
+    <button class="tab">Марка</button>
+  </section>
+  <section class="tabs--content wow fadeIn">
+    <div class="content wow fadeIn grid-10">
+      <button class="type--car active" data-id="0">Все авто</button>
+      <button class="type--car" data-id="0">Комфорт</button>
+      <button class="type--car" data-id="1">Кроссовер</button>
+      <button class="type--car" data-id="2">Минивен</button>
+      <button class="type--car" data-id="3">Эконом</button>
+      <button class="type--car" data-id="4">Ларгус</button>
+      <button class="type--car" data-id="5">Универсал</button>
+      <button class="type--car" data-id="6">Бизнес</button>
+      <button class="type--car" data-id="7">Премиум</button>
+      <button class="type--car" data-id="8">Внедорожник</button>
+    </div>
+    <div class="content wow fadeIn flex">
+      <label class="triggers">
+        <input type="checkbox" name="akpp" />
+        <span class="trigger--point"></span>
+        <span class="value subtitle">АКПП</span>
+      </label>
+      <label class="triggers">
+        <input type="checkbox" name="mkpp" />
+        <span class="trigger--point"></span>
+        <span class="value subtitle">МКПП</span>
+      </label>
+    </div>
+    <div class="content wow fadeIn grid-10">
+      <button class="logo--car" data-id="0">Huindai</button>
+      <button class="logo--car" data-id="1">Volkswagen</button>
+      <button class="logo--car" data-id="2">Toyota</button>
+      <button class="logo--car" data-id="3">Skoda</button>
+      <button class="logo--car" data-id="4">Nissan</button>
+      <button class="logo--car" data-id="5">Lada</button>
+      <button class="logo--car" data-id="6">Kia</button>
+      <button class="logo--car" data-id="7">Haval</button>
+      <button class="logo--car" data-id="8">Geely</button>
+      <button class="logo--car" data-id="9">Audi</button>
+    </div>
+  </section>
+
+  <label class="triggers wow fadeIn mt32">
+    <input type="checkbox" name="var" />
+    <span class="value subtitle">По популярности</span>
+    <span class="trigger--point"></span>
+    <span class="value subtitle">По цене</span>
+  </label>
+
+  <section class="grid-4 catalog">
+    <article class="cart post wow fadeIn" data-new>
+      <h2 class="title">Hyundai Creta (II)</h2>
+      <div class="preview">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+      </div>
+      <p class="price" data-discount="15" data-price="4 606">
+        от 4 606 ₽ <span class="mini">/ сутки</span>
+      </p>
+
+      <div class="cart--grey mini-static">
+        <p class="name">Характеристики автомобиля:</p>
+        <p class="value" data-weight="car-door">x 5</p>
+        <p class="value" data-weight="peaple">x 5</p>
+        <p class="value" data-weight="bag">x 6</p>
+        <p class="value" data-weight="transmission">АТ</p>
+        <p class="value" data-weight="temperature">есть</p>
+      </div>
+
+      <div class="mini-static">
+        <p class="name">Условия аренды:</p>
+        <p class="value" data-weight="man">от 24 лет</p>
+        <p class="value" data-weight="wheel">от 3 лет</p>
+      </div>
+
+      <a href="#" class="btn" target="_blank">Забронировать</a>
+      @@include("./inc/link-line.html", {text: "Подробнее об авто"})
+    </article>
+    <article class="cart post wow fadeIn">
+      <h2 class="title">Hyundai Creta (II)</h2>
+      <div class="preview">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+      </div>
+      <p class="price" data-discount="15" data-price="4 606">
+        от 4 606 ₽ <span class="mini">/ сутки</span>
+      </p>
+
+      <div class="cart--grey mini-static grid-12">
+        <p class="name">Характеристики автомобиля:</p>
+        <p class="value" data-weight="car-door">x 5</p>
+        <p class="value" data-weight="peaple">x 5</p>
+        <p class="value" data-weight="bag">x 6</p>
+        <p class="value" data-weight="transmission">АТ</p>
+        <p class="value" data-weight="temperature">есть</p>
+      </div>
+
+      <div class="mini-static flex">
+        <p class="name">Условия аренды:</p>
+        <p class="value" data-weight="man">от 24 лет</p>
+        <p class="value" data-weight="wheel">от 3 лет</p>
+      </div>
+
+      <a href="#" class="btn" target="_blank">Забронировать</a>
+      @@include("./inc/link-line.html", {text: "Подробнее об авто"})
+    </article>
+    <article class="cart post wow fadeIn">
+      <h2 class="title">Hyundai Creta (II)</h2>
+      <div class="preview">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+      </div>
+      <p class="price" data-discount="15" data-price="4 606">
+        от 4 606 ₽ <span class="mini">/ сутки</span>
+      </p>
+
+      <div class="cart--grey mini-static grid-12">
+        <p class="name">Характеристики автомобиля:</p>
+        <p class="value" data-weight="car-door">x 5</p>
+        <p class="value" data-weight="peaple">x 5</p>
+        <p class="value" data-weight="bag">x 6</p>
+        <p class="value" data-weight="transmission">АТ</p>
+        <p class="value" data-weight="temperature">есть</p>
+      </div>
+
+      <div class="mini-static flex">
+        <p class="name">Условия аренды:</p>
+        <p class="value" data-weight="man">от 24 лет</p>
+        <p class="value" data-weight="wheel">от 3 лет</p>
+      </div>
+
+      <a href="#" class="btn" target="_blank">Забронировать</a>
+      @@include("./inc/link-line.html", {text: "Подробнее об авто"})
+    </article>
+    <article class="cart post wow fadeIn">
+      <h2 class="title">Hyundai Creta (II)</h2>
+      <div class="preview">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+      </div>
+      <p class="price" data-discount="15" data-price="4 606">
+        от 4 606 ₽ <span class="mini">/ сутки</span>
+      </p>
+
+      <div class="cart--grey mini-static grid-12">
+        <p class="name">Характеристики автомобиля:</p>
+        <p class="value" data-weight="car-door">x 5</p>
+        <p class="value" data-weight="peaple">x 5</p>
+        <p class="value" data-weight="bag">x 6</p>
+        <p class="value" data-weight="transmission">АТ</p>
+        <p class="value" data-weight="temperature">есть</p>
+      </div>
+
+      <div class="mini-static flex">
+        <p class="name">Условия аренды:</p>
+        <p class="value" data-weight="man">от 24 лет</p>
+        <p class="value" data-weight="wheel">от 3 лет</p>
+      </div>
+
+      <a href="#" class="btn" target="_blank">Забронировать</a>
+      @@include("./inc/link-line.html", {text: "Подробнее об авто"})
+    </article>
+    <article class="cart post wow fadeIn">
+      <h2 class="title">Hyundai Creta (II)</h2>
+      <div class="preview">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+      </div>
+      <p class="price" data-discount="15" data-price="4 606">
+        от 4 606 ₽ <span class="mini">/ сутки</span>
+      </p>
+
+      <div class="cart--grey mini-static grid-12">
+        <p class="name">Характеристики автомобиля:</p>
+        <p class="value" data-weight="car-door">x 5</p>
+        <p class="value" data-weight="peaple">x 5</p>
+        <p class="value" data-weight="bag">x 6</p>
+        <p class="value" data-weight="transmission">АТ</p>
+        <p class="value" data-weight="temperature">есть</p>
+      </div>
+
+      <div class="mini-static flex">
+        <p class="name">Условия аренды:</p>
+        <p class="value" data-weight="man">от 24 лет</p>
+        <p class="value" data-weight="wheel">от 3 лет</p>
+      </div>
+
+      <a href="#" class="btn" target="_blank">Забронировать</a>
+      @@include("./inc/link-line.html", {text: "Подробнее об авто"})
+    </article>
+  </section>
+</section>
+
+@@include('./template/footer.html')

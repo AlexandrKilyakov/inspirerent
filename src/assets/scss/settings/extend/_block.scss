@@ -1,0 +1,64 @@
+%container {
+  width: 100%;
+  padding-inline: $con;
+}
+
+%container-inline {
+  width: 100%;
+  padding-inline: $con;
+  margin-inline: auto;
+}
+
+%cursor {
+  cursor: url("@img/close.png"), auto;
+}
+
+%close {
+  &:after,
+  &:before {
+    @extend %abs-50;
+    content: "";
+    display: block;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 0.25rem;
+    background-color: currentColor;
+  }
+
+  &::after {
+    width: var(--size);
+    height: $i2;
+  }
+
+  &::before {
+    width: $i2;
+    height: var(--size);
+  }
+}
+
+%no-active {
+  pointer-events: none;
+  user-select: none;
+}
+
+%no-active-op {
+  opacity: 0;
+  @extend %no-active;
+}
+
+%select {
+  body & {
+    --size: #{$i24};
+    --p: #{$i20};
+    padding-right: calc(var(--p) * 2 + var(--size));
+    text-overflow: ellipsis;
+    background: {
+      image: url(@svg/art/arrow.svg);
+      repeat: no-repeat;
+      size: var(--size);
+      position: {
+        y: center;
+        x: calc(100% - var(--size));
+      }
+    }
+  }
+}

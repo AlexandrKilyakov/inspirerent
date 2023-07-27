@@ -1,0 +1,105 @@
+a {
+  color: $clr-mn;
+  text-decoration: none;
+  transition: 0.1s all;
+  cursor: pointer;
+
+  &:hover {
+    color: $clr-hvr;
+  }
+}
+
+.link {
+  &--arrow,
+  &--line {
+    @extend %f-center;
+    color: $clr;
+    gap: $i8;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $clr-hvr;
+    }
+  }
+  &--line {
+    font-size: $h4;
+    font-weight: 500;
+    line-height: 120%;
+
+    .line {
+      color: $clr-mn;
+      transition: 0.1s color;
+      @extend %svg-current;
+    }
+
+    &:hover {
+      .line {
+        color: currentColor;
+      }
+    }
+  }
+  &--nav {
+    display: flex;
+    width: fit-content;
+    color: $clr-f;
+
+    @include not-last($i12);
+
+    &:hover {
+      color: $clr-hvr;
+    }
+  }
+  &--full {
+    @extend %inset;
+    z-index: 1;
+
+    ~ {
+      .content .title,
+      .content .name,
+      .title,
+      .name {
+        transition: 0.1s color;
+      }
+    }
+
+    &:hover {
+      ~ {
+        .content .title,
+        .content .name,
+        .title,
+        .name {
+          color: $clr-mn;
+        }
+      }
+    }
+  }
+}
+
+.downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $i20;
+
+  @include not-first-last($i20, $i20);
+
+  [download] {
+    @extend %flex-center;
+    background-color: $clr-f;
+    border-radius: $i4;
+    gap: $i4;
+    padding: $i8 $i16;
+
+    @include not-hover-color($clr);
+
+    @include __367 {
+      width: 100%;
+    }
+
+    &:after {
+      content: "";
+      @include square-ava(1.25rem);
+      @include bg-contain("@svg/art/pdf.svg");
+    }
+  }
+}
