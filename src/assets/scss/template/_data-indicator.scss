@@ -1,0 +1,27 @@
+%-baza-indicator {
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    @include sprite("@svg/combo/time-status.svg", 3);
+  }
+}
+
+@mixin -indicator($name, $x: 0, $y: 0, $w: 1.5rem, $h: 1.5rem) {
+  [data-indicator="#{$name}"] {
+    @extend %-baza-indicator;
+    @extend %f-center;
+    --w: #{$w};
+    --h: #{$h};
+    --x: #{$x};
+    --y: #{$y};
+    gap: 0.5rem;
+  }
+}
+
+@include -indicator("1");
+@include -indicator("2", 1);
+@include -indicator("3", 2);

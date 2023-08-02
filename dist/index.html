@@ -8,10 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230727205808"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230802035110"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230727205808" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230802035110" />
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
@@ -345,22 +345,817 @@
         <header class="inspire--select-header" data-type="point-issue">
           <p class="name">Пункт выдачи «Метрополис»</p>
         </header>
+        <section class="content address--map">
+          <div class="wrapper">
+            <h2 class="title" data-map="point-start">Выберите пункт выдачи</h2>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name">БЦ «Метрополис» (м. Войковская)</span>
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name">БЦ «Лотте Профсоюзная» (м. Калужская)</span>
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Шереметьево<br />(Терминал «С»)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Домодедово<br />(Терминал №1)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Внуково<br />(Терминал «А»)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+
+            <h2 class="title" data-map="point-end">Выберите пункт возврата</h2>
+            <label class="triggers">
+              <input type="checkbox" name="name" />
+              <span class="trigger"></span>
+              <span class="h4">Возврат там же</span>
+            </label>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?from=tabbar&ll=30.304909%2C59.917966&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE1MjgwNBIr0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsyIKDcuE8kEVUsFvQg%2C%2C&source=serp_navig&z=10"
+              width="560"
+              height="400"
+              frameborder="1"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </section>
       </div>
       <div class="inspire--select">
         <header class="inspire--select-header" data-type="date">
           <p
             class="name"
-            data-start="11"
-            data-end="14"
-            data-start-month="3"
-            data-end-month="3"
-            data-start-year
-            data-end-year
+            data-start="27.07.2023"
+            data-end="30.08.2023"
             data-output=""
           >
             11 марта 09:00 — 14 марта 09:00
           </p>
         </header>
+        <section class="content inspire--select-times">
+          <!-- Нужно сделать календарь нормальным, пока временный вариант  -->
+          <div class="time-item">
+            <input type="date" />
+            <div class="grid-2">
+              <div>
+                <p class="title">
+                  Время подачи: <span class="clr-stop">*</span>
+                </p>
+                <div class="inspire--select">
+                  <header class="inspire--select-header" data-indicator="1">
+                    <input type="text" value="09:00" hidden />
+                    <p class="name">09:00</p>
+                  </header>
+                  <section class="content">
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="08:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">08:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="09:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">09:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="10:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">10:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="11:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">11:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="12:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">12:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="13:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">13:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="14:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">14:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="15:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">15:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="16:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">16:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="17:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">17:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="18:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">18:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="19:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">19:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="20:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">20:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="21:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">21:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="22:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">22:00</span>
+                    </label>
+                  </section>
+                </div>
+              </div>
+              <div>
+                <p class="title">
+                  Время возврата: <span class="clr-stop">*</span>
+                </p>
+                <div class="inspire--select">
+                  <header class="inspire--select-header" data-indicator="1">
+                    <input type="text" value="09:00" hidden />
+                    <p class="name">09:00</p>
+                  </header>
+                  <section class="content">
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="08:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">08:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="09:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">09:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="10:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">10:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="11:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">11:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="12:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">12:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="13:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">13:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="14:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">14:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="15:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">15:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="16:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">16:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="17:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">17:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="18:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">18:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="19:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">19:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="20:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">20:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="21:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">21:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="22:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">22:00</span>
+                    </label>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="cart--grey">
+              <p class="subtitle" data-map="clock">Время возрата авто</p>
+              <p class="clr-stop bold">Считается как аренда еще на 1 день</p>
+              <p>
+                Вы сдаете авто слишком поздно.<br />Выгоднее сдать в
+                <span class="clr-main">22:00</span>
+              </p>
+            </div>
+            <button type="button">Далее</button>
+          </div>
+          <div class="time-item">
+            <input type="date" />
+            <div class="grid-2">
+              <div>
+                <p class="title">
+                  Время подачи: <span class="clr-stop">*</span>
+                </p>
+                <div class="inspire--select">
+                  <header class="inspire--select-header" data-indicator="1">
+                    <input type="text" value="09:00" hidden />
+                    <p class="name">09:00</p>
+                  </header>
+                  <section class="content">
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="08:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">08:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="09:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">09:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="10:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">10:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="11:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">11:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="12:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">12:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="13:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">13:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="14:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">14:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="15:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">15:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="16:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">16:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="17:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">17:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="18:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">18:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="19:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">19:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="20:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">20:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="21:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">21:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="22:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">22:00</span>
+                    </label>
+                  </section>
+                </div>
+              </div>
+              <div>
+                <p class="title">
+                  Время возврата: <span class="clr-stop">*</span>
+                </p>
+                <div class="inspire--select">
+                  <header class="inspire--select-header" data-indicator="1">
+                    <input type="text" value="09:00" hidden />
+                    <p class="name">09:00</p>
+                  </header>
+                  <section class="content">
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="08:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">08:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="09:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">09:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="10:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">10:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="11:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">11:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="12:00"
+                        data-indicator="2"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="2">12:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="13:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">13:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="14:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">14:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="15:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">15:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="16:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">16:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="17:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">17:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="18:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">18:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="19:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">19:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="20:00"
+                        data-indicator="3"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="3">20:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="21:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">21:00</span>
+                    </label>
+                    <label class="triggers">
+                      <input
+                        type="radio"
+                        name="name"
+                        value="22:00"
+                        data-indicator="1"
+                      />
+                      <span class="trigger"></span>
+                      <span class="txt" data-indicator="1">22:00</span>
+                    </label>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <button type="button">Далее</button>
+          </div>
+        </section>
       </div>
     </section>
     <div class="filter--elements wow fadeIn">
@@ -1499,10 +2294,10 @@
   </div>
 </div>
 
-	<script src="./assets/libs/wow/wow.min.js?ver=20230727205808" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20230802035110" ></script>
 	<script>
 		new WOW().init();
 	</script>
-	<script src="./assets/js/app.min.js?ver=20230727205808" defer></script>
+	<script src="./assets/js/app.min.js?ver=20230802035110" defer></script>
 </body>
 </html>

@@ -17,14 +17,202 @@
 
 .inspire {
   &--select {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $clr-blkt;
+      z-index: 1;
+      transition: 0.1s opacity;
+      @extend %cursor;
+    }
+
+    &:not(.active) {
+      &:before {
+        @extend %no-active;
+      }
+
+      .content {
+        @extend %no-active-op;
+      }
+    }
+
+    @media (min-width: 60.5rem) {
+      &:not(:hover, .active) {
+        &::before {
+          opacity: 0;
+        }
+      }
+      &:hover,
+      &.active {
+        z-index: 2;
+      }
+    }
+
+    @include __967 {
+      &:not(.active) {
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &.active {
+        z-index: 2;
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: calc(100% + 0.5rem);
+      max-width: calc(200% + 0.0625rem);
+      width: calc(200% + 0.0625rem);
+      border-radius: 0.25rem;
+      transition: 0.1s opacity;
+      z-index: 1;
+
+      @include __867 {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .title {
+        font-size: $h3;
+
+        @include not-last($i24);
+      }
+    }
+
+    &:nth-child(odd) {
+      .content {
+        left: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      .content {
+        right: 0;
+      }
+    }
+
+    .address--map {
+      display: grid;
+      grid-template-columns: 1fr 20.3125rem;
+      background-color: $clr-f;
+
+      @include __767 {
+        grid-template-columns: 100%;
+      }
+
+      .wrapper {
+        padding: $i32;
+      }
+
+      .title {
+        &:not(:first-child) {
+          position: relative;
+          padding-top: $i24;
+
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% + $i32 * 2);
+            height: 0.0625rem;
+            background-color: $clr-g-35;
+          }
+        }
+      }
+
+      .map {
+        width: 100%;
+        height: 100%;
+
+        @include __767 {
+          order: -1;
+        }
+
+        iframe {
+          width: inherit;
+          height: inherit;
+          border: none;
+        }
+      }
+
+      .triggers {
+        align-items: start;
+
+        &:not(:first-of-type, :last-of-type) {
+          padding-top: 1rem;
+          border-top: $ln-g-15;
+        }
+
+        &:not(:last-of-type) {
+          padding-bottom: 1rem;
+        }
+
+        .trigger {
+          --ava: 1.5rem;
+        }
+
+        .name {
+          font-size: $h5;
+          font-weight: 500;
+          line-height: 120%;
+
+          @include not-last(0.5rem);
+        }
+
+        .time,
+        .price {
+          color: $clr-g-80;
+          line-height: 120%;
+        }
+
+        .time {
+          font-size: $f12;
+        }
+
+        .price,
+        .free {
+          font-size: $f16;
+        }
+
+        .free {
+          color: $clr-mn;
+        }
+
+        .info {
+          flex-wrap: wrap;
+
+          .item {
+            @extend %f-column;
+
+            &:not(:last-child) {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
     &-header {
       @extend %f-center;
       @extend %select;
       @include cart();
-      width: 26.375rem;
+      width: 100%;
       height: 100%;
       padding-block: $i8;
       gap: $i12;
+      cursor: pointer;
 
       &[data-type="point-issue"] {
         @include dataType($punkt);
@@ -42,10 +230,102 @@
         }
       }
     }
+
+    &-times {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.25rem;
+
+      @include __867 {
+        grid-template-columns: 100%;
+      }
+
+      .time-item {
+        @include cart($clr-f, $i32);
+        width: 100%;
+        height: fit-content;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.5rem;
+        @include not-first-last($i24, $i16);
+
+        @include __467 {
+          grid-template-columns: 100%;
+        }
+
+        .title {
+          color: $clr;
+          font-size: 1rem;
+          line-height: 150%;
+
+          @include not-last(0);
+        }
+      }
+
+      .cart--grey {
+        .subtitle {
+          color: $clr-g-35;
+          @include not-last(0);
+        }
+      }
+
+      .inspire--select {
+        border: $ln-g-15;
+        border-radius: $br;
+
+        &:before {
+          display: none;
+        }
+
+        .content {
+          @include cart($clr-f, $i10);
+          position: absolute;
+          top: calc(100% + 0.5rem);
+          left: 0;
+          width: 100%;
+          border: $ln-g-15;
+
+          @include __467 {
+            height: 12.5rem;
+            overflow-y: auto;
+          }
+
+          .triggers {
+            padding-bottom: 0.25rem;
+            border-bottom: $ln;
+            border-color: $clr-bg;
+
+            &:not(:last-child) {
+              margin-bottom: 0.5rem;
+            }
+
+            .trigger {
+              --ava: 1.5rem;
+              order: 1;
+              margin-left: auto;
+            }
+          }
+        }
+      }
+
+      button {
+        max-width: 100%;
+        @include not-first-last($i16, $i16);
+      }
+    }
   }
   &-center {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 52.875rem;
+    width: 100%;
+    margin-inline: auto;
     gap: $i1;
+
+    @include __867 {
+      grid-template-columns: 100%;
+    }
   }
 }

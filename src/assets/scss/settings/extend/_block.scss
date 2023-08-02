@@ -42,7 +42,8 @@
 
 %no-active-op {
   opacity: 0;
-  @extend %no-active;
+  pointer-events: none;
+  user-select: none;
 }
 
 %select {

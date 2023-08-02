@@ -3,8 +3,27 @@ const selects = document.querySelectorAll(".inspire--select");
 if (selects.length) {
   selects.forEach((select) => {
     const header = select.querySelector(".inspire--select-header");
+    // const dates = select.querySelectorAll("[type='date']");
 
     if (!header) return;
+
+    header.addEventListener("click", () => {
+      select.classList.toggle("active");
+    });
+
+    select.addEventListener("click", ({ target }) => {
+      if (select == target) {
+        select.classList.toggle("active");
+      }
+    });
+
+    // if (dates.length) {
+    //   dates.forEach((item) => {
+    //     item.addEventListener("change", () => {
+    //       console.log(item.value);
+    //     });
+    //   });
+    // }
 
     const selectType = header.dataset.type;
 
@@ -24,12 +43,21 @@ if (selects.length) {
 
 // Работаем с селектом даты
 function selectDate(item) {
-  const start = item.querySelector("[data-start]");
-  const end = item.querySelector("[data-end]");
-  const startMonth = item.querySelector("[data-start-month]");
-  const endMonth = item.querySelector("[data-end-month]");
-  const endYear = item.querySelector("[data-end-year]");
-  const startYear = item.querySelector("[data-start-year]");
+  const dataStart = item.querySelector("[data-start]");
+  const dataEnd = item.querySelector("[data-end]");
+
+  if (!(dataStart && dataEnd)) return;
+
+  let tmp = dataStart.dataset.start.split(".");
+
+  const start = tmp[0];
+  const startMonth = tmp[1];
+  const startYear = tmp[2];
+
+  tmp = dataEnd.dataset.end.split(".");
+  const end = tmp[0];
+  const endMonth = tmp[1];
+  const endYear = tmp[2];
 
   const output = item.querySelector("[data-output]");
 
@@ -39,12 +67,8 @@ function selectDate(item) {
   const month = today.getMonth() + 1;
   const year = today.getFullYear();
 
-  const d1 = `${startYear.dataset.startYear || year}.${
-    startMonth.dataset.startMonth || month
-  }.${start.dataset.start || day}`;
-  const d2 = `${endYear.dataset.endYear || year}.${
-    endMonth.dataset.endMonth || month
-  }.${end.dataset.end || day}`;
+  const d1 = `${startYear || year}.${startMonth || month}.${start || day}`;
+  const d2 = `${endYear || year}.${endMonth || month}.${end || day}`;
 
   output.dataset.output = getDiffInDaysWeeksMonths(d1, d2);
 }

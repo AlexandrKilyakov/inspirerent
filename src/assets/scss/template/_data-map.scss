@@ -1,0 +1,28 @@
+%-baza-map {
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    @include sprite("@svg/combo/map.svg", 4);
+  }
+}
+
+@mixin -map($name, $x: 0, $y: 0, $w: 1.5rem, $h: 1.5rem) {
+  [data-map="#{$name}"] {
+    @extend %-baza-map;
+    @extend %f-center;
+    --w: #{$w};
+    --h: #{$h};
+    --x: #{$x};
+    --y: #{$y};
+    gap: 0.5rem;
+  }
+}
+
+@include -map("point-start");
+@include -map("point-end", 1);
+@include -map("ru", 2);
+@include -map("clock", 3);
