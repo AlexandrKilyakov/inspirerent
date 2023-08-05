@@ -41,4 +41,119 @@
     gap: $i20;
     transition: 1s transform;
   }
+
+  &--photo {
+    $size: 5.8125rem;
+    $max: $size * 7;
+    --size: #{$size};
+    display: flex;
+    gap: $i20;
+
+    @include not-first-last($i32, $i32);
+
+    @media (max-width: $max) {
+      flex-direction: column;
+    }
+
+    .preview {
+      order: 1;
+      width: 100%;
+      height: calc(var(--size) * 4 + 1.5rem);
+
+      @media (max-width: $max) {
+        order: initial;
+        height: auto;
+        min-height: 15.625rem;
+        max-height: 50vh;
+        aspect-ratio: 490/397;
+      }
+
+      img {
+        @extend %fit-contain;
+      }
+
+      &[data-new] {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 5.3125rem;
+          height: 1.875rem;
+          @include bg-contain("@svg/art/new.svg");
+          background-position: {
+            x: left;
+            y: top;
+          }
+        }
+      }
+    }
+
+    .nav {
+      @extend %f-column;
+      position: relative;
+      align-items: center;
+
+      @media (max-width: $max) {
+        flex-direction: row;
+        width: fit-content;
+      }
+
+      [data-step] {
+        --w: 1.5rem;
+        --h: 1.5rem;
+        --x: 10;
+        --y: 2;
+        @include square-ava(1.5rem);
+        @include sprite("@svg/combo/arrow.svg", 12);
+        padding: 0;
+        background-color: transparent;
+
+        &:hover {
+          --y: 1;
+        }
+
+        @media (max-width: $max) {
+          --x: 9;
+        }
+      }
+    }
+
+    .steps {
+      @extend %f-column;
+      min-width: var(--size);
+      width: var(--size);
+      max-height: calc(var(--size) * 4);
+      overflow: hidden;
+
+      @media (max-width: $max) {
+        flex-direction: row;
+        min-width: 0;
+        width: 100%;
+      }
+
+      img {
+        flex: 0 0 var(--size);
+        width: 100%;
+        height: var(--size);
+        object-fit: cover;
+        border-radius: 0.25rem;
+        transition: 0.3s opacity;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:not(.active, :hover) {
+          opacity: 0.5;
+        }
+
+        &.active {
+          pointer-events: none;
+          border: 0.0625rem solid $clr-mn-2;
+        }
+      }
+    }
+  }
 }

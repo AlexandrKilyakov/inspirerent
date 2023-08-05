@@ -1,0 +1,76 @@
+.info {
+  &--subname {
+    color: $clr-g-55;
+  }
+  &--value {
+    width: fit-content;
+    color: $clr-g-80;
+    font-size: h5;
+    font-weight: 500;
+    line-height: 120%;
+
+    @include not-last($i16);
+
+    a {
+      display: block;
+      width: fit-content;
+      font-size: 18px;
+      line-height: 130%;
+
+      &[data-subtitle] {
+        &:after {
+          content: "(" attr(data-subtitle) ")";
+          font-size: $f12;
+          font-weight: 400;
+          line-height: 150%;
+          color: $clr-g-80;
+        }
+      }
+    }
+
+    [data-social] {
+      --y: 0;
+
+      &:hover {
+        --y: 1;
+      }
+    }
+  }
+
+  &--hint {
+    @extend %f-center;
+    gap: $i10;
+
+    &-content {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        @include square-ava();
+        @include bg-contain("@svg/art/info.svg");
+        padding-right: 0.25rem;
+        cursor: pointer;
+      }
+
+      &:not(:hover) {
+        .text {
+          @extend %no-active-op;
+        }
+      }
+
+      .text {
+        @include cart();
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        width: 23.75rem;
+        font-size: $f12;
+        line-height: 150%;
+        box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.15);
+        transition: 0.3s opacity;
+      }
+    }
+  }
+}

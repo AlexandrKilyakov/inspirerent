@@ -70,4 +70,11 @@ $gap: 1.25rem;
   &-center {
     @extend %flex-center;
   }
+
+  &--justify-sb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $i16;
+  }
 }

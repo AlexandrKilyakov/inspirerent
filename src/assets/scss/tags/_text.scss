@@ -130,6 +130,83 @@ ol {
   }
 }
 
+.list {
+  &--like {
+    padding-inline-start: 0;
+    list-style: none;
+
+    li {
+      @include not-last($i8);
+
+      &:not(.accordion) {
+        display: flex;
+        align-items: flex-start;
+        color: $clr;
+        gap: $i8;
+
+        &:before {
+          content: "";
+          @include square-ava();
+          @include bg-contain("@svg/art/gulka.svg");
+        }
+      }
+
+      &.accordion {
+        .name {
+          color: $clr-g-35;
+        }
+
+        .arrow {
+          &::after {
+            border-color: $clr-g-35;
+          }
+        }
+        ul,
+        ol {
+          margin: 0;
+        }
+      }
+    }
+  }
+  &--close {
+    padding-inline-start: 0;
+    list-style: none;
+
+    li {
+      @include not-last($i8);
+
+      &:not(.accordion) {
+        display: flex;
+        align-items: flex-start;
+        color: $clr;
+        gap: $i8;
+
+        &:before {
+          content: "";
+          @include square-ava();
+          @include bg-contain("@svg/art/gulka-no.svg");
+        }
+      }
+
+      &.accordion {
+        .name {
+          color: $clr-g-35;
+        }
+
+        .arrow {
+          &::after {
+            border-color: $clr-g-35;
+          }
+        }
+        ul,
+        ol {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 time {
   display: block;
   color: $clr-g-35;

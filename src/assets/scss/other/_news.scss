@@ -211,6 +211,35 @@
             margin-left: $i64;
           }
         }
+        &.full {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cart--grey {
+        padding: $i24;
+
+        @include not-first-last($i24, $i24);
+
+        .name {
+          font-size: $h4;
+          font-weight: 500;
+
+          @include not-last($i16);
+        }
+
+        .price {
+          font-size: $h4;
+          color: $clr-mn;
+        }
+      }
+    }
+
+    &.content-article {
+      .content {
+        @include container-inline(52.875rem);
+        padding: $i32;
       }
     }
   }

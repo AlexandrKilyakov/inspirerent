@@ -1,0 +1,29 @@
+%-baza-metro {
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    @include sprite("@svg/combo/metro.svg", 5);
+  }
+}
+
+@mixin -metro($name, $x: 0, $y: 0, $w: 1.125rem, $h: 1.125rem) {
+  [data-metro="#{$name}"] {
+    @extend %-baza-metro;
+    @extend %f-center;
+    --w: #{$w};
+    --h: #{$h};
+    --x: #{$x};
+    --y: #{$y};
+    gap: 0.5rem;
+  }
+}
+
+@include -metro("1");
+@include -metro("2", 1);
+@include -metro("3", 2);
+@include -metro("4", 3);
+@include -metro("5", 4);
