@@ -2,7 +2,7 @@
   &--std {
     padding-block: $i64;
     &-top {
-      padding-top: $i64;
+      padding-block-start: $i64;
     }
   }
   &--big {
@@ -33,8 +33,8 @@
 
     .title {
       grid-column: 1/-1;
-      margin-bottom: calc(-1 * $i20);
-      padding-bottom: $i32;
+      margin-block-end: calc(-1 * $i20);
+      padding-block-end: $i32;
     }
 
     .cart {
@@ -87,16 +87,16 @@
     }
 
     &:first-child {
-      margin-top: $i64;
+      margin-block-start: $i64;
     }
 
     &:last-child {
-      margin-bottom: $i64;
+      margin-block-end: $i64;
     }
 
     legend {
       font-size: $f16;
-      margin-bottom: $i8;
+      margin-block-end: $i8;
     }
 
     .title {
@@ -140,7 +140,7 @@
       @include __767 {
         fieldset {
           &:not(:last-child) {
-            margin-bottom: $i20;
+            margin-block-end: $i20;
           }
         }
       }
@@ -156,7 +156,7 @@
       button {
         max-width: 100%;
         border-radius: $i4;
-        margin-top: $i8;
+        margin-block-start: $i8;
       }
     }
 
@@ -187,14 +187,14 @@
 
       > {
         :last-child {
-          margin-top: 0;
+          margin-block-start: 0;
         }
       }
 
       .title {
         &[data-weight] {
           &::before {
-            margin-bottom: $i8;
+            margin-block-end: $i8;
           }
         }
       }
@@ -223,7 +223,7 @@
 .scroll {
   &--car {
     display: flex;
-    padding-bottom: $i32;
+    padding-block-end: $i32;
     gap: $i20;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -253,7 +253,7 @@
     display: flex;
     gap: $i16;
     overflow-x: auto;
-    padding-bottom: $i16;
+    padding-block-end: $i16;
     scroll-snap-type: x mandatory;
   }
 }
@@ -394,5 +394,23 @@
     width: 100%;
     height: 100%;
     border: none;
+  }
+}
+
+.specifications {
+  @include not-first-last($i20, $i20);
+
+  .cart {
+    width: 100%;
+  }
+
+  .value {
+    @extend %f-center;
+    gap: 0.25rem;
+
+    &:before {
+      content: "";
+      @include square-ava(2rem);
+    }
   }
 }

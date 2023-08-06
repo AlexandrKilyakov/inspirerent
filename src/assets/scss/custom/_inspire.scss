@@ -71,33 +71,16 @@
     .content {
       position: absolute;
       top: calc(100% + 0.5rem);
-      max-width: calc(200% + 0.0625rem);
-      width: calc(200% + 0.0625rem);
+      left: 0;
+      width: 100%;
       border-radius: 0.25rem;
       transition: 0.1s opacity;
       z-index: 1;
-
-      @include __867 {
-        max-width: 100%;
-        width: 100%;
-      }
 
       .title {
         font-size: $h3;
 
         @include not-last($i24);
-      }
-    }
-
-    &:nth-child(odd) {
-      .content {
-        left: 0;
-      }
-    }
-
-    &:nth-child(even) {
-      .content {
-        right: 0;
       }
     }
 
@@ -117,7 +100,7 @@
       .title {
         &:not(:first-child) {
           position: relative;
-          padding-top: $i24;
+          padding-block-start: $i24;
 
           &:before {
             content: "";
@@ -151,12 +134,12 @@
         align-items: start;
 
         &:not(:first-of-type, :last-of-type) {
-          padding-top: 1rem;
+          padding-block-start: 1rem;
           border-top: $ln-g-15;
         }
 
         &:not(:last-of-type) {
-          padding-bottom: 1rem;
+          padding-block-end: 1rem;
         }
 
         .trigger {
@@ -197,10 +180,31 @@
             @extend %f-column;
 
             &:not(:last-child) {
-              margin-right: 0.5rem;
+              margin-inline-end: 0.5rem;
             }
           }
         }
+      }
+    }
+
+    .chips {
+      display: inline;
+      color: $clr-g-55;
+    }
+
+    .border {
+      border: $ln-g-15;
+    }
+
+    &.width-smart {
+      max-width: 16.25rem;
+      width: 100%;
+    }
+
+    &[select-text] {
+      .content {
+        max-height: 64vh;
+        overflow-y: auto;
       }
     }
 
@@ -218,8 +222,20 @@
         @include dataType($punkt);
       }
 
+      &[data-type="point-start"] {
+        @include dataType("@svg/art/point-start.svg");
+      }
+
+      &[data-type="point-end"] {
+        @include dataType("@svg/art/point-end.svg");
+      }
+
       &[data-type="date"] {
         @include dataType("@svg/art/calendar.svg");
+      }
+
+      &[data-type="time"] {
+        @include dataType("@svg/art/clock.svg");
       }
 
       [data-output] {
@@ -293,18 +309,18 @@
           }
 
           .triggers {
-            padding-bottom: 0.25rem;
+            padding-block-end: 0.25rem;
             border-bottom: $ln;
             border-color: $clr-bg;
 
             &:not(:last-child) {
-              margin-bottom: 0.5rem;
+              margin-block-end: 0.5rem;
             }
 
             .trigger {
               --ava: 1.5rem;
               order: 1;
-              margin-left: auto;
+              margin-inline-start: auto;
             }
           }
         }
@@ -324,8 +340,128 @@
     margin-inline: auto;
     gap: $i1;
 
+    .inspire--select {
+      &:nth-child(odd) {
+        .content {
+          left: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        .content {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+
+    .content {
+      max-width: calc(200% + 0.0625rem);
+      width: calc(200% + 0.0625rem);
+
+      @include __867 {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
     @include __867 {
       grid-template-columns: 100%;
+    }
+  }
+}
+
+.select {
+  &--wrapper {
+    --column: 9;
+    display: grid;
+    grid-template-columns: repeat(var(--column), 1fr);
+    align-items: center;
+    @include not-first-last($i8, $i8);
+
+    @include __867 {
+      --column: 8;
+      gap: 0.25rem;
+    }
+
+    @include __367 {
+      grid-template-columns: 100%;
+    }
+
+    &[data-title] {
+      &::before {
+        content: attr(data-title);
+        color: $clr;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 150%;
+
+        @include __867 {
+          grid-column: 1/-1;
+        }
+      }
+    }
+
+    [select-address] {
+      grid-column: span 4;
+
+      @include __867 {
+        grid-column: 1/-1;
+      }
+
+      .content {
+        width: calc(var(--mw-container) / var(--column) * 8);
+
+        @include __867 {
+          width: 100%;
+        }
+      }
+    }
+
+    [select-date] {
+      grid-column: span 2;
+
+      @include __867 {
+        grid-column: span 4;
+      }
+
+      @include __367 {
+        grid-column: 1/-1;
+      }
+
+      .content {
+        right: auto;
+        left: 0;
+        width: calc(var(--mw-container) / var(--column) * 4);
+
+        @include __867 {
+          width: 100%;
+        }
+      }
+    }
+
+    [select-times] {
+      grid-column: span 2;
+
+      @include __867 {
+        grid-column: span 4;
+      }
+
+      @include __367 {
+        grid-column: 1/-1;
+      }
+
+      .content {
+        width: 100%;
+      }
+    }
+
+    .inspire--select {
+      height: 100%;
+
+      .content {
+        max-width: none;
+      }
     }
   }
 }

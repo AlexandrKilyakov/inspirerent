@@ -26,7 +26,7 @@
       height: fit-content;
       list-style: decimal-leading-zero;
       padding-inline-start: revert;
-      margin-top: 0 !important;
+      margin-block-start: 0 !important;
 
       @media (min-width: 73rem) {
         position: sticky;
@@ -69,7 +69,7 @@
       }
 
       @include __467 {
-        padding-top: 0;
+        padding-block-start: 0;
         max-width: 100%;
       }
 
@@ -93,11 +93,11 @@
       a {
         @include not-hover-color($clr);
         display: block;
-        margin-left: $i16;
+        margin-inline-start: $i16;
 
         @include __1167 {
           padding: $i8;
-          margin-left: 0;
+          margin-inline-start: 0;
         }
       }
 

@@ -112,14 +112,14 @@
       font-size: $h3;
 
       &:not(:last-child) {
-        padding-bottom: $i16;
-        margin-bottom: $i16;
+        padding-block-end: $i16;
+        margin-block-end: $i16;
         border-bottom: $ln-g-15;
       }
 
       &[data-before-ava] {
         &::before {
-          margin-bottom: $i8;
+          margin-block-end: $i8;
         }
       }
     }
@@ -151,7 +151,7 @@
         min-width: var(--ava);
         width: var(--ava);
         height: var(--ava);
-        margin-right: 0.5rem;
+        margin-inline-end: 0.5rem;
 
         @include bg-contain("@svg/art/warning.svg");
       }
@@ -163,13 +163,13 @@
     @include not-first-last($i32, $i32);
     @include bg-contain("@svg/art/notification.svg");
     width: 100%;
-    padding-left: calc($i32 + $i64 + $i20);
+    padding-inline-start: calc($i32 + $i64 + $i20);
     background-size: $i64;
     background-position-x: $i32;
 
     @include __467 {
-      padding-top: calc($i32 + 4rem);
-      padding-left: $i32;
+      padding-block-start: calc($i32 + 4rem);
+      padding-inline-start: $i32;
       background: {
         size: 4rem;
         position: {
@@ -308,7 +308,7 @@
           font-weight: 400;
           line-height: 150%;
           color: $clr-g-55;
-          margin-right: $i4;
+          margin-inline-end: $i4;
         }
       }
     }
@@ -323,7 +323,7 @@
         grid-template-columns: 100%;
 
         time {
-          margin-left: auto;
+          margin-inline-start: auto;
         }
       }
 
@@ -379,11 +379,11 @@
 
   &--address {
     &:not(:first-child) {
-      padding-top: 1rem;
+      padding-block-start: 1rem;
       border-top: $ln-g-35;
     }
     &:not(:last-child) {
-      padding-bottom: 1rem;
+      padding-block-end: 1rem;
     }
 
     .name {
@@ -469,7 +469,7 @@
     .price {
       color: $clr-mn;
       font-size: $h3;
-      margin-top: auto;
+      margin-block-start: auto;
 
       .subtitle {
         color: $clr-g-55;

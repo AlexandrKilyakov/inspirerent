@@ -156,4 +156,64 @@
       }
     }
   }
+
+  &--fake {
+    @extend %f-center;
+    width: 100%;
+    gap: $i20;
+    @include not-first-last($i20, $i20);
+
+    @media (max-width: 43.6875rem) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .link {
+        &--next,
+        &--back {
+          order: 1;
+        }
+      }
+    }
+
+    .btn--like {
+      --ava: 1.5rem;
+      margin-block-start: 0.25rem;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    body & .ava {
+      max-width: 13.9375rem;
+      width: 100%;
+      aspect-ratio: 223/146;
+      object-fit: contain;
+
+      @media (max-width: 43.6875rem) {
+        max-width: 100%;
+      }
+    }
+
+    .name {
+      @include not-last($i8);
+    }
+
+    .subtitle {
+      @include not-last($i16);
+    }
+
+    .price {
+      font-size: $h3;
+    }
+
+    .description {
+      line-height: 100%;
+      letter-spacing: 0.02em;
+    }
+
+    .cart--header {
+      justify-content: start;
+    }
+  }
 }

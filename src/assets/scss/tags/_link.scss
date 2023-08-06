@@ -89,6 +89,27 @@ a {
       color: $clr-stp;
     }
   }
+  &--next,
+  &--back {
+    --w: #{$i32};
+    --h: #{$i32};
+    --y: 2;
+    @include square-ava($i32);
+    @include sprite("@svg/combo/arrow.svg", 12);
+    padding: 0;
+    background-color: transparent;
+    transition: none;
+
+    &:hover {
+      --y: 1;
+    }
+  }
+  &--next {
+    --x: 9;
+  }
+  &--back {
+    --x: 8;
+  }
 }
 
 .downloads {

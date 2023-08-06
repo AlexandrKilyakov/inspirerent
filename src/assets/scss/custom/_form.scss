@@ -36,6 +36,77 @@
       @include not-last(0);
     }
   }
+
+  &--number {
+    @extend %f-center;
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+
+    .btn--num {
+      @extend %flex-center;
+      width: 2rem;
+      height: 2rem;
+      border-color: $clr-mn;
+      padding: 0;
+    }
+    .btn--num[data-step="down"] {
+      border-radius: 0.25rem 0 0 0.25rem;
+      font-size: $i32;
+
+      &:after {
+        content: "-";
+      }
+    }
+
+    .btn--num[data-step="up"] {
+      border-radius: 0 0.25rem 0.25rem 0;
+      font-size: $i24;
+
+      &:after {
+        content: "+";
+      }
+    }
+    body & input {
+      position: initial !important;
+      opacity: 1;
+      z-index: 0;
+      width: 4rem;
+      height: 2rem;
+      border-radius: 0;
+      border-right: 0;
+      border-left: 0;
+      padding: 0.25rem;
+      text-align: center;
+    }
+  }
+
+  &--smart {
+    max-width: 23.9375rem;
+    width: 100%;
+    margin-inline: auto;
+
+    body & a.btn {
+      @extend %flex-center;
+      flex-direction: column;
+      position: initial;
+      transform: translateY(0);
+      gap: $i8;
+
+      @include not-first-last($i20, $i20);
+
+      &.inviz {
+        background-color: transparent;
+        color: $clr-mn;
+        border: $ln;
+
+        &:hover {
+          background-color: $clr-mn;
+          color: $clr-f;
+        }
+      }
+    }
+  }
 }
 
 .label {

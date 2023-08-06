@@ -1,26 +1,26 @@
-const selectParent = document.querySelectorAll(
-  ".inspire--select-times .inspire--select"
-);
+addEventSelect(document.querySelectorAll("[select-times]"));
+addEventSelect(document.querySelectorAll("[select-text]"));
 
-if (selectParent.length) {
-  selectParent.forEach((parent) => {
-    const selectTimesHeader = parent.querySelector(".inspire--select-header");
-    const selectTimesInput = parent.querySelector(
-      ".inspire--select-header input"
-    );
-    const selectTimesName = parent.querySelector(
-      ".inspire--select-header .name"
-    );
-    const selectTimesTriggers = parent.querySelectorAll(
-      ".content .triggers input"
-    );
+function addEventSelect(element) {
+  if (element.length) {
+    element.forEach((parent) => {
+      const selectTimesHeader = parent.querySelector(".inspire--select-header");
+      const selectTimesName = parent.querySelector(
+        ".inspire--select-header .name"
+      );
+      const selectTimesTriggers = parent.querySelectorAll(
+        ".content .triggers input"
+      );
 
-    selectTimesTriggers.forEach((trigger) => {
-      trigger.addEventListener("change", () => {
-        selectTimesHeader.dataset.indicator = trigger.dataset.indicator;
-        selectTimesInput.value = trigger.value;
-        selectTimesName.innerHTML = trigger.value;
+      selectTimesTriggers.forEach((trigger) => {
+        trigger.addEventListener("change", () => {
+          if (trigger.dataset.indicator) {
+            selectTimesHeader.dataset.indicator = trigger.dataset.indicator;
+          }
+
+          selectTimesName.innerHTML = trigger.value;
+        });
       });
     });
-  });
+  }
 }

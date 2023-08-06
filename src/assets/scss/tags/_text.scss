@@ -89,7 +89,7 @@ ol {
     a {
       @include not-hover-color($clr);
       display: block;
-      margin-left: $i16;
+      margin-inline-start: $i16;
     }
 
     .current {
@@ -352,7 +352,7 @@ address {
   }
 
   &.bb {
-    padding-bottom: $i8;
+    padding-block-end: $i8;
     border-bottom: $ln-g-15;
 
     @include not-last($i8);
@@ -388,6 +388,13 @@ address {
   }
 }
 
+.old-prise {
+  color: $clr-g-55;
+  font-size: $f12;
+  font-weight: 400;
+  text-decoration-line: line-through;
+}
+
 .rent {
   font-weight: 700;
   line-height: 150%;
@@ -397,4 +404,30 @@ address {
 b,
 strong {
   color: $clr;
+}
+
+.total {
+  color: $clr;
+  font-weight: 700;
+
+  @include __467 {
+    span {
+      display: block;
+    }
+  }
+
+  @include not-first($i32);
+
+  .price {
+    font-size: $h4;
+    @include not-last(0);
+
+    @media (min-width: 29.25rem) {
+      margin-inline-start: $i32;
+
+      &:not(:last-child) {
+        margin-inline-end: $i8;
+      }
+    }
+  }
 }

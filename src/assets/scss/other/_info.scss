@@ -43,14 +43,23 @@
 
     &-content {
       position: relative;
+      z-index: 2;
 
       &::before {
         content: "";
         display: block;
         @include square-ava();
         @include bg-contain("@svg/art/info.svg");
-        padding-right: 0.25rem;
+        padding-inline-end: 0.25rem;
         cursor: pointer;
+      }
+
+      &.icon-hint {
+        &::before {
+          flex: 0 0 0.75rem;
+          width: 0.75rem;
+          background-image: url("@svg/art/hint.svg");
+        }
       }
 
       &:not(:hover) {
@@ -71,6 +80,10 @@
         box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.15);
         transition: 0.3s opacity;
       }
+    }
+
+    p {
+      @include not-last(0);
     }
   }
 }

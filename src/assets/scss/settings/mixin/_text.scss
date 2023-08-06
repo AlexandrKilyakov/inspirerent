@@ -1,11 +1,11 @@
 @mixin not-last($n: $i16) {
   &:not(:last-child) {
-    margin-bottom: $n;
+    margin-block-end: $n;
   }
 }
 @mixin not-first($n: $i16) {
   &:not(:first-child) {
-    margin-top: $n;
+    margin-block-start: $n;
   }
 }
 @mixin not-first-last($f: $i16, $l: $i16) {

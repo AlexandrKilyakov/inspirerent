@@ -15,7 +15,7 @@
   }
 
   th {
-    padding-top: 0;
+    padding-block-start: 0;
     color: $clr-g-55;
     font-size: $f12;
     font-weight: 400;
@@ -51,7 +51,7 @@
     }
 
     th {
-      padding-top: 0;
+      padding-block-start: 0;
       color: $clr-g-55;
       font-size: $f12;
       font-weight: 400;
@@ -75,6 +75,50 @@
       .chips {
         color: $clr-g-80;
       }
+    }
+  }
+
+  &--line {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr {
+      &:not(:last-child) {
+        border-bottom: $ln-g-15;
+
+        td,
+        th {
+          padding-block-end: $i10;
+        }
+      }
+    }
+    th {
+      font-weight: 400;
+      color: $clr-g-15;
+      vertical-align: top;
+    }
+    td {
+      width: 0.0625rem;
+      padding: $i10 0 0;
+      vertical-align: top;
+    }
+    td:not(:first-child) {
+      padding-inline-start: 0.5rem;
+    }
+
+    .price {
+      text-align: right;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 150%;
+      vertical-align: middle;
+    }
+  }
+  &--x {
+    overflow-x: auto;
+
+    table {
+      min-width: 31.25rem;
     }
   }
 }

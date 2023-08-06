@@ -50,7 +50,7 @@
   body & {
     --size: #{$i24};
     --p: #{$i20};
-    padding-right: calc(var(--p) * 2 + var(--size));
+    padding-inline-end: calc(var(--p) * 2 + var(--size));
     text-overflow: ellipsis;
     background: {
       image: url(@svg/art/arrow.svg);

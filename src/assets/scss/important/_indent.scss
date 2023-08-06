@@ -7,38 +7,39 @@
     }
   }
   .pt#{$n} {
-    padding-top: var(--#{$n}) !important;
+    padding-block-start: var(--#{$n}) !important;
     &.scroll--inset {
       scroll-margin-block-start: var(--#{$n});
     }
   }
   .pb#{$n} {
-    padding-bottom: var(--#{$n}) !important;
+    padding-block-end: var(--#{$n}) !important;
     &.scroll--inset {
       scroll-margin-block-start: var(--#{$n});
     }
   }
   .m#{$n} {
-    margin-top: var(--#{$n}) !important;
-    margin-bottom: var(--#{$n}) !important;
+    margin-block-start: var(--#{$n}) !important;
+    margin-block-end: var(--#{$n}) !important;
     &.scroll--inset {
       scroll-margin-block-start: var(--#{$n});
     }
   }
   .mt#{$n} {
-    margin-top: var(--#{$n}) !important;
+    margin-block-start: var(--#{$n}) !important;
     &.scroll--inset {
       scroll-margin-block-start: var(--#{$n});
     }
   }
   .mb#{$n} {
-    margin-bottom: var(--#{$n}) !important;
+    margin-block-end: var(--#{$n}) !important;
     &.scroll--inset {
       scroll-margin-block-start: var(--#{$n});
     }
   }
 }
 
+@include indent("16");
 @include indent("20");
 @include indent("24");
 @include indent("28");

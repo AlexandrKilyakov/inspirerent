@@ -18,8 +18,8 @@
   &[class*="grid-"] {
     .section--header {
       grid-column: 1/-1;
-      margin-bottom: calc(-1 * var(--gap));
-      padding-bottom: $i32;
+      margin-block-end: calc(-1 * var(--gap));
+      padding-block-end: $i32;
     }
   }
 
@@ -208,7 +208,7 @@
 
           @media (min-width: 60.5rem) {
             float: right;
-            margin-left: $i64;
+            margin-inline-start: $i64;
           }
         }
         &.full {
@@ -256,7 +256,7 @@
 
     .anchos {
       height: fit-content;
-      margin-top: 0 !important;
+      margin-block-start: 0 !important;
 
       @media (min-width: 62.5rem) {
         position: sticky;

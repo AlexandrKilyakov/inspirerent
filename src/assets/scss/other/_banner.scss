@@ -93,7 +93,7 @@
     &:nth-child(odd) {
       @media (min-width: 35.5rem) {
         grid-column: span 2;
-        padding-left: $con;
+        padding-inline-start: $con;
       }
     }
     &:nth-child(even) {

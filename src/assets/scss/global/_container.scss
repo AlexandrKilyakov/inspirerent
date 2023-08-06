@@ -16,4 +16,36 @@
   &--container {
     @include container-inline(70rem);
   }
+
+  &--std {
+    --mw-container: 52.8125rem;
+    max-width: var(--mw-container);
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &--smart {
+    --mw-container: 39.375rem;
+    max-width: var(--mw-container);
+    width: 100%;
+    margin-inline: auto;
+
+    .cart {
+      position: initial;
+      width: 100%;
+      overflow: initial;
+    }
+
+    .title {
+      @include not-first-last($i32, $i16);
+    }
+
+    .info--hint {
+      @include not-first-last($i24, $i8);
+    }
+
+    .inspire--select-header {
+      padding: $i10;
+    }
+  }
 }

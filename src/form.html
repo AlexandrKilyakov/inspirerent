@@ -1,0 +1,796 @@
+@@include('./template/header.html', { title: "Бронирование автомобиля" })
+@@include('./inc/breadcrumbs.html', { text: "Бронирование автомобиля" })
+
+<section class="margin--std container">
+  <h1 class="title wow fadeIn">Ваш заказ</h1>
+
+  <div class="article--std">
+    <div class="cart slider--fake wow fadeIn">
+      <a href="#" class="link--back"></a>
+      <img
+        src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+        alt=""
+        class="ava"
+      />
+      <div class="content">
+        <header class="cart--header">
+          <h2 class="name">Hyundai Creta (II)</h2>
+          <button
+            type="button"
+            class="btn--like"
+            data-toggle-favorites=""
+            data-id
+          ></button>
+        </header>
+        <p class="subtitle">АКПП</p>
+        <p class="price">2 800 ₽ / сутки</p>
+        <p class="description">20 000₽ депозит</p>
+      </div>
+      <a href="#" class="link--next"></a>
+    </div>
+    <div class="grid-4 specifications">
+      <div class="cart">
+        <h2 class="h4 name wow fadeIn">Характеристики автомобиля:</h2>
+        <p class="value wow fadeIn" data-weight="car-door">
+          Количество дверей: x 5
+        </p>
+        <p class="value wow fadeIn" data-weight="peaple">
+          Количество мест: x 5
+        </p>
+        <p class="value wow fadeIn" data-weight="bag">Количество багажа: x 5</p>
+        <p class="value wow fadeIn" data-weight="transmission">
+          Коробка передач: АТ
+        </p>
+        <p class="value wow fadeIn" data-weight="temperature">
+          Кондиционер: есть
+        </p>
+      </div>
+      <div class="cart">
+        <h2 class="h4 name wow fadeIn">Условия аренды:</h2>
+        <p class="value wow fadeIn" data-weight="man">
+          Возраст водителя: от 24 лет
+        </p>
+        <p class="value wow fadeIn" data-weight="wheel">
+          Стаж вождения: от 3 лет
+        </p>
+        <p class="value wow fadeIn" data-weight="">Документы: паспорт, ВУ</p>
+        <p class="value wow fadeIn" data-weight="">Депозит: от 20 000 ₽</p>
+        <p class="value wow fadeIn" data-weight="">
+          Лимит пробега: 150 км / день
+        </p>
+      </div>
+    </div>
+    <div class="select--wrapper" data-title="Выдача:">
+      <div class="inspire--select wow fadeIn" select-address>
+        <header class="inspire--select-header" data-type="point-start">
+          <p class="name">БЦ Метрополис<br />(Ленинградское ш.16А, стр.3)</p>
+        </header>
+        <section class="content address--map">
+          <div class="wrapper">
+            <h2 class="title" data-map="point-start">Выберите пункт выдачи</h2>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name">БЦ «Метрополис» (м. Войковская)</span>
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name">БЦ «Лотте Профсоюзная» (м. Калужская)</span>
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Шереметьево<br />(Терминал «С»)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Домодедово<br />(Терминал №1)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Внуково<br />(Терминал «А»)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+
+            <h2 class="title" data-map="point-end">Выберите пункт возврата</h2>
+            <label class="triggers">
+              <input type="checkbox" name="name" />
+              <span class="trigger"></span>
+              <span class="h4">Возврат там же</span>
+            </label>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?from=tabbar&ll=30.304909%2C59.917966&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE1MjgwNBIr0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsyIKDcuE8kEVUsFvQg%2C%2C&source=serp_navig&z=10"
+              width="560"
+              height="400"
+              frameborder="1"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+      <div class="inspire--select wow fadeIn" select-date>
+        <header class="inspire--select-header" data-type="date">
+          <p class="name">1 июня</p>
+        </header>
+        <section class="content">
+          <!-- Нужно сделать календарь нормальным, пока временный вариант  -->
+          <input type="date" />
+        </section>
+      </div>
+      <div class="inspire--select wow fadeIn" select-times>
+        <header class="inspire--select-header" data-type="time">
+          <p class="name">09:00</p>
+        </header>
+        <section class="content cart">
+          <label class="triggers">
+            <input type="radio" name="name" value="08:00" />
+            <span class="trigger"></span>
+            <span class="txt">08:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="09:00" />
+            <span class="trigger"></span>
+            <span class="txt">09:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="10:00" />
+            <span class="trigger"></span>
+            <span class="txt">10:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="11:00" />
+            <span class="trigger"></span>
+            <span class="txt">11:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="12:00" />
+            <span class="trigger"></span>
+            <span class="txt">12:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="13:00" />
+            <span class="trigger"></span>
+            <span class="txt">13:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="14:00" />
+            <span class="trigger"></span>
+            <span class="txt">14:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="15:00" />
+            <span class="trigger"></span>
+            <span class="txt">15:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="16:00" />
+            <span class="trigger"></span>
+            <span class="txt">16:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="17:00" />
+            <span class="trigger"></span>
+            <span class="txt">17:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="18:00" />
+            <span class="trigger"></span>
+            <span class="txt">18:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="19:00" />
+            <span class="trigger"></span>
+            <span class="txt">19:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="20:00" />
+            <span class="trigger"></span>
+            <span class="txt">20:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="21:00" />
+            <span class="trigger"></span>
+            <span class="txt">21:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="22:00" />
+            <span class="trigger"></span>
+            <span class="txt">22:00</span>
+          </label>
+        </section>
+      </div>
+    </div>
+    <div class="select--wrapper" data-title="Возврат:">
+      <div class="inspire--select wow fadeIn" select-address>
+        <header class="inspire--select-header" data-type="point-end">
+          <p class="name">БЦ Метрополис<br />(Ленинградское ш.16А, стр.3)</p>
+        </header>
+        <section class="content address--map">
+          <div class="wrapper">
+            <h2 class="title" data-map="point-end">Выберите пункт выдачи</h2>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name">БЦ «Метрополис» (м. Войковская)</span>
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name">БЦ «Лотте Профсоюзная» (м. Калужская)</span>
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Шереметьево<br />(Терминал «С»)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Домодедово<br />(Терминал №1)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" />
+              <span class="trigger"></span>
+              <span class="txt">
+                <span class="name"
+                  >Пункт в аэропорту Внуково<br />(Терминал «А»)</span
+                >
+                <span class="info" data-map="ru">
+                  <span class="item">
+                    <span class="time">09:00 - 20:00</span>
+                    <span class="free">Бесплатно</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">20:00 - 09:00</span>
+                    <span class="price">800 ₽</span>
+                  </span>
+                  <span class="item">
+                    <span class="time">аэропортовый сбор:</span>
+                    <span class="price">1 500 ₽</span>
+                  </span>
+                </span>
+              </span>
+            </label>
+
+            <h2 class="title" data-map="point-end">Выберите пункт возврата</h2>
+            <label class="triggers">
+              <input type="checkbox" name="name" />
+              <span class="trigger"></span>
+              <span class="h4">Возврат там же</span>
+            </label>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?from=tabbar&ll=30.304909%2C59.917966&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE1MjgwNBIr0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsyIKDcuE8kEVUsFvQg%2C%2C&source=serp_navig&z=10"
+              width="560"
+              height="400"
+              frameborder="1"
+              allowfullscreen="true"
+            ></iframe>
+          </div>
+        </section>
+      </div>
+      <div class="inspire--select wow fadeIn" select-date>
+        <header class="inspire--select-header" data-type="date">
+          <p class="name">14 июня</p>
+        </header>
+        <section class="content">
+          <!-- Нужно сделать календарь нормальным, пока временный вариант  -->
+          <input type="date" />
+        </section>
+      </div>
+      <div class="inspire--select wow fadeIn" select-times>
+        <header class="inspire--select-header" data-type="time">
+          <p class="name">09:00</p>
+        </header>
+        <section class="content cart">
+          <label class="triggers">
+            <input type="radio" name="name" value="08:00" />
+            <span class="trigger"></span>
+            <span class="txt">08:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="09:00" />
+            <span class="trigger"></span>
+            <span class="txt">09:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="10:00" />
+            <span class="trigger"></span>
+            <span class="txt">10:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="11:00" />
+            <span class="trigger"></span>
+            <span class="txt">11:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="12:00" />
+            <span class="trigger"></span>
+            <span class="txt">12:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="13:00" />
+            <span class="trigger"></span>
+            <span class="txt">13:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="14:00" />
+            <span class="trigger"></span>
+            <span class="txt">14:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="15:00" />
+            <span class="trigger"></span>
+            <span class="txt">15:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="16:00" />
+            <span class="trigger"></span>
+            <span class="txt">16:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="17:00" />
+            <span class="trigger"></span>
+            <span class="txt">17:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="18:00" />
+            <span class="trigger"></span>
+            <span class="txt">18:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="19:00" />
+            <span class="trigger"></span>
+            <span class="txt">19:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="20:00" />
+            <span class="trigger"></span>
+            <span class="txt">20:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="21:00" />
+            <span class="trigger"></span>
+            <span class="txt">21:00</span>
+          </label>
+          <label class="triggers">
+            <input type="radio" name="name" value="22:00" />
+            <span class="trigger"></span>
+            <span class="txt">22:00</span>
+          </label>
+        </section>
+      </div>
+    </div>
+    <div class="article--smart mt32">
+      <h2 class="h3 title wow fadeIn">Дополнительные услуги</h2>
+      <div class="cart">
+        <div class="grid-5 mb16">
+          <label class="triggers--cart forms-hide wow fadeIn">
+            <input type="checkbox" name="delivery-limits" />
+            <span class="trigger"></span>
+            <span class="border"></span>
+            <span class="txt"
+              >Детское кресло <span class="chips">(1 шт.)</span>
+              <span class="cost">250 ₽ / день</span></span
+            >
+            <span class="content">
+              <span data-before-ava="child-seat"></span>
+              <span class="form--number">
+                <button class="btn--num" data-step="down"></button>
+                <input
+                  type="number"
+                  value="1"
+                  min="1"
+                  data-input="number"
+                  value="0"
+                />
+                <button class="btn--num" data-step="up"></button>
+              </span>
+            </span>
+          </label>
+          <label class="triggers--cart forms-hide wow fadeIn">
+            <input type="checkbox" name="delivery-limits" />
+            <span class="trigger"></span>
+            <span class="border"></span>
+            <span class="txt"
+              >Дополнительный водитель <span class="chips">(1 чел.)</span>
+              <span class="cost">250 ₽ / день</span></span
+            >
+            <span class="content">
+              <span data-before-ava="man"></span>
+              <span class="form--number">
+                <button class="btn--num" data-step="down"></button>
+                <input
+                  type="number"
+                  value="1"
+                  min="1"
+                  data-input="number"
+                  value="0"
+                />
+                <button class="btn--num" data-step="up"></button>
+              </span>
+            </span>
+          </label>
+        </div>
+        <div class="table--x">
+          <table class="table--line">
+            <tbody>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value">Бустер</span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">450 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value"
+                      >Транспондер для проезда по платным дорогам</span
+                    >
+                  </label>
+                </td>
+                <td class="price wow fadeIn">810 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value"
+                      >Возврат автомобиля с неполным баком</span
+                    >
+                  </label>
+                </td>
+                <td class="price wow fadeIn">3 500 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value"
+                      >Комплект держателя и USB адаптера для устройств
+                      (смартфонов)</span
+                    >
+                  </label>
+                </td>
+                <td class="price wow fadeIn">3 500 ₽</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value"
+                      >Возврат автомобиля в грязном виде<br />(мойка кузова +
+                      уборка салона)</span
+                    >
+                  </label>
+                </td>
+                <td class="price wow fadeIn">550 ₽</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <h2 class="h3 title wow fadeIn">Опции</h2>
+      <div class="cart">
+        <div class="table--x">
+          <table class="table--line">
+            <tbody>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value">Безлимитный пробег</span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">220 ₽ / день</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value">Защита от повреждений автомобиля </span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">435 ₽ / день</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value">Защита от угона </span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">220 ₽ / день</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value">Страховка стекол, фар, шин </span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">360 ₽ / день</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info--hint">
+          <p>Территория эксплуатации:</p>
+          <div class="info--hint-content icon-hint">
+            <p class="text">
+              Сбор аэропорта оплачивается единоразово, при выдаче авто. При
+              возврате в этот же аэропорт дополнительная оплата не требуется.
+            </p>
+          </div>
+        </div>
+        <div class="inspire--select width-smart" select-text>
+          <header class="inspire--select-header border">
+            <p class="name">Зона 1 <span class="chips">(Бесплатно)</span></p>
+          </header>
+          <section class="content cart">
+            <label class="triggers">
+              <input
+                type="radio"
+                name="name"
+                value="Зона 1 (Бесплатно)"
+                checked
+              />
+              <span class="trigger"></span>
+              <span class="txt"
+                >Зона 1 <span class="chips">(Бесплатно)</span></span
+              >
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 2 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 2 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 3 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 3 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 4 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 4 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 5 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 5 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 6 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 6 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 7 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 7 <span class="chips">(350)</span></span>
+            </label>
+          </section>
+        </div>
+        <p class="total wow fadeIn">
+          Итого депозит: <span class="price">14 200 ₽</span
+          ><span class="old-prise">20 000 ₽</span>
+        </p>
+      </div>
+      <h2 class="h3 title wow fadeIn">Контакты для подтверждения брони</h2>
+      <div class="cart">
+        <form action="" class="form--smart">
+          <label class="label--reverse wow fadeIn">
+            <input type="text" placeholder="Иван Иванов" required />
+            <span class="name">Имя и Фамилия:</span>
+          </label>
+          <label class="label--reverse wow fadeIn">
+            <input type="email" placeholder="ivanov@mail.ru" required />
+            <span class="name">E-mail:</span>
+          </label>
+          <label class="label--reverse wow fadeIn">
+            <input type="tel" required />
+            <span class="name">Телефон:</span>
+          </label>
+
+          <label class="triggers wow fadeIn">
+            <input type="checkbox" name="name" />
+            <span class="trigger"></span>
+            <span class="chips"
+              >Я принимаю
+              <a href="#" target="_blank"
+                >Условия заключения договора аренды транспортного средства и
+                Политику безопасности</a
+              >
+              и ознакомлен
+              <a href="#" target="_blank"
+                >с разрешенной территорией эксплуатации</a
+              >.</span
+            >
+          </label>
+          <p class="total wow fadeIn">
+            Итого стоимость: <span class="price">34 200 ₽</span
+            ><span class="old-prise">54 600 ₽</span>
+          </p>
+          <label class="triggers mb32 wow fadeIn">
+            <input type="checkbox" name="name" />
+            <span class="trigger"></span>
+            <span class="txt">У меня есть промокод</span>
+          </label>
+          <a href="#" class="btn h4 wow fadeIn"
+            >Оплатить онлайн со скидкой 1.5%
+            <span class="chips">через Сбербанк Онлайн</span></a
+          >
+          <a href="#" class="btn h4 inviz wow fadeIn"
+            >Оплатить в офисе Inspire
+            <span class="chips">при получении авто</span></a
+          >
+        </form>
+      </div>
+
+      <p class="mt16 wow fadeIn">
+        Итоговую стоимость возврата автомобиля в Санкт-Петербурге или Минске вам
+        подскажет сотрудник Inspire по телефону
+        <a href="tel:88007770755" class="bold clr-main">8 (800) 777-07-55</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+@@include('./template/footer.html')

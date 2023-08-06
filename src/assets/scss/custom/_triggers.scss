@@ -116,7 +116,7 @@
 
     &.small {
       --ava: 1rem;
-      margin-top: $i4;
+      margin-block-start: $i4;
     }
 
     &--point {
@@ -275,10 +275,43 @@
     }
 
     .txt {
-      margin-top: -0.25rem;
+      margin-block-start: -0.25rem;
 
       .cost {
         transition: 0.1s color;
+      }
+    }
+
+    &.forms-hide {
+      flex-direction: column;
+      height: 100%;
+      gap: 0.5rem;
+
+      .trigger {
+        display: none;
+      }
+
+      .chips {
+        display: inline;
+        color: $clr-g-55;
+      }
+
+      .cost {
+        display: block;
+        font-weight: 700;
+      }
+
+      .content {
+        @extend %f-center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: $i20;
+        margin-block-start: auto;
+      }
+
+      [data-before-ava] {
+        --w: 3rem;
+        --h: 3rem;
       }
     }
   }
