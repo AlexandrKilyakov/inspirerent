@@ -101,6 +101,7 @@
         &:not(:first-child) {
           position: relative;
           padding-block-start: $i24;
+          margin-block-start: $i24;
 
           &:before {
             content: "";
@@ -133,7 +134,7 @@
       .triggers {
         align-items: start;
 
-        &:not(:first-of-type, :last-of-type) {
+        &:not(:first-of-type) {
           padding-block-start: 1rem;
           border-top: $ln-g-15;
         }
@@ -185,6 +186,12 @@
           }
         }
       }
+
+      .accordion--child {
+        .contant {
+          padding-block-start: $i24;
+        }
+      }
     }
 
     .chips {
@@ -223,19 +230,19 @@
       }
 
       &[data-type="point-start"] {
-        @include dataType("@svg/art/point-start.svg");
+        @include dataType("/assets/svg/art/point-start.svg");
       }
 
       &[data-type="point-end"] {
-        @include dataType("@svg/art/point-end.svg");
+        @include dataType("/assets/svg/art/point-end.svg");
       }
 
       &[data-type="date"] {
-        @include dataType("@svg/art/calendar.svg");
+        @include dataType("/assets/svg/art/calendar.svg");
       }
 
       &[data-type="time"] {
-        @include dataType("@svg/art/clock.svg");
+        @include dataType("/assets/svg/art/clock.svg");
       }
 
       [data-output] {
@@ -248,18 +255,19 @@
     }
 
     &-times {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.25rem;
-
-      @include __867 {
-        grid-template-columns: 100%;
-      }
+      display: flex;
 
       .time-item {
         @include cart($clr-f, $i32);
         width: 100%;
         height: fit-content;
+        margin-inline-start: auto;
+
+        @media (min-width: 29.25rem) {
+          max-width: 26.4375rem;
+          min-width: 26.4375rem;
+          width: 26.4375rem;
+        }
       }
 
       .grid-2 {

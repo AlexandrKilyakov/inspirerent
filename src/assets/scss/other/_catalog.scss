@@ -14,7 +14,7 @@
           display: block;
           width: 5.3125rem;
           height: 1.875rem;
-          @include bg-contain("@svg/art/new.svg");
+          @include bg-contain("/assets/svg/art/new.svg");
           background-position: {
             x: left;
             y: top;

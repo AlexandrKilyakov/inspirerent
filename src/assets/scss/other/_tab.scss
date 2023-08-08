@@ -133,7 +133,7 @@
       --h: 1.75rem;
 
       &:before {
-        @include sprite("@svg/combo/type_car.svg", 9, var(--w));
+        @include sprite("/assets/svg/combo/type_car.svg", 9, var(--w));
       }
     }
   }
@@ -145,7 +145,7 @@
       --h: 4rem;
 
       &:before {
-        @include sprite("@svg/combo/logo.svg", 10);
+        @include sprite("/assets/svg/combo/logo.svg", 10);
       }
     }
   }

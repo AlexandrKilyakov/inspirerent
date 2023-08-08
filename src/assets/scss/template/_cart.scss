@@ -153,7 +153,7 @@
         height: var(--ava);
         margin-inline-end: 0.5rem;
 
-        @include bg-contain("@svg/art/warning.svg");
+        @include bg-contain("/assets/svg/art/warning.svg");
       }
     }
   }
@@ -161,7 +161,7 @@
   &--notification {
     @include cart($clr-notification);
     @include not-first-last($i32, $i32);
-    @include bg-contain("@svg/art/notification.svg");
+    @include bg-contain("/assets/svg/art/notification.svg");
     width: 100%;
     padding-inline-start: calc($i32 + $i64 + $i20);
     background-size: $i64;
@@ -395,7 +395,7 @@
       &::before {
         content: "";
         @include square-ava($i32);
-        @include bg-contain("@svg/art/bookmark.svg");
+        @include bg-contain("/assets/svg/art/bookmark.svg");
       }
 
       .subtitle {
@@ -413,7 +413,7 @@
       &::before {
         content: "";
         @include square-ava();
-        @include bg-contain("@svg/art/loc-light.svg");
+        @include bg-contain("/assets/svg/art/loc-light.svg");
       }
 
       @include __567 {
@@ -432,7 +432,7 @@
       &::before {
         content: "";
         @include square-ava();
-        @include bg-contain("@svg/art/time.svg");
+        @include bg-contain("/assets/svg/art/time.svg");
       }
     }
 

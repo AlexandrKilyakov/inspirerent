@@ -1,9 +1,24 @@
 const selects = document.querySelectorAll(".inspire--select");
+const months = [
+  "Января",
+  "Февраля",
+  "Марта",
+  "Апреля",
+  "Мая",
+  "Июня",
+  "Июля",
+  "Августа",
+  "Сентября",
+  "Октября",
+  "Ноября",
+  "Декабря",
+];
+const year = new Date().getFullYear();
 
 if (selects.length) {
   selects.forEach((select) => {
     const header = select.querySelector(".inspire--select-header");
-    // const dates = select.querySelectorAll("[type='date']");
+    const dateClick = select.querySelector("[data-click-date]");
 
     if (!header) return;
 
@@ -17,13 +32,64 @@ if (selects.length) {
       }
     });
 
-    // if (dates.length) {
-    //   dates.forEach((item) => {
-    //     item.addEventListener("change", () => {
-    //       console.log(item.value);
-    //     });
-    //   });
-    // }
+    if (dateClick) {
+      dateClick.addEventListener("click", () => {
+        let parent = dateClick.closest("[select-date]");
+
+        if (!parent) {
+          return;
+        }
+
+        let text = parent.querySelector(".inspire--select-header .name");
+        let assets = parent.querySelector("[data-here-date]");
+        let dateStart = parent.querySelector("[select-times-start]");
+        let dateEnd = parent.querySelector("[select-times-end]");
+
+        if (!(text && assets)) {
+          return;
+        }
+
+        let dates = assets.value.split(",");
+
+        if (dates.length) {
+          text.textContent = "";
+          dates.forEach((day, i) => {
+            let elements = day.split(".");
+
+            text.textContent += i > 0 ? " — " : "";
+            text.textContent += elements[0];
+            text.textContent += " " + months[~~elements[1] - 1];
+            text.textContent += year < ~~elements[2] ? " " + elements[2] : "";
+
+            if (!(dateStart && dateEnd)) {
+              return;
+            }
+
+            let times = [dateStart.textContent, dateEnd.textContent];
+
+            try {
+              text.textContent += " " + times[i];
+            } catch {
+              console.log("Нет времени");
+            }
+          });
+
+          try {
+            if (dates.length > 1) {
+              text.dataset.start = dates[0];
+              text.dataset.end = dates[1];
+              selectDate(text.parentElement);
+            } else {
+              text.dataset.start = "";
+              text.dataset.end = "";
+              selectDate(text.parentElement);
+            }
+          } catch {
+            console.log("Нет диапазона дат");
+          }
+        }
+      });
+    }
 
     const selectType = header.dataset.type;
 

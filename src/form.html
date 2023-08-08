@@ -68,8 +68,8 @@
         <section class="content address--map">
           <div class="wrapper">
             <h2 class="title" data-map="point-start">Выберите пункт выдачи</h2>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label class="triggers" js-point-of-issue data-text="«Метрополис»">
+              <input type="radio" name="point-of-issue" checked />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name">БЦ «Метрополис» (м. Войковская)</span>
@@ -85,8 +85,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-issue
+              data-text="«Лотте Профсоюзная»"
+            >
+              <input type="radio" name="point-of-issue" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name">БЦ «Лотте Профсоюзная» (м. Калужская)</span>
@@ -102,8 +106,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-issue
+              data-text="в аэропорту Шереметьево"
+            >
+              <input type="radio" name="point-of-issue" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name"
@@ -125,8 +133,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-issue
+              data-text="в аэропорту Домодедово"
+            >
+              <input type="radio" name="point-of-issue" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name"
@@ -148,8 +160,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-issue
+              data-text="в аэропорту Внуково"
+            >
+              <input type="radio" name="point-of-issue" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name"
@@ -171,13 +187,6 @@
                 </span>
               </span>
             </label>
-
-            <h2 class="title" data-map="point-end">Выберите пункт возврата</h2>
-            <label class="triggers">
-              <input type="checkbox" name="name" />
-              <span class="trigger"></span>
-              <span class="h4">Возврат там же</span>
-            </label>
           </div>
           <div class="map">
             <iframe
@@ -194,9 +203,16 @@
         <header class="inspire--select-header" data-type="date">
           <p class="name">1 июня</p>
         </header>
-        <section class="content">
-          <!-- Нужно сделать календарь нормальным, пока временный вариант  -->
-          <input type="date" />
+        <section class="content inspire--select-times">
+          <div class="time-item">
+            <input type="text" id="date1" hidden data-here-date />
+            <script>
+              var date1 = new Datepicker("#date1", {
+                inline: true,
+              });
+            </script>
+            <button type="button" data-click-date>Сохранить дату</button>
+          </div>
         </section>
       </div>
       <div class="inspire--select wow fadeIn" select-times>
@@ -289,9 +305,9 @@
         </header>
         <section class="content address--map">
           <div class="wrapper">
-            <h2 class="title" data-map="point-end">Выберите пункт выдачи</h2>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <h2 class="title" data-map="point-end">Выберите пункт возврата</h2>
+            <label class="triggers" js-point-of-return data-text="«Метрополис»">
+              <input type="radio" name="point-of-return" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name">БЦ «Метрополис» (м. Войковская)</span>
@@ -307,8 +323,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-return
+              data-text="«Лотте Профсоюзная»"
+            >
+              <input type="radio" name="point-of-return" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name">БЦ «Лотте Профсоюзная» (м. Калужская)</span>
@@ -324,8 +344,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-return
+              data-text="в аэропорту Шереметьево"
+            >
+              <input type="radio" name="point-of-return" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name"
@@ -347,8 +371,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-return
+              data-text="в аэропорту Домодедово"
+            >
+              <input type="radio" name="point-of-return" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name"
@@ -370,8 +398,12 @@
                 </span>
               </span>
             </label>
-            <label class="triggers">
-              <input type="radio" name="name" />
+            <label
+              class="triggers"
+              js-point-of-return
+              data-text="в аэропорту Внуково"
+            >
+              <input type="radio" name="point-of-return" />
               <span class="trigger"></span>
               <span class="txt">
                 <span class="name"
@@ -393,13 +425,6 @@
                 </span>
               </span>
             </label>
-
-            <h2 class="title" data-map="point-end">Выберите пункт возврата</h2>
-            <label class="triggers">
-              <input type="checkbox" name="name" />
-              <span class="trigger"></span>
-              <span class="h4">Возврат там же</span>
-            </label>
           </div>
           <div class="map">
             <iframe
@@ -416,9 +441,16 @@
         <header class="inspire--select-header" data-type="date">
           <p class="name">14 июня</p>
         </header>
-        <section class="content">
-          <!-- Нужно сделать календарь нормальным, пока временный вариант  -->
-          <input type="date" />
+        <section class="content inspire--select-times">
+          <div class="time-item">
+            <input type="text" id="date2" hidden data-here-date />
+            <script>
+              var date2 = new Datepicker("#date2", {
+                inline: true,
+              });
+            </script>
+            <button type="button" data-click-date>Сохранить дату</button>
+          </div>
         </section>
       </div>
       <div class="inspire--select wow fadeIn" select-times>

@@ -6,7 +6,7 @@
     width: var(--w);
     height: var(--h);
 
-    @include sprite("@svg/combo/map.svg", 4);
+    @include sprite("/assets/svg/combo/map.svg", 4);
   }
 }
 

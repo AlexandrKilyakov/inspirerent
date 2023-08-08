@@ -10,7 +10,7 @@
 }
 
 %cursor {
-  cursor: url("@img/close.png"), auto;
+  cursor: url("/assets/img/close.png"), auto;
 }
 
 %close {
@@ -53,7 +53,7 @@
     padding-inline-end: calc(var(--p) * 2 + var(--size));
     text-overflow: ellipsis;
     background: {
-      image: url(@svg/art/arrow.svg);
+      image: url(/assets/svg/art/arrow.svg);
       repeat: no-repeat;
       size: var(--size);
       position: {

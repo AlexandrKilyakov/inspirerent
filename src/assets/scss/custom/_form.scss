@@ -145,7 +145,7 @@
     &:before {
       content: "";
       transition: 0.3s background-image;
-      @include bg-contain("@svg/art/add.svg");
+      @include bg-contain("/assets/svg/art/add.svg");
       @include square-ava();
     }
 
@@ -154,7 +154,7 @@
       color: $clr-f;
 
       &:before {
-        background-image: url("@svg/art/add-light.svg");
+        background-image: url("/assets/svg/art/add-light.svg");
       }
     }
 

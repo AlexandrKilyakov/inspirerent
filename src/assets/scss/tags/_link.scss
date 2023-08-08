@@ -82,7 +82,7 @@ a {
     &::after {
       content: "";
       @include square-ava($i16);
-      @include bg-contain("@svg/art/cancel.svg");
+      @include bg-contain("/assets/svg/art/cancel.svg");
     }
 
     &:hover {
@@ -95,7 +95,7 @@ a {
     --h: #{$i32};
     --y: 2;
     @include square-ava($i32);
-    @include sprite("@svg/combo/arrow.svg", 12);
+    @include sprite("/assets/svg/combo/arrow.svg", 12);
     padding: 0;
     background-color: transparent;
     transition: none;
@@ -135,7 +135,7 @@ a {
     &:after {
       content: "";
       @include square-ava(1.25rem);
-      @include bg-contain("@svg/art/pdf.svg");
+      @include bg-contain("/assets/svg/art/pdf.svg");
     }
   }
 }
