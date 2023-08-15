@@ -246,6 +246,13 @@
         min-width: 19.0625rem;
         max-width: 19.0625rem;
       }
+
+      .title {
+        width: 14rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
   }
 
@@ -299,8 +306,10 @@
       @extend %f-column;
     }
 
-    .icon--big .icon--element {
-      padding-inline: 0;
+    .icon--big {
+      .icon--element {
+        padding-inline: 0;
+      }
     }
   }
 
@@ -340,20 +349,30 @@
       }
 
       .collection {
-        max-height: calc(100vh - var(--height-header));
-        overflow-y: auto;
+        @supports not (position: sticky) {
+          max-height: calc(100vh - var(--height-header));
+          overflow-y: auto;
 
-        &::-webkit-scrollbar {
-          width: 0.25rem;
-          border-radius: 0.25rem;
-        }
+          &::-webkit-scrollbar {
+            width: 0.25rem;
+            border-radius: 0.25rem;
+          }
 
-        &::-webkit-scrollbar-thumb {
-          border-radius: 0.25rem;
+          &::-webkit-scrollbar-thumb {
+            border-radius: 0.25rem;
+          }
         }
       }
 
       .map {
+        @supports (position: sticky) {
+          @media (min-width: 55.625rem) {
+            position: sticky;
+            top: calc($i32 + var(--height-header));
+            height: fit-content;
+          }
+        }
+
         iframe {
           width: 100%;
           min-height: 18.75rem;

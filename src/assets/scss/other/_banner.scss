@@ -145,7 +145,7 @@
 
     button,
     .link--line {
-      @include not-first($i16);
+      @include not-first($i8);
     }
   }
 

@@ -48,6 +48,9 @@
 
     .icon--element {
       flex-wrap: nowrap;
+
+      @include not-last(0);
+
       @media (min-width: 60.5rem) {
         padding-inline: $i32;
       }

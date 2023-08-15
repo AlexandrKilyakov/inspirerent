@@ -88,6 +88,8 @@ if (selects.length) {
             console.log("Нет диапазона дат");
           }
         }
+
+        select.classList.toggle("active");
       });
     }
 

@@ -47,6 +47,12 @@
           }
         }
 
+        .trigger--switch {
+          &:after {
+            left: calc(100% - 0.625rem);
+          }
+        }
+
         .trigger--point {
           background-color: $clr-mn;
 
@@ -117,6 +123,32 @@
     &.small {
       --ava: 1rem;
       margin-block-start: $i4;
+    }
+
+    &--switch {
+      --w: 2rem;
+      --h: 1rem;
+      position: relative;
+      min-width: var(--w);
+      width: var(--w);
+      height: var(--h);
+      background-color: transparent;
+      border: 0.125rem solid $clr-mn;
+      border-radius: var(--h);
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0.125rem;
+        width: calc(var(--h) - 0.5rem);
+        height: calc(var(--h) - 0.5rem);
+        background: $clr-mn;
+        border-radius: 1.25rem;
+        transition: 0.3s all ease-out;
+        transform: translateY(-50%);
+      }
     }
 
     &--point {

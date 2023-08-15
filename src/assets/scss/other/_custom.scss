@@ -1,6 +1,6 @@
 .custom {
   &--select-loc {
-    max-width: fit-content;
+    max-width: 12.5rem;
     width: 100%;
     font-size: $h3;
     font-weight: 600;
@@ -31,7 +31,7 @@
 
   &--select {
     @extend %z1;
-    max-width: 12.3125rem;
+    max-width: max-content;
     width: 100%;
 
     &:not(.active) {
@@ -50,7 +50,7 @@
       position: absolute;
       top: calc(100% + 1rem);
       left: 0;
-      width: 100%;
+      width: max-content;
       background-color: $clr-f;
       border-radius: $br;
       padding: 1rem;

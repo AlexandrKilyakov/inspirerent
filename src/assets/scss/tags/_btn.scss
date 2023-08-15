@@ -6,6 +6,7 @@ button,
   @extend %flex-center;
   font-weight: 500;
   font-size: $h4;
+  line-height: 120%;
   max-width: 19.0625rem;
   width: 100%;
   background-color: $clr-mn;
@@ -110,7 +111,7 @@ button,
     }
   }
   &--like {
-    @include square-ava(2rem);
+    @include square-ava(1.5rem);
     --x: 0;
     --y: 0;
     --w: var(--ava);
@@ -128,7 +129,14 @@ button,
     }
 
     &[data-toggle-favorites="true"] {
-      --x: 3;
+      background: {
+        image: url("/assets/svg/art/like.svg");
+        size: contain;
+        position: {
+          x: center;
+          y: center;
+        }
+      }
     }
   }
   &--aside {

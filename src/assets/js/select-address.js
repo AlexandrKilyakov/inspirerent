@@ -20,11 +20,13 @@ if (SELECT_ADDRESS.length) {
         return;
       }
 
+      let dataTrigger = target.parentElement.dataset.triggersNotChange;
+
       if (pointIssue) {
         text1 = "Пункт выдачи " + pointIssue.dataset.text;
       } else if (pointReturn) {
         text2 = br + "Пункт возврата " + pointReturn.dataset.text;
-      } else if (pointPlace) {
+      } else if (pointPlace && (!dataTrigger || dataTrigger === "false")) {
         let input = pointPlace.querySelector("input");
 
         if (input.checked) {

@@ -21,6 +21,17 @@
     width: 100%;
     z-index: 1;
 
+    @media (hover: hover) {
+      .inspire--select-header {
+        border: 0.0625rem solid transparent;
+        transition: 0.1s border;
+
+        &:hover {
+          border-color: $clr-mn;
+        }
+      }
+    }
+
     &:before {
       content: "";
       position: fixed;
@@ -44,28 +55,14 @@
       }
     }
 
-    @media (min-width: 60.5rem) {
-      &:not(:hover, .active) {
-        &::before {
-          opacity: 0;
-        }
-      }
-      &:hover,
-      &.active {
-        z-index: 2;
+    &:not(.active) {
+      &::before {
+        opacity: 0;
       }
     }
 
-    @include __967 {
-      &:not(.active) {
-        &::before {
-          opacity: 0;
-        }
-      }
-
-      &.active {
-        z-index: 2;
-      }
+    &.active {
+      z-index: 2;
     }
 
     .content {
@@ -103,7 +100,7 @@
           padding-block-start: $i24;
           margin-block-start: $i24;
 
-          &:before {
+          &:after {
             content: "";
             position: absolute;
             top: 0;
@@ -187,9 +184,29 @@
         }
       }
 
-      .accordion--child {
-        .contant {
-          padding-block-start: $i24;
+      .accordion {
+        &.active {
+          .title {
+            @include not-hover-color($clr);
+          }
+        }
+
+        &:not(.active) {
+          .title {
+            @include not-last(0px);
+          }
+        }
+
+        .title {
+          font-weight: 600;
+          line-height: 120%;
+          transition: 0.5s margin-block-end;
+        }
+
+        &--child {
+          .contant {
+            padding-block-start: $i24;
+          }
         }
       }
     }

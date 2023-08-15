@@ -1,7 +1,6 @@
 html {
   font-size: $base;
   scroll-behavior: smooth;
-  hyphens: auto;
 }
 
 body,
@@ -28,10 +27,6 @@ body {
 main {
   flex: 1;
   z-index: 0;
-
-  @include __1267 {
-    overflow: hidden;
-  }
 }
 
 button,

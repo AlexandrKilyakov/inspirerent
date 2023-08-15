@@ -78,3 +78,7 @@ input {
     cursor: pointer;
   }
 }
+
+:target {
+  scroll-margin-block-start: var(--height-header);
+}

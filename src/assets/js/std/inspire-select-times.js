@@ -19,6 +19,8 @@ function addEventSelect(element) {
           }
 
           selectTimesName.innerHTML = trigger.value;
+
+          parent.classList.remove("active");
         });
       });
     });
