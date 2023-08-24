@@ -88,7 +88,7 @@
   min-width: var(--w);
   width: var(--w);
   height: var(--h);
-  background-image: url("/assets/svg/combo/arrow.svg");
+  background-image: url("../svg/combo/arrow.svg");
   background-size: calc(var(--w) * 12);
   background-repeat: no-repeat;
   background-position-x: calc(-1 * var(--x) * var(--w));
