@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230814144814"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230830161729"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230814144814" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230814144814" />
-    <script src="./assets/js/datepicker.js?ver=20230814144814"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230830161729" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230830161729" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230830161729" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230830161729" />
+    <script src="./assets/js/datepicker.js?ver=20230830161729"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
@@ -233,28 +235,63 @@
   <h1 class="title wow fadeIn">Ваш заказ</h1>
 
   <div class="article--std">
-    <div class="cart slider--fake wow fadeIn">
-      <a href="#" class="link--back"></a>
-      <img
-        src="https://inspirerent.ru/upload/iblock/1d7/1.png"
-        alt=""
-        class="ava"
-      />
-      <div class="content">
-        <header class="cart--header">
-          <h2 class="name">Hyundai Creta (II)</h2>
-          <button
-            type="button"
-            class="btn--like"
-            data-toggle-favorites=""
-            data-id
-          ></button>
-        </header>
-        <p class="subtitle">АКПП</p>
-        <p class="price">2 800 ₽ / сутки</p>
-        <p class="description">20 000₽ депозит</p>
+    <div class="glide slider--fake-wrapper cart wow fadeIn">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide slider--fake">
+            <img
+              src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+              alt=""
+              class="ava"
+            />
+            <div class="content">
+              <header class="cart--header">
+                <h2 class="name">Hyundai Creta (II)</h2>
+                <button
+                  type="button"
+                  class="btn--like"
+                  data-toggle-favorites=""
+                  data-id
+                ></button>
+              </header>
+              <p class="subtitle">АКПП</p>
+              <p class="price">2 800 ₽ / сутки</p>
+              <p class="description">20 000₽ депозит</p>
+            </div>
+          </li>
+          <li class="glide__slide slider--fake">
+            <img
+              src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+              alt=""
+              class="ava"
+            />
+            <div class="content">
+              <header class="cart--header">
+                <h2 class="name">Hyundai Creta</h2>
+                <button
+                  type="button"
+                  class="btn--like"
+                  data-toggle-favorites=""
+                  data-id
+                ></button>
+              </header>
+              <p class="subtitle">АКПП</p>
+              <p class="price">2 800 ₽ / сутки</p>
+              <p class="description">20 000₽ депозит</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <a href="#" class="link--next"></a>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button
+          class="glide__arrow glide__arrow--left link--back"
+          data-glide-dir="<"
+        ></button>
+        <button
+          class="glide__arrow glide__arrow--right link--next"
+          data-glide-dir=">"
+        ></button>
+      </div>
     </div>
     <div class="grid-4 specifications">
       <div class="cart">
@@ -1268,10 +1305,12 @@
   </div>
 </div>
 
-	<script src="./assets/libs/wow/wow.min.js?ver=20230814144814" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230830161729" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20230830161729" ></script>
 	<script>
 		new WOW().init();
+		new Glide('.glide').mount()
 	</script>
-	<script src="./assets/js/app.min.js?ver=20230814144814" defer></script>
+	<script src="./assets/js/app.min.js?ver=20230830161729" defer></script>
 </body>
 </html>
