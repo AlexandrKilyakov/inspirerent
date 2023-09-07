@@ -8,17 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230830161729"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230908004253"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230830161729" />
-    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230830161729" />
-    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230830161729" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230830161729" />
-    <script src="./assets/js/datepicker.js?ver=20230830161729"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230908004253" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230908004253" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230908004253" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230908004253" />
+    <script src="./assets/js/datepicker.js?ver=20230908004253"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
+      <a href="/" class="logo"></a>
       <a
         href="tel:88007770755"
         class="icon--element header--mr"
@@ -801,6 +802,7 @@
         </section>
       </div>
     </div>
+
     <div class="article--smart mt32">
       <h2 class="h3 title wow fadeIn">Дополнительные услуги</h2>
       <div class="cart">
@@ -1030,7 +1032,9 @@
           ><span class="old-prise">20 000 ₽</span>
         </p>
       </div>
-      <h2 class="h3 title wow fadeIn">Контакты для подтверждения брони</h2>
+      <h2 id="form-smart" class="h3 title wow fadeIn">
+        Контакты для подтверждения брони
+      </h2>
       <div class="cart">
         <form action="" class="form--smart">
           <label class="label--reverse wow fadeIn">
@@ -1086,6 +1090,18 @@
         подскажет сотрудник Inspire по телефону
         <a href="tel:88007770755" class="bold clr-main">8 (800) 777-07-55</a>
       </p>
+    </div>
+
+    <div class="sticky-cost wow fadeIn">
+      <div class="check-car">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+        <p class="name h4">Hyundai Creta (II)</p>
+      </div>
+      <p class="total">
+        Итого стоимость: <span class="price">34 200 ₽</span
+        ><span class="old-prise">54 600 ₽</span>
+      </p>
+      <a href="#form-smart" class="btn">Забронировать</a>
     </div>
   </div>
 </section>
@@ -1305,12 +1321,12 @@
   </div>
 </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230830161729" ></script>
-	<script src="./assets/libs/wow/wow.min.js?ver=20230830161729" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230908004253" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20230908004253" ></script>
 	<script>
 		new WOW().init();
 		new Glide('.glide').mount()
 	</script>
-	<script src="./assets/js/app.min.js?ver=20230830161729" defer></script>
+	<script src="./assets/js/app.min.js?ver=20230908004253" defer></script>
 </body>
 </html>
