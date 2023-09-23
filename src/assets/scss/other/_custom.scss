@@ -7,7 +7,7 @@
     line-height: 120%;
     background: {
       color: $clr-blk-pct-02;
-      image: url(/assets/svg/art/icon/loc-f.svg);
+      image: url(../svg/art/icon/loc-f.svg);
       repeat: no-repeat;
       size: $i24;
       position: {
@@ -37,6 +37,18 @@
     &:not(.active) {
       .options {
         @extend %no-active-op;
+      }
+    }
+
+    &.active {
+      &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
       }
     }
 

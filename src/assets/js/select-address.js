@@ -2,7 +2,12 @@ const SELECT_ADDRESS = document.querySelectorAll("[select-address]");
 
 if (SELECT_ADDRESS.length) {
   SELECT_ADDRESS.forEach((address) => {
-    const name = address.querySelector(".inspire--select-header .name");
+    const headerSelect = address.querySelector(".inspire--select-header");
+    const name = headerSelect.querySelector(".name");
+    const pointIssue = headerSelect.dataset.type == "point-issue";
+
+    let subtext1 = pointIssue ? "Пункт выдачи " : "";
+    let subtext2 = pointIssue ? "Пункт возврата " : "";
 
     let text1 = "";
     let text2 = "";
@@ -23,9 +28,9 @@ if (SELECT_ADDRESS.length) {
       let dataTrigger = target.parentElement.dataset.triggersNotChange;
 
       if (pointIssue) {
-        text1 = "Пункт выдачи " + pointIssue.dataset.text;
+        text1 = subtext1 + twoWord(pointIssue.dataset.text);
       } else if (pointReturn) {
-        text2 = br + "Пункт возврата " + pointReturn.dataset.text;
+        text2 = br + subtext2 + twoWord(pointReturn.dataset.text);
       } else if (pointPlace && (!dataTrigger || dataTrigger === "false")) {
         let input = pointPlace.querySelector("input");
 
@@ -37,4 +42,9 @@ if (SELECT_ADDRESS.length) {
       name.innerHTML = text1 + text2;
     });
   });
+}
+
+function twoWord(str) {
+  let words = str.split(" ");
+  return words.slice(0, 2).join(" ");
 }

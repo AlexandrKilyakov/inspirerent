@@ -115,6 +115,33 @@
     &::-webkit-scrollbar-thumb {
       background-color: $clr-mn-2;
     }
+
+    .select-city {
+      margin-inline: auto;
+
+      @include not-last($i32);
+
+      .inspire--select-header {
+        width: fit-content;
+        font-size: $h4;
+        font-weight: 600;
+        line-height: 120%;
+        background-color: $clr-blk-pct-02;
+        background-image: url(../svg/art/icon/loc-f.svg);
+        background-repeat: no-repeat;
+        background-size: $i24;
+        background-position-y: center;
+        background-position-x: $i32;
+        color: $clr-f;
+        padding: 0.625rem $i32 0.625rem calc($i32 + $i24 + 1rem);
+        border-radius: 6.25rem;
+        margin-inline: auto;
+
+        .name {
+          color: currentColor;
+        }
+      }
+    }
   }
 }
 
@@ -155,7 +182,7 @@ a.current,
           width: var(--w);
           height: var(--h);
 
-          @include sprite("/assets/svg/combo/x24.svg", 5);
+          @include sprite("../svg/combo/x24.svg", 5);
         }
       }
     }

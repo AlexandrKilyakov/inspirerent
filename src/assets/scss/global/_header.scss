@@ -8,6 +8,22 @@
   gap: $i8;
   z-index: 99;
 
+  .logo {
+    width: 11.0625rem;
+    height: 2.75rem;
+    background: {
+      image: url("../svg/art/logo.svg");
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+    }
+    margin-right: auto;
+
+    @media (min-width: 35.5rem) {
+      min-width: 11.0625rem;
+    }
+  }
+
   a {
     &[data-icon] {
       &:hover {
@@ -22,8 +38,9 @@
     font-weight: 900;
     line-height: 120%;
 
-    @media (max-width: 26.5625rem) {
+    @include __667 {
       font-size: 0;
+      gap: 0;
     }
 
     @include not-last(0);
@@ -41,8 +58,15 @@
   .burger--menu {
     margin-inline: $i8;
 
-    @media (max-width: 15.625rem) {
+    @include __367 {
       font-size: 0;
+      gap: 0;
+      margin-inline: 0;
+      order: 1;
+
+      .burger {
+        padding: 0.0625rem;
+      }
     }
   }
 

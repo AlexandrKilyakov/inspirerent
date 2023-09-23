@@ -1,3 +1,4 @@
+const changeEvent = new Event("change");
 document.addEventListener("click", (e) => {
   let el = e.target;
 
@@ -23,5 +24,7 @@ document.addEventListener("click", (e) => {
       default:
         break;
     }
+
+    input.dispatchEvent(changeEvent);
   }
 });

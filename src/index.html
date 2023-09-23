@@ -302,23 +302,25 @@
       </div>
       <div class="inspire--select" select-date>
         <header class="inspire--select-header" data-type="date">
-          <p
-            class="name"
-            data-start="27.07.2023"
-            data-end="30.08.2023"
-            data-output=""
-          >
+          <p class="name" data-start="" data-end="" data-output="">
             11 марта 09:00 — 14 марта 09:00
           </p>
         </header>
         <section class="content inspire--select-times">
           <div class="time-item">
-            <input type="text" id="simple" hidden data-here-date />
+            <!-- В value записывай 2 даты через запятую без пробелов -->
+            <!-- можно вводить даты 2х форматов dd.mm.yyyy и yyyy.mm.dd -->
+            <input
+              type="text"
+              id="simple"
+              hidden
+              data-here-date
+              value="01.08.2023,2023.08.25"
+            />
             <script>
-              var simple = new Datepicker("#simple", {
+              let simple = new Datepicker("#simple", {
                 inline: true,
                 ranged: true,
-                onChange: "11.08.2023",
               });
             </script>
             <div class="grid-2">

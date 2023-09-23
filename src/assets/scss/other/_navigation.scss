@@ -34,7 +34,7 @@
         --w: 1.5rem;
         --h: 1.5rem;
         --y: 1;
-        @include sprite("/assets/svg/combo/arrow.svg", 12);
+        @include sprite("../svg/combo/arrow.svg", 12);
 
         &[data-stop] {
           pointer-events: none;

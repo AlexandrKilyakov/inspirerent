@@ -6,7 +6,7 @@
     width: var(--w);
     height: var(--h);
 
-    @include sprite("/assets/svg/combo/metro.svg", 5);
+    @include sprite("../svg/combo/metro.svg", 5);
   }
 }
 

@@ -68,3 +68,27 @@
 @include indent("120");
 @include indent("124");
 @include indent("128");
+
+@mixin indent-text($n) {
+  .p#{$n} {
+    padding-block: #{$n} !important;
+  }
+  .pt#{$n} {
+    padding-block-start: #{$n} !important;
+  }
+  .pb#{$n} {
+    padding-block-end: #{$n} !important;
+  }
+  .m#{$n} {
+    margin-block-start: #{$n} !important;
+    margin-block-end: #{$n} !important;
+  }
+  .mt#{$n} {
+    margin-block-start: #{$n} !important;
+  }
+  .mb#{$n} {
+    margin-block-end: #{$n} !important;
+  }
+}
+
+@include indent-text("0");

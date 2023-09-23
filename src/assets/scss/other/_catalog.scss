@@ -1,5 +1,20 @@
 .catalog {
-  @include not-first-last($i16, $i64);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $i20;
+  margin-block: $i16 $i64;
+
+  @media (max-width: 91.6875rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 66.6875rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 39.375rem) {
+    grid-template-columns: 100%;
+  }
 
   .post {
     &[data-new] {
@@ -14,7 +29,7 @@
           display: block;
           width: 5.3125rem;
           height: 1.875rem;
-          @include bg-contain("/assets/svg/art/new.svg");
+          @include bg-contain("../svg/art/new.svg");
           background-position: {
             x: left;
             y: top;

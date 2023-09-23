@@ -12,6 +12,10 @@
 
     .content {
       --gap: 0.625rem;
+
+      &:not(.active) {
+        display: none !important;
+      }
     }
   }
 }
@@ -59,70 +63,26 @@
     gap: $i8;
     font-size: $i16;
 
-    &[data-id] {
-      --w: 4rem;
-      --y: 0;
+    &.active {
+      border-color: $clr-mn;
+    }
 
-      &:before {
-        content: "";
-        width: var(--w);
-        height: var(--h);
-      }
-
-      &.active {
-        --y: 1;
-      }
-
-      &:hover,
-      &.active {
+    @media (hover: hover) {
+      &:hover {
         border-color: $clr-mn;
-        background-color: $clr-f;
-        color: $clr;
-      }
-
-      &.active {
-        pointer-events: none;
       }
     }
 
-    &[data-id="0"] {
-      --x: 0;
+    @media (hover: none) {
+      &:active {
+        border-color: $clr-mn;
+      }
     }
 
-    &[data-id="1"] {
-      --x: 1;
-    }
-
-    &[data-id="2"] {
-      --x: 2;
-    }
-
-    &[data-id="3"] {
-      --x: 3;
-    }
-
-    &[data-id="4"] {
-      --x: 4;
-    }
-
-    &[data-id="5"] {
-      --x: 5;
-    }
-
-    &[data-id="6"] {
-      --x: 6;
-    }
-
-    &[data-id="7"] {
-      --x: 7;
-    }
-
-    &[data-id="8"] {
-      --x: 8;
-    }
-
-    &[data-id="9"] {
-      --x: 9;
+    .ava {
+      width: 4rem;
+      height: 4rem;
+      object-fit: contain;
     }
   }
 }
@@ -133,7 +93,7 @@
       --h: 1.75rem;
 
       &:before {
-        @include sprite("/assets/svg/combo/type_car.svg", 9, var(--w));
+        @include sprite("../svg/combo/type_car.svg", 9, var(--w));
       }
     }
   }
@@ -145,7 +105,7 @@
       --h: 4rem;
 
       &:before {
-        @include sprite("/assets/svg/combo/logo.svg", 10);
+        @include sprite("../svg/combo/logo.svg", 10);
       }
     }
   }

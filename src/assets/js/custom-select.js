@@ -54,12 +54,13 @@ if (selects.length) {
         if (dates.length) {
           text.textContent = "";
           dates.forEach((day, i) => {
-            let elements = day.split(".");
+            let elements = getDateCustom(day);
+            let yearCheck = elements.getFullYear();
 
             text.textContent += i > 0 ? " — " : "";
-            text.textContent += elements[0];
-            text.textContent += " " + months[~~elements[1] - 1];
-            text.textContent += year < ~~elements[2] ? " " + elements[2] : "";
+            text.textContent += elements.getDate();
+            text.textContent += " " + months[elements.getMonth()];
+            text.textContent += year != yearCheck ? " " + yearCheck : "";
 
             if (!(dateStart && dateEnd)) {
               return;
@@ -89,7 +90,7 @@ if (selects.length) {
           }
         }
 
-        select.classList.toggle("active");
+        select.classList.remove("active");
       });
     }
 
@@ -115,17 +116,19 @@ function selectDate(item) {
   const dataEnd = item.querySelector("[data-end]");
 
   if (!(dataStart && dataEnd)) return;
+  if (dataStart.dataset.start == "" || dataEnd.dataset.end == "") return;
 
-  let tmp = dataStart.dataset.start.split(".");
+  let tmp = getDateCustom(dataStart.dataset.start);
 
-  const start = tmp[0];
-  const startMonth = tmp[1];
-  const startYear = tmp[2];
+  const start = tmp.getDate();
+  const startMonth = tmp.getMonth() + 1;
+  const startYear = tmp.getFullYear();
 
-  tmp = dataEnd.dataset.end.split(".");
-  const end = tmp[0];
-  const endMonth = tmp[1];
-  const endYear = tmp[2];
+  tmp = getDateCustom(dataEnd.dataset.end);
+
+  const end = tmp.getDate();
+  const endMonth = tmp.getMonth() + 1;
+  const endYear = tmp.getFullYear();
 
   const output = item.querySelector("[data-output]");
 
@@ -139,6 +142,22 @@ function selectDate(item) {
   const d2 = `${endYear || year}.${endMonth || month}.${end || day}`;
 
   output.dataset.output = getDiffInDaysWeeksMonths(d1, d2);
+}
+
+function getDateCustom(str) {
+  // Проверяем формат даты и преобразуем его в формат ISO
+  if (/^\d{2}\.\d{2}\.\d{4}$/.test(str)) {
+    str = str.split(".").reverse().join("-");
+  } else if (/^\d{4}\.\d{2}\.\d{2}$/.test(str)) {
+    str = str.replace(/\./g, "-");
+  } else if (/^\d{2}\/\d{2}\/\d{4}$/.test(str)) {
+    str = str.split("/").reverse().join("-");
+  }
+
+  console.log(new Date(str));
+
+  // Создаем объект Date из преобразованной строки
+  return new Date(str);
 }
 
 // Получаем индекс окончания

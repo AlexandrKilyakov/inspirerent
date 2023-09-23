@@ -226,7 +226,15 @@
     padding-block-end: $i32;
     gap: $i20;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    cursor: grab;
+
+    &:not(:active) {
+      scroll-snap-type: x mandatory;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
 
     &.margin-block {
       margin-block: $i64;
@@ -430,6 +438,87 @@
     &:before {
       content: "";
       @include square-ava(2rem);
+    }
+  }
+}
+
+.sticky-cost {
+  position: sticky;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  max-width: 52.75rem;
+  width: 100%;
+  gap: $i20 $i52;
+  padding: 0.5rem 0.75rem;
+  margin-block-start: $i32;
+  margin-inline: auto;
+  border-radius: 4.75rem;
+  background: $clr-f;
+  box-shadow: 0 0.125rem 0.9375rem 0 rgba(0, 0, 0, 0.2);
+  z-index: 9;
+
+  @include __967 {
+    gap: $i10 $i20;
+  }
+
+  @media (max-width: 49.9375rem) {
+    width: fit-content;
+  }
+
+  @include __567 {
+    border-radius: 1.25rem;
+    padding: 0.5rem;
+  }
+
+  .check-car {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-inline: 0.75rem auto;
+
+    @media (max-width: 49.9375rem) {
+      display: none;
+    }
+
+    img {
+      width: 2.375rem;
+      height: auto;
+    }
+  }
+
+  .btn {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 150%;
+    padding: 1rem 1.5rem;
+    border-radius: 6.25rem;
+    width: fit-content;
+
+    @include __567 {
+      border-radius: 0.75rem;
+    }
+  }
+
+  .total {
+    @include not-first-last(0, 0);
+    font-weight: 400;
+
+    @include __967 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 0.5rem;
+    }
+
+    .price {
+      font-weight: 500;
+      margin-inline-start: 0.5rem;
+
+      @include __967 {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+      }
     }
   }
 }

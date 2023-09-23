@@ -117,7 +117,7 @@ button,
     --w: var(--ava);
     --h: var(--ava);
 
-    @include sprite("/assets/svg/combo/x24.svg", 5);
+    @include sprite("../svg/combo/x24.svg", 5);
 
     background-color: transparent !important;
     border-radius: var(--ava);
@@ -130,7 +130,7 @@ button,
 
     &[data-toggle-favorites="true"] {
       background: {
-        image: url("/assets/svg/art/like.svg");
+        image: url("../svg/art/like.svg");
         size: contain;
         position: {
           x: center;
@@ -140,7 +140,7 @@ button,
     }
   }
   &--aside {
-    @include bg-contain("/assets/svg/art/btn-aside.svg");
+    @include bg-contain("../svg/art/btn-aside.svg");
     max-width: none;
     width: 2rem;
     height: 2rem;
@@ -149,7 +149,7 @@ button,
   }
 
   &--back {
-    @include bg-contain("/assets/svg/art/btn-aside.svg");
+    @include bg-contain("../svg/art/btn-aside.svg");
     max-width: none;
     width: 100%;
     height: 2rem;

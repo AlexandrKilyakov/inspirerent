@@ -36,9 +36,11 @@
 	</footer>
 	@@include("../inc/modal/order-in-1-click.html")
 	@@include("../inc/modal/login.html")
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide" ></script>
 	<script src="@libs/wow/wow.min.js" ></script>
 	<script>
 		new WOW().init();
+		new Glide('.glide').mount()
 	</script>
 	<script src="@js/app.min.js" defer></script>
 </body>

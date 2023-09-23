@@ -8,12 +8,12 @@
   @if $name != $art {
     .#{$name} {
       @extend %square;
-      background-image: url(/assets/svg/art/#{$art}.svg);
+      background-image: url(../svg/art/#{$art}.svg);
     }
   } @else {
     .svg-#{$art} {
       @extend %square;
-      background-image: url(/assets/svg/art/#{$art}.svg);
+      background-image: url(../svg/art/#{$art}.svg);
     }
   }
 
@@ -21,7 +21,7 @@
     &:before {
       @extend %square;
       content: "";
-      background-image: url(/assets/svg/art/#{$art}.svg);
+      background-image: url(../svg/art/#{$art}.svg);
     }
   }
 }

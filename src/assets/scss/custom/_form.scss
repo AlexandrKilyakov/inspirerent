@@ -86,10 +86,12 @@
     width: 100%;
     margin-inline: auto;
 
-    body & a.btn {
+    body & a.btn,
+    .btn {
       @extend %flex-center;
       flex-direction: column;
       position: initial;
+      max-width: 100%;
       transform: translateY(0);
       gap: $i8;
 
@@ -145,7 +147,7 @@
     &:before {
       content: "";
       transition: 0.3s background-image;
-      @include bg-contain("/assets/svg/art/add.svg");
+      @include bg-contain("../svg/art/add.svg");
       @include square-ava();
     }
 
@@ -154,7 +156,7 @@
       color: $clr-f;
 
       &:before {
-        background-image: url("/assets/svg/art/add-light.svg");
+        background-image: url("../svg/art/add-light.svg");
       }
     }
 

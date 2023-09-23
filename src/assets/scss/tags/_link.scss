@@ -82,7 +82,7 @@ a {
     &::after {
       content: "";
       @include square-ava($i16);
-      @include bg-contain("/assets/svg/art/cancel.svg");
+      @include bg-contain("../svg/art/cancel.svg");
     }
 
     &:hover {
@@ -91,14 +91,17 @@ a {
   }
   &--next,
   &--back {
-    --w: #{$i32};
-    --h: #{$i32};
+    --w: #{2rem};
+    --h: #{2rem};
     --y: 2;
-    @include square-ava($i32);
-    @include sprite("/assets/svg/combo/arrow.svg", 12);
+    @include square-ava(2rem);
+    @include sprite("../svg/combo/arrow.svg", 12);
     padding: 0;
-    background-color: transparent;
+    background-color: transparent !important;
+    border: none;
     transition: none;
+    box-shadow: none;
+    text-shadow: none;
 
     &:hover {
       --y: 1;
@@ -135,7 +138,7 @@ a {
     &:after {
       content: "";
       @include square-ava(1.25rem);
-      @include bg-contain("/assets/svg/art/pdf.svg");
+      @include bg-contain("../svg/art/pdf.svg");
     }
   }
 }

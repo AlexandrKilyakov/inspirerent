@@ -21,6 +21,11 @@
     width: 100%;
     z-index: 1;
 
+    .inspire--select-header,
+    .content .inspire--select-header {
+      height: auto;
+    }
+
     @media (hover: hover) {
       .inspire--select-header {
         border: 0.0625rem solid transparent;
@@ -237,7 +242,6 @@
       @extend %select;
       @include cart();
       width: 100%;
-      height: 100%;
       padding-block: $i8;
       gap: $i12;
       cursor: pointer;
@@ -247,19 +251,19 @@
       }
 
       &[data-type="point-start"] {
-        @include dataType("/assets/svg/art/point-start.svg");
+        @include dataType("../svg/art/point-start.svg");
       }
 
       &[data-type="point-end"] {
-        @include dataType("/assets/svg/art/point-end.svg");
+        @include dataType("../svg/art/point-end.svg");
       }
 
       &[data-type="date"] {
-        @include dataType("/assets/svg/art/calendar.svg");
+        @include dataType("../svg/art/calendar.svg");
       }
 
       &[data-type="time"] {
-        @include dataType("/assets/svg/art/clock.svg");
+        @include dataType("../svg/art/clock.svg");
       }
 
       [data-output] {
@@ -378,6 +382,10 @@
           right: 0;
         }
       }
+
+      &-header {
+        height: 100%;
+      }
     }
 
     .content {
@@ -425,6 +433,10 @@
           grid-column: 1/-1;
         }
       }
+    }
+
+    .inspire--select-header {
+      height: 100%;
     }
 
     [select-address] {

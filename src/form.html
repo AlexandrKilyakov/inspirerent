@@ -5,28 +5,63 @@
   <h1 class="title wow fadeIn">Ваш заказ</h1>
 
   <div class="article--std">
-    <div class="cart slider--fake wow fadeIn">
-      <a href="#" class="link--back"></a>
-      <img
-        src="https://inspirerent.ru/upload/iblock/1d7/1.png"
-        alt=""
-        class="ava"
-      />
-      <div class="content">
-        <header class="cart--header">
-          <h2 class="name">Hyundai Creta (II)</h2>
-          <button
-            type="button"
-            class="btn--like"
-            data-toggle-favorites=""
-            data-id
-          ></button>
-        </header>
-        <p class="subtitle">АКПП</p>
-        <p class="price">2 800 ₽ / сутки</p>
-        <p class="description">20 000₽ депозит</p>
+    <div class="glide slider--fake-wrapper cart wow fadeIn">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide slider--fake">
+            <img
+              src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+              alt=""
+              class="ava"
+            />
+            <div class="content">
+              <header class="cart--header">
+                <h2 class="name">Hyundai Creta (II)</h2>
+                <button
+                  type="button"
+                  class="btn--like"
+                  data-toggle-favorites=""
+                  data-id
+                ></button>
+              </header>
+              <p class="subtitle">АКПП</p>
+              <p class="price">2 800 ₽ / сутки</p>
+              <p class="description">20 000₽ депозит</p>
+            </div>
+          </li>
+          <li class="glide__slide slider--fake">
+            <img
+              src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+              alt=""
+              class="ava"
+            />
+            <div class="content">
+              <header class="cart--header">
+                <h2 class="name">Hyundai Creta</h2>
+                <button
+                  type="button"
+                  class="btn--like"
+                  data-toggle-favorites=""
+                  data-id
+                ></button>
+              </header>
+              <p class="subtitle">АКПП</p>
+              <p class="price">2 800 ₽ / сутки</p>
+              <p class="description">20 000₽ депозит</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <a href="#" class="link--next"></a>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button
+          class="glide__arrow glide__arrow--left link--back"
+          data-glide-dir="<"
+        ></button>
+        <button
+          class="glide__arrow glide__arrow--right link--next"
+          data-glide-dir=">"
+        ></button>
+      </div>
     </div>
     <div class="grid-4 specifications">
       <div class="cart">
@@ -536,6 +571,7 @@
         </section>
       </div>
     </div>
+
     <div class="article--smart mt32">
       <h2 class="h3 title wow fadeIn">Дополнительные услуги</h2>
       <div class="cart">
@@ -765,7 +801,9 @@
           ><span class="old-prise">20 000 ₽</span>
         </p>
       </div>
-      <h2 class="h3 title wow fadeIn">Контакты для подтверждения брони</h2>
+      <h2 id="form-smart" class="h3 title wow fadeIn">
+        Контакты для подтверждения брони
+      </h2>
       <div class="cart">
         <form action="" class="form--smart">
           <label class="label--reverse wow fadeIn">
@@ -821,6 +859,18 @@
         подскажет сотрудник Inspire по телефону
         <a href="tel:88007770755" class="bold clr-main">8 (800) 777-07-55</a>
       </p>
+    </div>
+
+    <div class="sticky-cost wow fadeIn">
+      <div class="check-car">
+        <img src="https://inspirerent.ru/upload/iblock/1d7/1.png" alt="" />
+        <p class="name h4">Hyundai Creta (II)</p>
+      </div>
+      <p class="total">
+        Итого стоимость: <span class="price">34 200 ₽</span
+        ><span class="old-prise">54 600 ₽</span>
+      </p>
+      <a href="#form-smart" class="btn">Забронировать</a>
     </div>
   </div>
 </section>

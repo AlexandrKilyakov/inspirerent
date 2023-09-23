@@ -11,22 +11,21 @@ if (tabs.length) {
       const tab = event.target;
 
       if (tab.dataset.index) {
-        const tabContent =
+        const tabsContent =
           tabContainer.parentElement.querySelector(".tabs--content");
+        const tabContent = tabsContent.querySelector(".content.active");
         const activeTab = tabContainer.querySelector(".active");
 
         if (activeTab) {
           activeTab.classList.remove("active");
         }
 
-        for (const content of tabContent.children) {
-          if (!content.classList.contains("hide")) {
-            content.classList.add("hide");
-          }
+        if (tabContent) {
+          tabContent.classList.remove("active");
         }
 
         tab.classList.add("active");
-        tabContent.children[Number(tab.dataset.index)].classList.remove("hide");
+        tabsContent.children[Number(tab.dataset.index)].classList.add("active");
       }
     });
 

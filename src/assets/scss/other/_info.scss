@@ -38,18 +38,20 @@
   }
 
   &--hint {
-    @extend %f-center;
+    display: grid;
+    grid-template-columns: auto 1fr;
     gap: $i10;
 
     &-content {
       position: relative;
+      width: 100%;
       z-index: 2;
 
       &::before {
         content: "";
         display: block;
         @include square-ava();
-        @include bg-contain("/assets/svg/art/info.svg");
+        @include bg-contain("../svg/art/info.svg");
         padding-inline-end: 0.25rem;
         cursor: pointer;
       }
@@ -58,7 +60,7 @@
         &::before {
           flex: 0 0 0.75rem;
           width: 0.75rem;
-          background-image: url("/assets/svg/art/hint.svg");
+          background-image: url("../svg/art/hint.svg");
         }
       }
 
@@ -72,13 +74,21 @@
         @include cart();
         position: absolute;
         top: 50%;
-        left: 100%;
+        left: 16px;
         transform: translateY(-50%);
-        width: 23.75rem;
+        width: 100%;
         font-size: $f12;
         line-height: 150%;
         box-shadow: 0 0 0.9375rem 0 rgba(0, 0, 0, 0.15);
         transition: 0.3s opacity;
+
+        @include __567 {
+          top: 100%;
+          left: auto;
+          right: 0;
+          transform: initial;
+          width: 85vw;
+        }
       }
     }
 

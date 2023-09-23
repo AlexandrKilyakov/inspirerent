@@ -6,7 +6,7 @@
     width: var(--w);
     height: var(--h);
 
-    @include sprite("/assets/svg/combo/x32.svg", 6);
+    @include sprite("../svg/combo/x32.svg", 6);
   }
 }
 
@@ -20,7 +20,6 @@
   }
 }
 
-@include -icon("car-door", 0, 0);
 @include -icon("peaple", 0, 1);
 @include -icon("bag", 0, 2);
 @include -icon("transmission", 0, 3);
@@ -43,3 +42,23 @@
 @include -icon("mail-main", 4, 3);
 @include -icon("sun-main", 4, 4);
 @include -icon("moon-main", 5, 0);
+
+[data-weight="car-door"] {
+  --w: 2rem;
+  --h: 2rem;
+
+  &::before {
+    content: "";
+    display: block;
+    flex: 0 0 var(--w);
+    width: var(--w);
+    height: var(--h);
+
+    background: {
+      image: url("../img/car-door.png");
+      repeat: no-repeat;
+      size: 87.5% auto;
+      position: center;
+    }
+  }
+}

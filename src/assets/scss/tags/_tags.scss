@@ -44,7 +44,7 @@ img {
   &:after {
     content: "";
     @extend %inset;
-    @include bg-contain("/assets/svg/art/no-photo.svg");
+    @include bg-contain("../svg/art/no-photo.svg");
     background-color: $clr-f;
   }
 }

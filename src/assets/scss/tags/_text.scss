@@ -119,7 +119,7 @@ ol {
       &:before {
         content: "";
         @include square-ava();
-        @include bg-contain("/assets/svg/art/sber.svg");
+        @include bg-contain("../svg/art/sber.svg");
       }
 
       b {
@@ -147,7 +147,7 @@ ol {
         &:before {
           content: "";
           @include square-ava();
-          @include bg-contain("/assets/svg/art/gulka.svg");
+          @include bg-contain("../svg/art/gulka.svg");
         }
       }
 
@@ -184,7 +184,7 @@ ol {
         &:before {
           content: "";
           @include square-ava();
-          @include bg-contain("/assets/svg/art/gulka-no.svg");
+          @include bg-contain("../svg/art/gulka-no.svg");
         }
       }
 
@@ -226,13 +226,13 @@ time {
 
   &[data-type="date"] {
     &:before {
-      @include bg-contain("/assets/svg/art/calendar.svg");
+      @include bg-contain("../svg/art/calendar.svg");
     }
   }
 
   &[data-type="time"] {
     &:before {
-      @include bg-contain("/assets/svg/art/clock.svg");
+      @include bg-contain("../svg/art/clock.svg");
     }
   }
 }
@@ -253,13 +253,13 @@ address {
 
   &[data-point="start"] {
     &::before {
-      @include bg-contain("/assets/svg/art/point-start.svg");
+      @include bg-contain("../svg/art/point-start.svg");
     }
   }
 
   &[data-point="end"] {
     &::before {
-      @include bg-contain("/assets/svg/art/point-end.svg");
+      @include bg-contain("../svg/art/point-end.svg");
     }
   }
 }
