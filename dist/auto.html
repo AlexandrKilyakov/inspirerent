@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230814144814"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230924012411"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230814144814" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230814144814" />
-    <script src="./assets/js/datepicker.js?ver=20230814144814"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230924012411" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230924012411" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230924012411" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230924012411" />
+    <script src="./assets/js/datepicker.js?ver=20230924012411"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
+      <a href="/" class="logo"></a>
       <a
         href="tel:88007770755"
         class="icon--element header--mr"
@@ -164,15 +167,28 @@
 </a
         >
         <!-- form — связывает отдельно стоящий элемент <input> с формой. -->
-        <select
-          name="rate_id"
-          form="order-in-1-click"
-          class="custom--select-loc"
-        >
-          <option value="1298376">Москва</option>
-          <option value="1488201">Санкт-Петербург</option>
-          <option value="1473758">Краснодар</option>
-        </select>
+        <div class="inspire--select select-city" select-text>
+          <header class="inspire--select-header">
+            <p class="name">Москва</p>
+          </header>
+          <section class="content cart">
+            <label class="triggers">
+              <input type="radio" name="rate_id" form="order-in-1-click" value="Москва" checked />
+              <span class="trigger"></span>
+              <span class="txt">Москва</span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="rate_id" form="order-in-1-click" value="Санкт-Петербург" />
+              <span class="trigger"></span>
+              <span class="txt">Санкт-Петербург</span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="rate_id" form="order-in-1-click" value="Краснодар" />
+              <span class="trigger"></span>
+              <span class="txt">Краснодар</span>
+            </label>
+          </section>
+        </div>
         <a href="#" class="link--nav">Условия аренды</a>
         <a href="#" class="link--nav">Автомобили</a>
         <a href="#" class="link--nav">Подписка</a>
@@ -284,7 +300,7 @@
             <td><div class="discount">-10%</div></td>
             <td class="h5">
               Скидка на раннее бронирование<span class="chips"
-                >сна машину с лимитом пробега</span
+                >сна машину с&nbsp;лимитом пробега</span
               >
             </td>
             <td class="minw-150">с 15 мая</td>
@@ -327,7 +343,7 @@
       <div class="btns">
         <a href="#" class="btn" target="_blank">Рассчитать стоимость</a>
         <a href="#" class="link--line wow fadeIn"
-  >Заказать в 1 клик <span class="line"><svg
+  >Заказать в&nbsp;1 клик <span class="line"><svg
   width="24"
   height="24"
   viewBox="0 0 24 24"
@@ -382,26 +398,30 @@
 <section class="margin--std container">
   <h2 class="title wow fadeIn">Дополнительные услуги</h2>
   <div class="grid-4">
-    <a href="#" class="cart--add-services wow fadeIn">
-      <span class="name" data-before-ava="child-seat">Детское кресло</span>
-      <span class="price">250 ₽<span class="subtitle"> / сутки</span></span>
-    </a>
-    <a href="#" class="cart--add-services wow fadeIn">
-      <span class="name" data-before-ava="loc-line"
-        >Возврат в другом городе</span
-      >
-      <span class="price">1 000 ₽<span class="subtitle"></span></span>
-    </a>
-    <a href="#" class="cart--add-services wow fadeIn">
-      <span class="name" data-before-ava="insure">Страховка от угона</span>
-      <span class="price">220 ₽<span class="subtitle"> / сутки</span></span>
-    </a>
-    <a href="#" class="cart--add-services wow fadeIn">
-      <span class="name" data-before-ava="defend"
-        >Страховка стекол, фар и автошин</span
-      >
-      <span class="price">360 ₽<span class="subtitle"> / сутки</span></span>
-    </a>
+    <a
+      href="#"
+      class="cart--servese wow fadeIn"
+      style="--image: url('../img/card/1.jpg')"
+      >Детское кресло или бустер</a
+    >
+    <a
+      href="#"
+      class="cart--servese wow fadeIn"
+      style="--image: url('../img/card/2.jpg')"
+      >Подача в&nbsp;любую точку города</a
+    >
+    <a
+      href="#"
+      class="cart--servese wow fadeIn"
+      style="--image: url('../img/card/3.jpg')"
+      >Возврат в&nbsp;другом городе</a
+    >
+    <a
+      href="#"
+      class="cart--servese wow fadeIn"
+      style="--image: url('../img/card/4.jpg')"
+      >Встреча в&nbsp;аэропорту с&nbsp;табличкой</a
+    >
   </div>
 </section>
 
@@ -409,10 +429,11 @@
   <h2 class="title wow fadeIn">Описание автомобиля</h2>
   <div class="grid-2 wow fadeIn">
     <p>
-      <b>Аренда Хендай Крета в Санкт-Петербурге</b> возможна в компании Inspire.
-      Этот субкомпактный кроссовер с автоматической пятиступенчатой коробкой
-      передач и грамотно продуманным интерьером прекрасно подойдет для
-      длительной поездки на природу с еще четырьмя пассажирами.
+      <b>Аренда Хендай Крета в&nbsp;Санкт-Петербурге</b> возможна
+      в&nbsp;компании Inspire. Этот субкомпактный кроссовер
+      с&nbsp;автоматической пятиступенчатой коробкой передач и грамотно
+      продуманным интерьером прекрасно подойдет для длительной поездки на
+      природу с&nbsp;еще четырьмя пассажирами.
     </p>
     <p>
       Inspire предлагает аренду этого автомобиля по привлекательной цене
@@ -432,7 +453,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Kodiaq</h2>
+      <a href="#" class="title">Skoda Kodiaq</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -464,7 +485,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Hyundai Creta NEW</h2>
+      <a href="#" class="title">Hyundai Creta NEW</a>
       <p class="subtitle" data-box-types="РКПП"></p>
     </div>
     <button
@@ -496,7 +517,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Kodiaq 4x4</h2>
+      <a href="#" class="title">Skoda Kodiaq 4x4</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -528,7 +549,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Karoq</h2>
+      <a href="#" class="title">Skoda Karoq</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -560,7 +581,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Nissan Qashqai</h2>
+      <a href="#" class="title">Nissan Qashqai</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -592,7 +613,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Mitsubishi Outlander</h2>
+      <a href="#" class="title">Mitsubishi Outlander</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -624,7 +645,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Hyundai Creta (I) Rest.</h2>
+      <a href="#" class="title">Hyundai Creta (I) Rest.</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -656,7 +677,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Hyundai Creta (I)</h2>
+      <a href="#" class="title">Hyundai Creta (I)</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -688,7 +709,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Haval Jolion</h2>
+      <a href="#" class="title">Haval Jolion</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -720,7 +741,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Geely Coolray</h2>
+      <a href="#" class="title">Geely Coolray</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -752,7 +773,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Hyundai Elantra</h2>
+      <a href="#" class="title">Hyundai Elantra</a>
       <p class="subtitle" data-box-types="РКПП"></p>
     </div>
     <button
@@ -784,7 +805,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Octavia</h2>
+      <a href="#" class="title">Skoda Octavia</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -816,7 +837,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Toyota Camry</h2>
+      <a href="#" class="title">Toyota Camry</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -848,7 +869,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Octavia</h2>
+      <a href="#" class="title">Skoda Octavia</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -880,7 +901,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Hyundai Creta NEW</h2>
+      <a href="#" class="title">Hyundai Creta NEW</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -912,7 +933,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Nissan X-Trail 4x4</h2>
+      <a href="#" class="title">Nissan X-Trail 4x4</a>
       <p class="subtitle" data-box-types="РКПП"></p>
     </div>
     <button
@@ -944,7 +965,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Octavia NEW</h2>
+      <a href="#" class="title">Skoda Octavia NEW</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -976,7 +997,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Hyundai Elantra</h2>
+      <a href="#" class="title">Hyundai Elantra</a>
       <p class="subtitle" data-box-types="МКПП"></p>
     </div>
     <button
@@ -1008,7 +1029,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Volkswagen Polo</h2>
+      <a href="#" class="title">Volkswagen Polo</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -1040,7 +1061,7 @@
 >
   <header class="cart--header">
     <div class="name">
-      <h2 class="title">Skoda Octavia</h2>
+      <a href="#" class="title">Skoda Octavia</a>
       <p class="subtitle" data-box-types="АКПП"></p>
     </div>
     <button
@@ -1283,10 +1304,12 @@
   </div>
 </div>
 
-	<script src="./assets/libs/wow/wow.min.js?ver=20230814144814" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230924012411" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20230924012411" ></script>
 	<script>
 		new WOW().init();
+		new Glide('.glide').mount()
 	</script>
-	<script src="./assets/js/app.min.js?ver=20230814144814" defer></script>
+	<script src="./assets/js/app.min.js?ver=20230924012411" defer></script>
 </body>
 </html>
