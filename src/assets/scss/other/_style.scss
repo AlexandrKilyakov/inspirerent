@@ -200,6 +200,20 @@
       }
     }
   }
+
+  &--stock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: $i32 $i64;
+    gap: $i20;
+
+    @media (max-width: 66.6875rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 43.6875rem) {
+      grid-template-columns: 100%;
+    }
+  }
 }
 
 .social {

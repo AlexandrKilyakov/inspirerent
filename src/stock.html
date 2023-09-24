@@ -1,0 +1,40 @@
+@@include('./template/header.html', { "title": "Акции" })
+
+<section class="banner wow fadeIn">
+  <div class="item">
+    <div class="ava" style="background-image: url(@img/stock.jpg)"></div>
+    <div class="logo">@@include("./assets/svg/logo.html")</div>
+  </div>
+  <div class="item">
+    <h1 class="title">Акции автопроката «Inspire» Москва</h1>
+
+    <p>
+      Мы внимательно следим за ценами и предложением на рынке, чтобы предложить
+      нашим клиентам самые интересные скидки и акции.
+    </p>
+  </div>
+</section>
+
+@@include('./inc/breadcrumbs.html', { text: "Акции" })
+
+<section class="section--stock container">
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '25', art: 'https://inspirerent.ru/upload/iblock/1d7/1.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '15', art: 'https://inspirerent.ru/upload/iblock/5bf/ela_1.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '10', art: 'https://inspirerent.ru/upload/iblock/3b4/vp_1.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '25', art: 'https://inspirerent.ru/upload/iblock/f46/vp_2.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '15', art: 'https://inspirerent.ru/upload/iblock/fe4/1370.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '10', art: 'https://inspirerent.ru/upload/iblock/955/solaris.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '25', art: 'https://inspirerent.ru/upload/iblock/1c9/1.jpg' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '15', art: 'https://inspirerent.ru/upload/iblock/1b7/camry_new.png' })
+  @@include("./inc/stock.html", { price: '4 606', old_price: '5 900', discount:
+  '10', art: 'https://inspirerent.ru/upload/iblock/d55/toyota_camry.png' })
+</section>
+@@include('./template/footer.html')

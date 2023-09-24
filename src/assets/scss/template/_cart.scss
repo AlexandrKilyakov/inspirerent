@@ -555,4 +555,115 @@
       aspect-ratio: 1/1;
     }
   }
+
+  &--stock {
+    @extend %f-column;
+    width: 100%;
+
+    @media (max-width: 43.6875rem) and (min-width: 35.4375rem) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price {
+      position: relative;
+      font-size: $h3;
+      width: 100%;
+      height: 0;
+      column-gap: $i8;
+      margin-bottom: 0;
+      z-index: 1;
+
+      @media (max-width: 43.6875rem) {
+        grid-column: 1 / -1;
+        height: fit-content;
+      }
+
+      &[data-discount] {
+        &:before {
+          font-weight: 700;
+
+          @media (min-width: 21.875rem) {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+
+          @media (min-width: 72.9375rem) {
+            font-size: $h1;
+          }
+
+          @media (max-width: 72.9375rem) {
+            font-size: $h2;
+          }
+        }
+      }
+    }
+
+    .ava {
+      height: 18.75rem;
+      object-fit: contain;
+      margin-top: calc(-1 * $i20);
+
+      @media (max-width: 29.1875rem) {
+        height: auto;
+        margin-top: 0;
+      }
+    }
+
+    .cart--grey {
+      margin-top: auto;
+      transition: 0.1s background-color;
+
+      @media (max-width: 43.6875rem) and (min-width: 35.4375rem) {
+        margin-bottom: auto;
+      }
+
+      p {
+        @include not-last(0.25rem);
+        line-height: 150%;
+        transition: 0.1s color;
+      }
+
+      .name {
+        color: $clr-g-80;
+        font-size: $f12;
+      }
+    }
+
+    .link--full {
+      @media (hover: hover) {
+        &:hover {
+          ~ .cart--grey {
+            background-color: $clr-mn;
+
+            p,
+            b {
+              color: $clr-f;
+            }
+
+            .name {
+              color: $clr-f;
+            }
+          }
+        }
+      }
+      @media (hover: none) {
+        &:active {
+          ~ .cart--grey {
+            background-color: $clr-mn;
+
+            p,
+            b {
+              color: $clr-f;
+            }
+
+            .name {
+              color: $clr-f;
+            }
+          }
+        }
+      }
+    }
+  }
 }
