@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230920192743"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230926003227"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230920192743" />
-    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230920192743" />
-    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230920192743" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230920192743" />
-    <script src="./assets/js/datepicker.js?ver=20230920192743"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230926003227" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230926003227" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230926003227" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230926003227" />
+    <script src="./assets/js/datepicker.js?ver=20230926003227"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
@@ -366,7 +366,7 @@
         <section class="content address--map">
           <div class="wrapper">
             <div class="accordion active" data-accordion-only="true">
-              <h2 class="title accordion--name" data-map="point-start">
+              <h2 class="title accordion--name mb0" data-map="point-start">
                 Выберите пункт выдачи
               </h2>
 
@@ -638,6 +638,9 @@
                 </div>
               </div>
             </div>
+            <button type="button" class="click-address" data-click-address>
+              Сохранить
+            </button>
           </div>
           <div class="map">
             <iframe
@@ -656,8 +659,9 @@
             11 марта 09:00 — 14 марта 09:00
           </p>
         </header>
-        <section class="content inspire--select-times">
-          <div class="time-item">
+        <!-- content этот класс перенеси ниже -->
+        <section class="inspire--select-times">
+          <div class="time-item content">
             <!-- В value записывай 2 даты через запятую без пробелов -->
             <!-- можно вводить даты 2х форматов dd.mm.yyyy и yyyy.mm.dd -->
             <input
@@ -2229,12 +2233,12 @@
   </div>
 </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230920192743" ></script>
-	<script src="./assets/libs/wow/wow.min.js?ver=20230920192743" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230926003227" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20230926003227" ></script>
 	<script>
 		new WOW().init();
 		new Glide('.glide').mount()
 	</script>
-	<script src="./assets/js/app.min.js?ver=20230920192743" defer></script>
+	<script src="./assets/js/app.min.js?ver=20230926003227" defer></script>
 </body>
 </html>
