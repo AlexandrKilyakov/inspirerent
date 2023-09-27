@@ -16,7 +16,7 @@
         <section class="content address--map">
           <div class="wrapper">
             <div class="accordion active" data-accordion-only="true">
-              <h2 class="title accordion--name" data-map="point-start">
+              <h2 class="title accordion--name mb0" data-map="point-start">
                 Выберите пункт выдачи
               </h2>
 
@@ -288,6 +288,9 @@
                 </div>
               </div>
             </div>
+            <button type="button" class="click-address" data-click-address>
+              Сохранить
+            </button>
           </div>
           <div class="map">
             <iframe
@@ -306,8 +309,9 @@
             11 марта 09:00 — 14 марта 09:00
           </p>
         </header>
-        <section class="content inspire--select-times">
-          <div class="time-item">
+        <!-- content этот класс перенеси ниже -->
+        <section class="inspire--select-times">
+          <div class="time-item content">
             <!-- В value записывай 2 даты через запятую без пробелов -->
             <!-- можно вводить даты 2х форматов dd.mm.yyyy и yyyy.mm.dd -->
             <input

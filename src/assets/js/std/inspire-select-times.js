@@ -18,7 +18,8 @@ function addEventSelect(element) {
             selectTimesHeader.dataset.indicator = trigger.dataset.indicator;
           }
 
-          selectTimesName.innerHTML = trigger.value;
+          selectTimesName.innerHTML =
+            trigger.parentElement.querySelector(".txt").innerHTML;
 
           parent.classList.remove("active");
         });

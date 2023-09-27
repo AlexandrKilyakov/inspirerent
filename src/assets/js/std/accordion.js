@@ -24,7 +24,7 @@ if (accordion) {
 
       arrow.addEventListener("click", function (event) {
         event.preventDefault();
-        if (acc.dataset.accordionOnly && !acc.classList.contains("active")) {
+        if (acc.dataset.accordionOnly) {
           const accordionOnly = acc.parentElement.querySelectorAll(
             "[data-accordion-only]"
           );
@@ -35,13 +35,7 @@ if (accordion) {
             }
 
             if (item.classList.contains("active")) {
-              let trigger = item.querySelector(".accordion--name");
-              if (trigger) {
-                if (trigger.classList.contains("triggers")) {
-                  item.dataset.triggersNotChange = "";
-                }
-                trigger.click();
-              }
+              triggerClick(item);
             }
           });
         }
@@ -64,4 +58,16 @@ if (accordion) {
       });
     });
   }, 500);
+}
+
+function triggerClick(item) {
+  let trigger = item.querySelector(".accordion--name");
+
+  if (trigger) {
+    if (trigger.classList.contains("triggers")) {
+      item.dataset.triggersNotChange = "";
+    }
+
+    trigger.click();
+  }
 }

@@ -8,15 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230814144814"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230927152709"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230814144814" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230814144814" />
-    <script src="./assets/js/datepicker.js?ver=20230814144814"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230927152709" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230927152709" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230927152709" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230927152709" />
+    <script src="./assets/js/datepicker.js?ver=20230927152709"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
+      <a href="/" class="logo"></a>
       <a
         href="tel:88007770755"
         class="icon--element header--mr"
@@ -164,15 +167,28 @@
 </a
         >
         <!-- form — связывает отдельно стоящий элемент <input> с формой. -->
-        <select
-          name="rate_id"
-          form="order-in-1-click"
-          class="custom--select-loc"
-        >
-          <option value="1298376">Москва</option>
-          <option value="1488201">Санкт-Петербург</option>
-          <option value="1473758">Краснодар</option>
-        </select>
+        <div class="inspire--select select-city" select-text>
+          <header class="inspire--select-header">
+            <p class="name">Москва</p>
+          </header>
+          <section class="content cart">
+            <label class="triggers">
+              <input type="radio" name="rate_id" form="order-in-1-click" value="Москва" checked />
+              <span class="trigger"></span>
+              <span class="txt">Москва</span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="rate_id" form="order-in-1-click" value="Санкт-Петербург" />
+              <span class="trigger"></span>
+              <span class="txt">Санкт-Петербург</span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="rate_id" form="order-in-1-click" value="Краснодар" />
+              <span class="trigger"></span>
+              <span class="txt">Краснодар</span>
+            </label>
+          </section>
+        </div>
         <a href="#" class="link--nav">Условия аренды</a>
         <a href="#" class="link--nav">Автомобили</a>
         <a href="#" class="link--nav">Подписка</a>
@@ -522,10 +538,12 @@
   </div>
 </div>
 
-	<script src="./assets/libs/wow/wow.min.js?ver=20230814144814" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230927152709" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20230927152709" ></script>
 	<script>
 		new WOW().init();
+		new Glide('.glide').mount()
 	</script>
-	<script src="./assets/js/app.min.js?ver=20230814144814" defer></script>
+	<script src="./assets/js/app.min.js?ver=20230927152709" defer></script>
 </body>
 </html>

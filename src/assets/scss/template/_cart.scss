@@ -2,9 +2,24 @@
   @include cart();
   overflow: hidden;
 
-  &:hover {
+  @media (hover: hover) {
     a.btn {
-      transform: translateY(0);
+      position: absolute;
+      inset: auto 0 0 0;
+      max-width: 100%;
+      transform: translateY(100%);
+    }
+
+    &:hover {
+      a.btn {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @media (hover: none) {
+    a.btn {
+      margin-top: $i24;
     }
   }
 
@@ -39,13 +54,6 @@
 
   .rent {
     @include not-last(0);
-  }
-
-  a.btn {
-    position: absolute;
-    inset: auto 0 0 0;
-    max-width: 100%;
-    transform: translateY(100%);
   }
 
   &--header {
@@ -538,6 +546,7 @@
     min-height: max-content;
     max-height: 18.75rem;
     padding: $i32;
+    color: $clr-f;
     border-radius: 0.25rem;
     border-radius: 4px;
     background-image: linear-gradient(
@@ -546,10 +555,6 @@
         rgba(0, 0, 0, 0) 65.57%
       ),
       var(--image);
-
-    &:not(:hover) {
-      color: $clr-f;
-    }
 
     @media (min-width: 41.875rem) {
       aspect-ratio: 1/1;
@@ -612,6 +617,7 @@
     }
 
     .cart--grey {
+      @include not-last(0);
       margin-top: auto;
       transition: 0.1s background-color;
 

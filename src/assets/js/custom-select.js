@@ -52,24 +52,24 @@ if (selects.length) {
         let dates = assets.value.split(",");
 
         if (dates.length) {
-          text.textContent = "";
+          text.innerHTML = "";
           dates.forEach((day, i) => {
             let elements = getDateCustom(day);
             let yearCheck = elements.getFullYear();
 
-            text.textContent += i > 0 ? " — " : "";
-            text.textContent += elements.getDate();
-            text.textContent += " " + months[elements.getMonth()];
-            text.textContent += year != yearCheck ? " " + yearCheck : "";
+            text.innerHTML += i > 0 ? "<br>" : "";
+            text.innerHTML += elements.getDate();
+            text.innerHTML += " " + months[elements.getMonth()];
+            text.innerHTML += year != yearCheck ? " " + yearCheck : "";
 
             if (!(dateStart && dateEnd)) {
               return;
             }
 
-            let times = [dateStart.textContent, dateEnd.textContent];
+            let times = [dateStart.innerHTML, dateEnd.innerHTML];
 
             try {
-              text.textContent += " " + times[i];
+              text.innerHTML += " " + times[i];
             } catch {
               console.log("Нет времени");
             }
