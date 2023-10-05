@@ -20,6 +20,7 @@
 .datepicker table td {
   width: 14.2857142857%;
   padding: 0;
+  padding-bottom: 0.25rem;
 }
 
 .datepicker table th {
@@ -161,8 +162,32 @@
   color: white;
 }
 
+.datepicker__day.is-selected div {
+  border-radius: 6.25rem;
+}
+
+.datepicker__day.is-selected div::after {
+  border-radius: 6.25rem;
+}
+
+.datepicker__day.is-click div {
+  border-radius: 6.25rem;
+}
+
+.datepicker__day.is-click div::after {
+  border-radius: 6.25rem;
+}
+
 .datepicker__day.is-today {
   color: var(--clr-main);
+}
+
+.datepicker__day.is-today:not(.is-selected) div {
+  border-radius: 6.25rem;
+}
+
+.datepicker__day.is-today:not(.is-selected) div::after {
+  border-radius: 6.25rem;
 }
 
 .datepicker__day.is-today.is-disabled.is-selected div::after,
@@ -216,14 +241,12 @@
   margin: 0;
   background-color: transparent;
   position: relative;
-  border-radius: 6.25rem;
   cursor: pointer;
 }
 
 .datepicker__day div::after {
   content: "";
   display: block;
-  border-radius: 6.25rem;
   padding-top: 2rem;
   position: relative;
   background-color: inherit;
@@ -232,14 +255,6 @@
 
 .datepicker__day div:hover {
   background-color: var(--clr-main-2);
-}
-
-.datepicker__day:first-child div:after {
-  border-radius: 0 6.25rem 6.25rem 0;
-}
-
-.datepicker__day:last-child div:after {
-  border-radius: 6.25rem 0 0 6.25rem;
 }
 
 .datepicker__daynum {

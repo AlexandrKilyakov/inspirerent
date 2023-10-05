@@ -8,24 +8,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230927152709"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20231006011047"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230927152709" />
-    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230927152709" />
-    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230927152709" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230927152709" />
-    <script src="./assets/js/datepicker.js?ver=20230927152709"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20231006011047" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20231006011047" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20231006011047" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20231006011047" />
+    <script src="./assets/js/datepicker.js?ver=20231006011047"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
       <a href="/" class="logo"></a>
-      <a
-        href="tel:88007770755"
-        class="icon--element header--mr"
-        data-icon="phone"
-        >8 (800) 777-07-55</a
-      >
+      <div class="header--mr header--phones">
+        <a href="tel:88007770755" class="icon--element">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="26"
+  height="26"
+  viewBox="0 0 26 26"
+  fill="none"
+>
+  <path
+    d="M10.1707 8.25432L7.10253 1C5.44137 1 4.45476 1.34169 2.77365 2.85748C1.89589 3.64892 1.27148 4.70039 1.11665 5.87208C0.191028 12.8767 4.8019 21.4541 13.7502 24.3174C21.5228 26.8046 24.4886 21.8993 25 19.1358L17.3297 15.5086L13.7502 18.6176C13.0684 18.6176 11.2957 18.2031 9.65932 16.545C8.02298 14.8868 7.27299 13.0905 7.10253 12.3996L10.1707 8.25432Z"
+    stroke="white"
+    stroke-linejoin="round"
+  />
+</svg>
+ 8 (800) 777-07-55
+        </a>
+        <a href="tel:84956408282" class="icon--element">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="26"
+  height="26"
+  viewBox="0 0 26 26"
+  fill="none"
+>
+  <path
+    d="M10.1707 8.25432L7.10253 1C5.44137 1 4.45476 1.34169 2.77365 2.85748C1.89589 3.64892 1.27148 4.70039 1.11665 5.87208C0.191028 12.8767 4.8019 21.4541 13.7502 24.3174C21.5228 26.8046 24.4886 21.8993 25 19.1358L17.3297 15.5086L13.7502 18.6176C13.0684 18.6176 11.2957 18.2031 9.65932 16.545C8.02298 14.8868 7.27299 13.0905 7.10253 12.3996L10.1707 8.25432Z"
+    stroke="white"
+    stroke-linejoin="round"
+  />
+</svg>
+ +7 (495) 640-82-82
+        </a>
+      </div>
+      <section class="header--icons">
+        <a
+          href="#"
+          class="social--link wow fadeIn"
+          target="_blank"
+          data-social="telegram"
+        ></a>
+        <a
+          href="#"
+          class="social--link wow fadeIn"
+          target="_blank"
+          data-social="whatsapp"
+        ></a>
+      </section>
 
       <button class="burger--menu" data-click="menu" data-body="no-scroll">
         <span class="burger">
@@ -173,17 +215,33 @@
           </header>
           <section class="content cart">
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Москва" checked />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Москва"
+                checked
+              />
               <span class="trigger"></span>
               <span class="txt">Москва</span>
             </label>
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Санкт-Петербург" />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Санкт-Петербург"
+              />
               <span class="trigger"></span>
               <span class="txt">Санкт-Петербург</span>
             </label>
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Краснодар" />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Краснодар"
+              />
               <span class="trigger"></span>
               <span class="txt">Краснодар</span>
             </label>
@@ -249,94 +307,108 @@
   <h1 class="title wow fadeIn">Ваш заказ</h1>
 
   <div class="article--std">
-    <div class="glide slider--fake-wrapper cart wow fadeIn">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li class="glide__slide slider--fake">
-            <img
-              src="https://inspirerent.ru/upload/iblock/1d7/1.png"
-              alt=""
-              class="ava"
-            />
-            <div class="content">
-              <header class="cart--header">
-                <h2 class="name">Hyundai Creta (II)</h2>
-                <button
-                  type="button"
-                  class="btn--like"
-                  data-toggle-favorites=""
-                  data-id
-                ></button>
-              </header>
-              <p class="subtitle">АКПП</p>
-              <p class="price">2 800 ₽ / сутки</p>
-              <p class="description">20 000₽ депозит</p>
+    <div class="wow fadeIn mb32">
+      <div class="glide cart slider--fake-wrapper">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide slider--fake">
+              <img
+                src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+                alt=""
+                class="ava"
+              />
+              <div class="content">
+                <header class="cart--header">
+                  <h2 class="name">Hyundai Creta (II)</h2>
+                  <button
+                    type="button"
+                    class="btn--like"
+                    data-toggle-favorites=""
+                    data-id
+                  ></button>
+                </header>
+                <p class="subtitle">АКПП</p>
+                <p class="price">2 800 ₽ / сутки</p>
+                <p class="description">20 000₽ депозит</p>
+              </div>
+            </li>
+            <li class="glide__slide slider--fake">
+              <img
+                src="https://inspirerent.ru/upload/iblock/1d7/1.png"
+                alt=""
+                class="ava"
+              />
+              <div class="content">
+                <header class="cart--header">
+                  <h2 class="name">Hyundai Creta</h2>
+                  <button
+                    type="button"
+                    class="btn--like"
+                    data-toggle-favorites=""
+                    data-id
+                  ></button>
+                </header>
+                <p class="subtitle">АКПП</p>
+                <p class="price">2 800 ₽ / сутки</p>
+                <p class="description">20 000₽ депозит</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button
+            class="glide__arrow glide__arrow--left link--back"
+            data-glide-dir="<"
+          ></button>
+          <button
+            class="glide__arrow glide__arrow--right link--next"
+            data-glide-dir=">"
+          ></button>
+        </div>
+      </div>
+
+      <div class="accordion acc--specifications">
+        <header class="accordion--name">
+          <p class="name">Характеристики авто и условия аренды</p>
+          <button class="arrow"></button>
+        </header>
+        <div class="accordion--child">
+          <div class="contant grid-4 specifications">
+            <div class="cart">
+              <h2 class="h4 name wow fadeIn">Характеристики автомобиля:</h2>
+              <p class="value wow fadeIn" data-weight="car-door">
+                Количество дверей: x 5
+              </p>
+              <p class="value wow fadeIn" data-weight="peaple">
+                Количество мест: x 5
+              </p>
+              <p class="value wow fadeIn" data-weight="bag">
+                Количество багажа: x 5
+              </p>
+              <p class="value wow fadeIn" data-weight="transmission">
+                Коробка передач: АТ
+              </p>
+              <p class="value wow fadeIn" data-weight="temperature">
+                Кондиционер: есть
+              </p>
             </div>
-          </li>
-          <li class="glide__slide slider--fake">
-            <img
-              src="https://inspirerent.ru/upload/iblock/1d7/1.png"
-              alt=""
-              class="ava"
-            />
-            <div class="content">
-              <header class="cart--header">
-                <h2 class="name">Hyundai Creta</h2>
-                <button
-                  type="button"
-                  class="btn--like"
-                  data-toggle-favorites=""
-                  data-id
-                ></button>
-              </header>
-              <p class="subtitle">АКПП</p>
-              <p class="price">2 800 ₽ / сутки</p>
-              <p class="description">20 000₽ депозит</p>
+            <div class="cart">
+              <h2 class="h4 name wow fadeIn">Условия аренды:</h2>
+              <p class="value wow fadeIn" data-weight="man">
+                Возраст водителя: от 24 лет
+              </p>
+              <p class="value wow fadeIn" data-weight="wheel">
+                Стаж вождения: от 3 лет
+              </p>
+              <p class="value wow fadeIn" data-weight="doc">
+                Документы: паспорт, ВУ
+              </p>
+              <p class="value wow fadeIn" data-weight="cash">
+                Депозит: от 20 000 ₽
+              </p>
             </div>
-          </li>
-        </ul>
-      </div>
-      <div class="glide__arrows" data-glide-el="controls">
-        <button
-          class="glide__arrow glide__arrow--left link--back"
-          data-glide-dir="<"
-        ></button>
-        <button
-          class="glide__arrow glide__arrow--right link--next"
-          data-glide-dir=">"
-        ></button>
-      </div>
-    </div>
-    <div class="grid-4 specifications">
-      <div class="cart">
-        <h2 class="h4 name wow fadeIn">Характеристики автомобиля:</h2>
-        <p class="value wow fadeIn" data-weight="car-door">
-          Количество дверей: x 5
-        </p>
-        <p class="value wow fadeIn" data-weight="peaple">
-          Количество мест: x 5
-        </p>
-        <p class="value wow fadeIn" data-weight="bag">Количество багажа: x 5</p>
-        <p class="value wow fadeIn" data-weight="transmission">
-          Коробка передач: АТ
-        </p>
-        <p class="value wow fadeIn" data-weight="temperature">
-          Кондиционер: есть
-        </p>
-      </div>
-      <div class="cart">
-        <h2 class="h4 name wow fadeIn">Условия аренды:</h2>
-        <p class="value wow fadeIn" data-weight="man">
-          Возраст водителя: от 24 лет
-        </p>
-        <p class="value wow fadeIn" data-weight="wheel">
-          Стаж вождения: от 3 лет
-        </p>
-        <p class="value wow fadeIn" data-weight="">Документы: паспорт, ВУ</p>
-        <p class="value wow fadeIn" data-weight="">Депозит: от 20 000 ₽</p>
-        <p class="value wow fadeIn" data-weight="">
-          Лимит пробега: 150 км / день
-        </p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="select--wrapper" data-title="Выдача:">
@@ -817,6 +889,119 @@
     </div>
 
     <div class="article--smart mt32">
+      <h2 class="h3 title wow fadeIn">Опции</h2>
+      <div class="cart">
+        <div class="table--x">
+          <table class="table--line">
+            <tbody>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" checked />
+                    <span class="trigger--point"></span>
+                    <span class="value"
+                      >SPCDW - Защита от повреждений автомобиля
+                    </span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">435 ₽ / день</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" checked />
+                    <span class="trigger--point"></span>
+                    <span class="value">SPTHW - Защита от угона </span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">220 ₽ / день</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" checked />
+                    <span class="trigger--point"></span>
+                    <span class="value">WWI - Страховка стекол, фар, шин </span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">360 ₽ / день</td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="triggers wow fadeIn">
+                    <input type="checkbox" name="stock" />
+                    <span class="trigger--point"></span>
+                    <span class="value">Безлимитный пробег</span>
+                  </label>
+                </td>
+                <td class="price wow fadeIn">220 ₽ / день</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info--hint">
+          <p>Территория эксплуатации:</p>
+          <div class="info--hint-content icon-hint">
+            <p class="text">
+              Сбор аэропорта оплачивается единоразово, при выдаче авто. При
+              возврате в этот же аэропорт дополнительная оплата не требуется.
+            </p>
+          </div>
+        </div>
+        <div class="inspire--select width-smart" select-text>
+          <header class="inspire--select-header border">
+            <p class="name">Зона 1 <span class="chips">(Бесплатно)</span></p>
+          </header>
+          <section class="content cart">
+            <label class="triggers">
+              <input
+                type="radio"
+                name="name"
+                value="Зона 1 (Бесплатно)"
+                checked
+              />
+              <span class="trigger"></span>
+              <span class="txt"
+                >Зона 1 <span class="chips">(Бесплатно)</span></span
+              >
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 2 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 2 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 3 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 3 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 4 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 4 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 5 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 5 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 6 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 6 <span class="chips">(350)</span></span>
+            </label>
+            <label class="triggers">
+              <input type="radio" name="name" value="Зона 7 (350)" />
+              <span class="trigger"></span>
+              <span class="txt">Зона 7 <span class="chips">(350)</span></span>
+            </label>
+          </section>
+        </div>
+        <p class="total wow fadeIn">
+          Итого депозит: <span class="price">14 200 ₽</span
+          ><span class="old-prise">20 000 ₽</span>
+        </p>
+      </div>
       <h2 class="h3 title wow fadeIn">Дополнительные услуги</h2>
       <div class="cart">
         <div class="grid-5 mb16">
@@ -933,117 +1118,6 @@
             </tbody>
           </table>
         </div>
-      </div>
-      <h2 class="h3 title wow fadeIn">Опции</h2>
-      <div class="cart">
-        <div class="table--x">
-          <table class="table--line">
-            <tbody>
-              <tr>
-                <td>
-                  <label class="triggers wow fadeIn">
-                    <input type="checkbox" name="stock" />
-                    <span class="trigger--point"></span>
-                    <span class="value">Безлимитный пробег</span>
-                  </label>
-                </td>
-                <td class="price wow fadeIn">220 ₽ / день</td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="triggers wow fadeIn">
-                    <input type="checkbox" name="stock" />
-                    <span class="trigger--point"></span>
-                    <span class="value">Защита от повреждений автомобиля </span>
-                  </label>
-                </td>
-                <td class="price wow fadeIn">435 ₽ / день</td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="triggers wow fadeIn">
-                    <input type="checkbox" name="stock" />
-                    <span class="trigger--point"></span>
-                    <span class="value">Защита от угона </span>
-                  </label>
-                </td>
-                <td class="price wow fadeIn">220 ₽ / день</td>
-              </tr>
-              <tr>
-                <td>
-                  <label class="triggers wow fadeIn">
-                    <input type="checkbox" name="stock" />
-                    <span class="trigger--point"></span>
-                    <span class="value">Страховка стекол, фар, шин </span>
-                  </label>
-                </td>
-                <td class="price wow fadeIn">360 ₽ / день</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="info--hint">
-          <p>Территория эксплуатации:</p>
-          <div class="info--hint-content icon-hint">
-            <p class="text">
-              Сбор аэропорта оплачивается единоразово, при выдаче авто. При
-              возврате в этот же аэропорт дополнительная оплата не требуется.
-            </p>
-          </div>
-        </div>
-        <div class="inspire--select width-smart" select-text>
-          <header class="inspire--select-header border">
-            <p class="name">Зона 1 <span class="chips">(Бесплатно)</span></p>
-          </header>
-          <section class="content cart">
-            <label class="triggers">
-              <input
-                type="radio"
-                name="name"
-                value="Зона 1 (Бесплатно)"
-                checked
-              />
-              <span class="trigger"></span>
-              <span class="txt"
-                >Зона 1 <span class="chips">(Бесплатно)</span></span
-              >
-            </label>
-            <label class="triggers">
-              <input type="radio" name="name" value="Зона 2 (350)" />
-              <span class="trigger"></span>
-              <span class="txt">Зона 2 <span class="chips">(350)</span></span>
-            </label>
-            <label class="triggers">
-              <input type="radio" name="name" value="Зона 3 (350)" />
-              <span class="trigger"></span>
-              <span class="txt">Зона 3 <span class="chips">(350)</span></span>
-            </label>
-            <label class="triggers">
-              <input type="radio" name="name" value="Зона 4 (350)" />
-              <span class="trigger"></span>
-              <span class="txt">Зона 4 <span class="chips">(350)</span></span>
-            </label>
-            <label class="triggers">
-              <input type="radio" name="name" value="Зона 5 (350)" />
-              <span class="trigger"></span>
-              <span class="txt">Зона 5 <span class="chips">(350)</span></span>
-            </label>
-            <label class="triggers">
-              <input type="radio" name="name" value="Зона 6 (350)" />
-              <span class="trigger"></span>
-              <span class="txt">Зона 6 <span class="chips">(350)</span></span>
-            </label>
-            <label class="triggers">
-              <input type="radio" name="name" value="Зона 7 (350)" />
-              <span class="trigger"></span>
-              <span class="txt">Зона 7 <span class="chips">(350)</span></span>
-            </label>
-          </section>
-        </div>
-        <p class="total wow fadeIn">
-          Итого депозит: <span class="price">14 200 ₽</span
-          ><span class="old-prise">20 000 ₽</span>
-        </p>
       </div>
       <h2 id="form-smart" class="h3 title wow fadeIn">
         Контакты для подтверждения брони
@@ -1334,12 +1408,12 @@
   </div>
 </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230927152709" ></script>
-	<script src="./assets/libs/wow/wow.min.js?ver=20230927152709" ></script>
-	<script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20231006011047" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20231006011047" ></script>
+	<!-- <script>
 		new WOW().init();
 		new Glide('.glide').mount()
-	</script>
-	<script src="./assets/js/app.min.js?ver=20230927152709" defer></script>
+	</script> -->
+	<script src="./assets/js/app.min.js?ver=20231006011047" defer></script>
 </body>
 </html>

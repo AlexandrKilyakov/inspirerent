@@ -8,24 +8,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20230927152709"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&ver=20231006011047"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20230927152709" />
-    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20230927152709" />
-    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20230927152709" />
-    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20230927152709" />
-    <script src="./assets/js/datepicker.js?ver=20230927152709"></script>
+    <link rel="stylesheet" href="./assets/css/datepicker.material.css?ver=20231006011047" />
+    <link rel="stylesheet" href="./assets/css/glide.core.css?ver=20231006011047" />
+    <link rel="stylesheet" href="./assets/css/glide.theme.css?ver=20231006011047" />
+    <link rel="stylesheet" href="./assets/css/app.min.css?ver=20231006011047" />
+    <script src="./assets/js/datepicker.js?ver=20231006011047"></script>
   </head>
   <body>
     <header data-role="header" class="header wow fadeIn">
       <a href="/" class="logo"></a>
-      <a
-        href="tel:88007770755"
-        class="icon--element header--mr"
-        data-icon="phone"
-        >8 (800) 777-07-55</a
-      >
+      <div class="header--mr header--phones">
+        <a href="tel:88007770755" class="icon--element">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="26"
+  height="26"
+  viewBox="0 0 26 26"
+  fill="none"
+>
+  <path
+    d="M10.1707 8.25432L7.10253 1C5.44137 1 4.45476 1.34169 2.77365 2.85748C1.89589 3.64892 1.27148 4.70039 1.11665 5.87208C0.191028 12.8767 4.8019 21.4541 13.7502 24.3174C21.5228 26.8046 24.4886 21.8993 25 19.1358L17.3297 15.5086L13.7502 18.6176C13.0684 18.6176 11.2957 18.2031 9.65932 16.545C8.02298 14.8868 7.27299 13.0905 7.10253 12.3996L10.1707 8.25432Z"
+    stroke="white"
+    stroke-linejoin="round"
+  />
+</svg>
+ 8 (800) 777-07-55
+        </a>
+        <a href="tel:84956408282" class="icon--element">
+          <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="26"
+  height="26"
+  viewBox="0 0 26 26"
+  fill="none"
+>
+  <path
+    d="M10.1707 8.25432L7.10253 1C5.44137 1 4.45476 1.34169 2.77365 2.85748C1.89589 3.64892 1.27148 4.70039 1.11665 5.87208C0.191028 12.8767 4.8019 21.4541 13.7502 24.3174C21.5228 26.8046 24.4886 21.8993 25 19.1358L17.3297 15.5086L13.7502 18.6176C13.0684 18.6176 11.2957 18.2031 9.65932 16.545C8.02298 14.8868 7.27299 13.0905 7.10253 12.3996L10.1707 8.25432Z"
+    stroke="white"
+    stroke-linejoin="round"
+  />
+</svg>
+ +7 (495) 640-82-82
+        </a>
+      </div>
+      <section class="header--icons">
+        <a
+          href="#"
+          class="social--link wow fadeIn"
+          target="_blank"
+          data-social="telegram"
+        ></a>
+        <a
+          href="#"
+          class="social--link wow fadeIn"
+          target="_blank"
+          data-social="whatsapp"
+        ></a>
+      </section>
 
       <button class="burger--menu" data-click="menu" data-body="no-scroll">
         <span class="burger">
@@ -173,17 +215,33 @@
           </header>
           <section class="content cart">
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Москва" checked />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Москва"
+                checked
+              />
               <span class="trigger"></span>
               <span class="txt">Москва</span>
             </label>
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Санкт-Петербург" />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Санкт-Петербург"
+              />
               <span class="trigger"></span>
               <span class="txt">Санкт-Петербург</span>
             </label>
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Краснодар" />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Краснодар"
+              />
               <span class="trigger"></span>
               <span class="txt">Краснодар</span>
             </label>
@@ -1268,12 +1326,12 @@
   </div>
 </div>
 
-	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20230927152709" ></script>
-	<script src="./assets/libs/wow/wow.min.js?ver=20230927152709" ></script>
-	<script>
+	<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide?ver=20231006011047" ></script>
+	<script src="./assets/libs/wow/wow.min.js?ver=20231006011047" ></script>
+	<!-- <script>
 		new WOW().init();
 		new Glide('.glide').mount()
-	</script>
-	<script src="./assets/js/app.min.js?ver=20230927152709" defer></script>
+	</script> -->
+	<script src="./assets/js/app.min.js?ver=20231006011047" defer></script>
 </body>
 </html>
