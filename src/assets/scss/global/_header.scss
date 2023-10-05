@@ -9,8 +9,8 @@
   z-index: 99;
 
   .logo {
-    width: 11.0625rem;
-    height: 2.75rem;
+    width: 8.0625rem;
+    height: 2rem;
     background: {
       image: url("../svg/art/logo.svg");
       repeat: no-repeat;
@@ -96,5 +96,66 @@
     gap: $i16 $i20;
 
     @include not-last($i16);
+  }
+
+  &--phones {
+    display: flex;
+    align-items: center;
+    column-gap: $i32;
+
+    @media (max-width: 60.4375rem) {
+      display: none;
+    }
+
+    a {
+      text-wrap: nowrap;
+      column-gap: 0.5rem;
+
+      svg {
+        --ava: #{$i28};
+
+        [stroke] {
+          stroke: currentColor;
+        }
+      }
+    }
+
+    .icon--element {
+      @media (max-width: 64rem) {
+        font-size: 1.25rem;
+        font-weight: 400;
+
+        svg {
+          --ava: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &--icons {
+    display: flex;
+    align-items: center;
+    column-gap: $i24;
+    margin-right: $i56;
+
+    @media (max-width: 72.9375rem) {
+      margin-left: $i64;
+    }
+
+    @media (max-width: 67.5rem) {
+      margin-inline: $i24 $i16;
+    }
+
+    @media (max-width: 64rem) {
+      .social--link {
+        --ava: 1.5rem;
+        --w: 1.5rem;
+        --h: 1.5rem;
+      }
+    }
+
+    @media (max-width: 26.5625rem) {
+      display: none;
+    }
   }
 }

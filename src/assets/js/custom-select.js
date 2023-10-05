@@ -145,16 +145,24 @@ function selectDate(item) {
 }
 
 function getDateCustom(str) {
+  const userLang = navigator.language || navigator.userLanguage;
+
   // Проверяем формат даты и преобразуем его в формат ISO
-  if (/^\d{2}\.\d{2}\.\d{4}$/.test(str)) {
-    str = str.split(".").reverse().join("-");
-  } else if (/^\d{4}\.\d{2}\.\d{2}$/.test(str)) {
-    str = str.replace(/\./g, "-");
-  } else if (/^\d{2}\/\d{2}\/\d{4}$/.test(str)) {
-    str = str.split("/").reverse().join("-");
+  if (str.includes(".")) {
+    str = str.split(".").reverse();
+  } else if (str.includes("/")) {
+    str = str.split("/").reverse();
   }
 
-  console.log(new Date(str));
+  console.log(userLang, str);
+
+  if (userLang.includes("en")) {
+    str[1] = str[1] ^ str[2];
+    str[2] = str[1] ^ str[2];
+    str[1] = str[1] ^ str[2];
+  }
+
+  str = str.join("-");
 
   // Создаем объект Date из преобразованной строки
   return new Date(str);

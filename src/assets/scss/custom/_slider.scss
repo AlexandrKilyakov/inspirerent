@@ -161,7 +161,6 @@
     @extend %f-center;
     width: 100%;
     gap: $i20;
-    @include not-first-last($i20, $i20);
 
     @media (max-width: 43.6875rem) {
       flex-wrap: wrap;
@@ -219,6 +218,10 @@
     &-wrapper {
       width: 100%;
       overflow: hidden;
+
+      &.glide {
+        padding-bottom: 0;
+      }
 
       .glide__slide {
         margin-top: 0 !important;

@@ -71,3 +71,69 @@
     transition: 0.5s height cubic-bezier(0.39, 0.58, 0.57, 1);
   }
 }
+
+.acc {
+  &--specifications {
+    background-color: $clr-f;
+    padding-bottom: $i24;
+    border-radius: 0 0 $i4 $i4;
+    transition: 0.1s padding-top;
+
+    @media (max-width: 43.6875rem) {
+      padding-inline: calc($i24 + 2rem);
+
+      .cart {
+        padding-inline: 0;
+      }
+    }
+
+    @media (max-width: 26.5625rem) {
+      padding-inline: $i24;
+    }
+
+    &.active {
+      padding-top: $i24;
+
+      &:before {
+        right: $i24;
+        opacity: 1;
+      }
+
+      .accordion--name {
+        padding-top: $i24;
+
+        .name {
+          color: $clr-mn;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $i24;
+      left: $i24;
+      height: 0.0625rem;
+      background-color: $clr-g-15;
+      opacity: 0;
+      transition: 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    }
+
+    .accordion--name {
+      transition: 0.1s padding-top;
+
+      @media (min-width: 43.6875rem) {
+        margin-left: 17.25rem;
+        padding-inline: $i24;
+      }
+
+      @media (max-width: 43.6875rem) {
+        padding-top: $i24;
+      }
+
+      .name {
+        color: $clr;
+      }
+    }
+  }
+}

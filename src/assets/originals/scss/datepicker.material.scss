@@ -19,6 +19,7 @@
     td {
       width: calc(100% / 7);
       padding: 0;
+      padding-bottom: 0.25rem;
     }
 
     th {
@@ -160,10 +161,39 @@
       .datepicker__daynum {
         color: white;
       }
+
+      // TEMP
+      div {
+        border-radius: 6.25rem;
+
+        &::after {
+          border-radius: 6.25rem;
+        }
+      }
+    }
+
+    &.is-click {
+      div {
+        border-radius: 6.25rem;
+
+        &::after {
+          border-radius: 6.25rem;
+        }
+      }
     }
 
     &.is-today {
       color: var(--clr-main);
+
+      &:not(.is-selected) {
+        div {
+          border-radius: 6.25rem;
+
+          &::after {
+            border-radius: 6.25rem;
+          }
+        }
+      }
 
       &.is-disabled,
       &.is-otherMonth {
@@ -225,13 +255,11 @@
       margin: 0;
       background-color: transparent;
       position: relative;
-      border-radius: 6.25rem;
       cursor: pointer;
 
       &::after {
         content: "";
         display: block;
-        border-radius: 6.25rem;
         padding-top: 2rem;
         position: relative;
         background-color: inherit;
@@ -240,22 +268,6 @@
 
       &:hover {
         background-color: var(--clr-main-2);
-      }
-    }
-
-    &:first-child {
-      div {
-        &:after {
-          border-radius: 0 6.25rem 6.25rem 0;
-        }
-      }
-    }
-
-    &:last-child {
-      div {
-        &:after {
-          border-radius: 6.25rem 0 0 6.25rem;
-        }
       }
     }
   }

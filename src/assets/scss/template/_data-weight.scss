@@ -20,6 +20,28 @@
   }
 }
 
+@mixin -std-icon($name, $art, $size: contain, $w: 2rem, $h: 2rem) {
+  [data-weight="#{$name}"] {
+    --w: #{$w};
+    --h: #{$h};
+
+    &::before {
+      content: "";
+      display: block;
+      flex: 0 0 var(--w);
+      width: var(--w);
+      height: var(--h);
+
+      background: {
+        image: url($art);
+        repeat: no-repeat;
+        size: $size;
+        position: center;
+      }
+    }
+  }
+}
+
 @include -icon("peaple", 0, 1);
 @include -icon("bag", 0, 2);
 @include -icon("transmission", 0, 3);
@@ -43,22 +65,6 @@
 @include -icon("sun-main", 4, 4);
 @include -icon("moon-main", 5, 0);
 
-[data-weight="car-door"] {
-  --w: 2rem;
-  --h: 2rem;
-
-  &::before {
-    content: "";
-    display: block;
-    flex: 0 0 var(--w);
-    width: var(--w);
-    height: var(--h);
-
-    background: {
-      image: url("../img/car-door.png");
-      repeat: no-repeat;
-      size: 87.5% auto;
-      position: center;
-    }
-  }
-}
+@include -std-icon("car-door", "../img/car-door.png", 87.5% auto);
+@include -std-icon("doc", "../svg/art/icon/doc.svg");
+@include -std-icon("cash", "../svg/art/icon/cash.svg");

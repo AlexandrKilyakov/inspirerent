@@ -20,12 +20,28 @@
   <body>
     <header data-role="header" class="header wow fadeIn">
       <a href="/" class="logo"></a>
-      <a
-        href="tel:88007770755"
-        class="icon--element header--mr"
-        data-icon="phone"
-        >8 (800) 777-07-55</a
-      >
+      <div class="header--mr header--phones">
+        <a href="tel:88007770755" class="icon--element">
+          @@include("../assets/svg/icon/phone.html") 8 (800) 777-07-55
+        </a>
+        <a href="tel:84956408282" class="icon--element">
+          @@include("../assets/svg/icon/phone.html") +7 (495) 640-82-82
+        </a>
+      </div>
+      <section class="header--icons">
+        <a
+          href="#"
+          class="social--link wow fadeIn"
+          target="_blank"
+          data-social="telegram"
+        ></a>
+        <a
+          href="#"
+          class="social--link wow fadeIn"
+          target="_blank"
+          data-social="whatsapp"
+        ></a>
+      </section>
 
       <button class="burger--menu" data-click="menu" data-body="no-scroll">
         <span class="burger">
@@ -56,17 +72,33 @@
           </header>
           <section class="content cart">
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Москва" checked />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Москва"
+                checked
+              />
               <span class="trigger"></span>
               <span class="txt">Москва</span>
             </label>
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Санкт-Петербург" />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Санкт-Петербург"
+              />
               <span class="trigger"></span>
               <span class="txt">Санкт-Петербург</span>
             </label>
             <label class="triggers">
-              <input type="radio" name="rate_id" form="order-in-1-click" value="Краснодар" />
+              <input
+                type="radio"
+                name="rate_id"
+                form="order-in-1-click"
+                value="Краснодар"
+              />
               <span class="trigger"></span>
               <span class="txt">Краснодар</span>
             </label>

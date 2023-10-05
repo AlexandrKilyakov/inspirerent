@@ -1,81 +1,75 @@
-// const dateHereDate = document.querySelectorAll("[data-here-date]");
+// (function () {
+//   const dateHereDate = document.querySelectorAll("[data-here-date]");
 
-// if (dateHereDate.length) {
+//   if (!dateHereDate.length) {
+//     return;
+//   }
+
 //   dateHereDate.forEach((input) => {
 //     const parent = input.closest(".inspire--select");
-//     const container = parent.querySelector(".datepicker__container");
-//     const clickDate = parent.querySelector("[data-click-date]");
-//     const inputDates = input.value.split(",");
+//     const container = parent.querySelector(".datepicker__cal");
+//     // const dateFrom = parent.querySelector("[name='date_from']");
+//     // const dateTo = parent.querySelector("[name='date_to']");
 
-//     const dates =
-//       inputDates.length > 1
-//         ? getDates(inputDates[0], inputDates[1])
-//         : getDates();
+//     // console.log(dateFrom);
+//     // dateFrom.addEventListener("change", () => {
+//     //   console.log("change");
+//     // });
 
-//     let start = new Date(dates[0]);
-//     let end = new Date(dates[dates.length - 1]);
+//     // dateFrom.addEventListener("input", function (event) {
+//     //   console.log("input");
+//     // });
 
-//     if (inputDates.length < 2) {
-//       input.value = `${start.getDate()}.${
-//         start.getMonth() + 1
-//       }.${start.getFullYear()},${end.getDate()}.${
-//         end.getMonth() + 1
-//       }.${end.getFullYear()}`;
-//     }
+//     // dateFrom.addEventListener("paste", () => {
+//     //   console.log("paste");
+//     // });
 
-//     dates.forEach((date) => {
-//       let day = container.querySelector(`[data-day="${date}"]`);
+//     input.addEventListener("input", () => {
+//       const inputDates = input.value.split(",");
+//       const isClick = container.querySelectorAll(".is-click");
+//       console.log(seconds);
 
-//       if (day) {
-//         day.classList.add("is-selected");
+//       if (isClick.length) {
+//         isClick.forEach((el) => {
+//           el.classList.remove("is-click");
+//         });
 //       }
+
+//       inputDates.forEach((day) => {
+//         const date = getDateCustom(day);
+//         date.setHours(0, 0, 0, 0);
+//         date.setDate(date.getDate() + 1);
+//         const seconds = Math.floor(date.getTime());
+//         const dataDay = container.querySelector(`[data-day="${seconds}"]`);
+
+//         console.log(seconds);
+
+//         if (dataDay) {
+//           dataDay.classList.add("is-click");
+//         }
+//       });
 //     });
-
-//     clickDate.click();
 //   });
-// }
 
-// function getDates(start = false, end = false) {
-//   const dates = [];
+//   function getDateCustom(str) {
+//     const userLang = navigator.language || navigator.userLanguage;
 
-//   if (!start || !end) {
-//     for (let i = 0; i < 3; i++) {
-//       const date = new Date();
-//       date.setHours(0, 0, 0, 0);
-//       date.setDate(date.getDate() + i + 1);
-//       const seconds = Math.floor(date.getTime());
-//       dates.push(seconds);
+//     // Проверяем формат даты и преобразуем его в формат ISO
+//     if (str.includes(".")) {
+//       str = str.split(".").reverse();
+//     } else if (str.includes("/")) {
+//       str = str.split("/").reverse();
 //     }
-//   } else {
-//     start = getDateCustom(start);
-//     end = getDateCustom(end);
 
-//     let startDate = new Date(start);
-//     let endDate = new Date(end);
-
-//     endDate.setHours(0, 0, 0, 0);
-//     endDate.setDate(endDate.getDate());
-
-//     let i = 0;
-
-//     while (startDate.getTime() < endDate.getTime()) {
-//       startDate = new Date(start);
-//       startDate.setHours(0, 0, 0, 0);
-//       startDate.setDate(startDate.getDate() + i++);
-//       let seconds = Math.floor(startDate.getTime());
-//       dates.push(seconds);
+//     if (userLang == "en-US") {
+//       str[1] = str[1] ^ str[2];
+//       str[2] = str[1] ^ str[2];
+//       str[1] = str[1] ^ str[2];
 //     }
+
+//     str = str.join("-");
+
+//     // Создаем объект Date из преобразованной строки
+//     return new Date(str);
 //   }
-
-//   return dates;
-// }
-
-// function getDateCustom(item) {
-//   let tmp = item.split(".");
-
-//   if (tmp.length && tmp[0].length < 3) {
-//     tmp = tmp.reverse();
-//   }
-
-//   return tmp.join(".");
-// }
+// })();

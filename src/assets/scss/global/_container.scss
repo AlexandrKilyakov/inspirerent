@@ -5,6 +5,13 @@
   .article--content {
     padding: 0;
   }
+
+  &--smart {
+    max-width: 52.8125rem;
+    width: 100%;
+
+    @include not-last($i24);
+  }
 }
 
 .article {
